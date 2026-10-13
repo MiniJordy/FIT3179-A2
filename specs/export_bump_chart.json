@@ -116,7 +116,7 @@
         "ticks": false,
         "labelPadding": 112,
         "labelFontSize": 13,
-        "labelColor": "#3a3a37"
+        "labelColor": "var(--ink-2)"
       }
     },
     "detail": {
@@ -144,13 +144,7 @@
               "Southeast Asia",
               "Oceania"
             ],
-            "range": [
-              "#9b2343",
-              "#cf9a2e",
-              "#7a4fa0",
-              "#d36f8f",
-              "#5a78c0"
-            ]
+            "range": "world"
           },
           "legend": {
             "orient": "bottom",
@@ -174,7 +168,7 @@
       "mark": {
         "type": "circle",
         "size": 55,
-        "stroke": "#ffdecc",
+        "stroke": "var(--paper)",
         "strokeWidth": 1
       },
       "encoding": {
@@ -190,13 +184,7 @@
               "Southeast Asia",
               "Oceania"
             ],
-            "range": [
-              "#9b2343",
-              "#cf9a2e",
-              "#7a4fa0",
-              "#d36f8f",
-              "#5a78c0"
-            ]
+            "range": "world"
           },
           "legend": null
         },
@@ -258,15 +246,11 @@
         "type": "text",
         "align": "left",
         "dx": 12,
-        "fontSize": 13.5,
-        "fontWeight": 600
+        "style": "end-label"
       },
       "encoding": {
         "text": {
           "field": "market"
-        },
-        "color": {
-          "value": "#3a3a37"
         },
         "opacity": {
           "condition": {
@@ -288,15 +272,11 @@
         "type": "text",
         "align": "right",
         "dx": -12,
-        "fontSize": 13.5,
-        "fontWeight": 600
+        "style": "end-label"
       },
       "encoding": {
         "text": {
           "field": "market"
-        },
-        "color": {
-          "value": "#3a3a37"
         },
         "opacity": {
           "condition": {

@@ -5,9 +5,7 @@
     {
       "title": {
         "text": "Grapes crushed",
-        "subtitle": "2026 vintage, by grape colour",
-        "fontSize": 13.5,
-        "subtitleFontSize": 11.5
+        "subtitle": "2026 vintage, by grape colour"
       },
       "width": 410,
       "height": 210,
@@ -42,7 +40,7 @@
           "mark": {
             "type": "rect",
             "cornerRadius": 2.5,
-            "stroke": "#ffdecc",
+            "stroke": "var(--paper)",
             "strokeWidth": 2.5
           },
           "encoding": {
@@ -91,12 +89,7 @@
                   "Rosé",
                   "Sparkling, fortified & other"
                 ],
-                "range": [
-                  "#9b2343",
-                  "#d9b84a",
-                  "#e08aa3",
-                  "#8a8984"
-                ]
+                "range": "wine"
               },
               "legend": null
             },
@@ -185,12 +178,7 @@
                   "Rosé",
                   "Sparkling, fortified & other"
                 ],
-                "range": [
-                  "#9b2343",
-                  "#d9b84a",
-                  "#e08aa3",
-                  "#8a8984"
-                ]
+                "range": "wine"
               },
               "legend": null
             }
@@ -228,8 +216,7 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 13,
-            "color": "#3a3a37"
+            "style": "key-label"
           },
           "encoding": {
             "x": {
@@ -268,9 +255,7 @@
     {
       "title": {
         "text": "Wine exported",
-        "subtitle": "2025–26, by volume",
-        "fontSize": 13.5,
-        "subtitleFontSize": 11.5
+        "subtitle": "2025–26, by volume"
       },
       "width": 410,
       "height": 210,
@@ -305,7 +290,7 @@
           "mark": {
             "type": "rect",
             "cornerRadius": 2.5,
-            "stroke": "#ffdecc",
+            "stroke": "var(--paper)",
             "strokeWidth": 2.5
           },
           "encoding": {
@@ -354,12 +339,7 @@
                   "Rosé",
                   "Sparkling, fortified & other"
                 ],
-                "range": [
-                  "#9b2343",
-                  "#d9b84a",
-                  "#e08aa3",
-                  "#8a8984"
-                ]
+                "range": "wine"
               },
               "legend": null
             },
@@ -448,12 +428,7 @@
                   "Rosé",
                   "Sparkling, fortified & other"
                 ],
-                "range": [
-                  "#9b2343",
-                  "#d9b84a",
-                  "#e08aa3",
-                  "#8a8984"
-                ]
+                "range": "wine"
               },
               "legend": null
             }
@@ -491,8 +466,7 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 13,
-            "color": "#3a3a37"
+            "style": "key-label"
           },
           "encoding": {
             "x": {

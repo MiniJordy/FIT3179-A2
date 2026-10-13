@@ -205,12 +205,12 @@
 <script src="js/theme.js"></script>
 <script>
   // in page order
-  vegaEmbed('#crush-bubble-map', 'specs/crush_bubble_map.json', EMBED_OPTS).catch(console.error);
-  vegaEmbed('#variety-heatmap', 'specs/variety_heatmap.json', EMBED_OPTS).catch(console.error);
-  vegaEmbed('#colour-waffle', 'specs/colour_waffle.json', EMBED_OPTS).catch(console.error);
-  vegaEmbed('#wine-flows-sunburst', 'specs/wine_flows_sunburst.json', EMBED_OPTS).catch(console.error);
-  vegaEmbed('#export-flow-map', 'specs/export_flow_map.json', EMBED_OPTS).catch(console.error);
-  vegaEmbed('#export-bump-chart', 'specs/export_bump_chart.json', EMBED_OPTS).catch(console.error);
+  embedChart('#crush-bubble-map', 'specs/crush_bubble_map.json');
+  embedChart('#variety-heatmap', 'specs/variety_heatmap.json');
+  embedChart('#colour-waffle', 'specs/colour_waffle.json');
+  embedChart('#wine-flows-sunburst', 'specs/wine_flows_sunburst.json');
+  embedChart('#export-flow-map', 'specs/export_flow_map.json');
+  embedChart('#export-bump-chart', 'specs/export_bump_chart.json');
 </script>
 </body>
 </html>

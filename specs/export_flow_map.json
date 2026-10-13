@@ -26,16 +26,16 @@
       ],
       "mark": {
         "type": "geoshape",
-        "stroke": "#ffdecc",
+        "stroke": "var(--paper)",
         "strokeWidth": 0.5
       },
       "encoding": {
         "color": {
           "condition": {
             "test": "datum.id == 36",
-            "value": "#e9b9be"
+            "value": "var(--region-fill)"
           },
-          "value": "#fff3ec"
+          "value": "var(--land)"
         }
       }
     },
@@ -55,7 +55,7 @@
         },
         "fontSize": 56,
         "fontWeight": 700,
-        "color": "#f0b39c",
+        "color": "var(--rose-faint)",
         "align": "center",
         "baseline": "middle"
       },
@@ -88,7 +88,7 @@
         "opacity": 0.75,
         "strokeCap": "round",
         "interpolate": "basis",
-        "color": "#9b2343"
+        "color": "var(--rose)"
       },
       "encoding": {
         "longitude": {
@@ -128,9 +128,9 @@
               1000
             ],
             "orient": "bottom-left",
-            "symbolStrokeColor": "#9b2343",
+            "symbolStrokeColor": "var(--rose)",
             "symbolType": "stroke",
-            "fillColor": "#ffdecc",
+            "fillColor": "var(--paper)",
             "padding": 8
           }
         },
@@ -178,9 +178,9 @@
         "type": "circle",
         "size": 45,
         "opacity": 1,
-        "stroke": "#ffdecc",
+        "stroke": "var(--paper)",
         "strokeWidth": 1,
-        "color": "#9b2343"
+        "color": "var(--rose)"
       },
       "encoding": {
         "longitude": {
@@ -238,10 +238,10 @@
       },
       "mark": {
         "type": "circle",
-        "color": "#5c0f24",
+        "color": "var(--merlot)",
         "size": 70,
         "opacity": 1,
-        "stroke": "#ffdecc",
+        "stroke": "var(--paper)",
         "strokeWidth": 1.5
       },
       "encoding": {
@@ -284,9 +284,7 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "fontSize": 11,
-        "fontWeight": 600,
-        "color": "#3a3a37"
+        "style": "route-label"
       },
       "encoding": {
         "longitude": {
@@ -331,9 +329,7 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "fontSize": 11,
-        "fontWeight": 600,
-        "color": "#3a3a37"
+        "style": "route-label"
       },
       "encoding": {
         "longitude": {
@@ -378,9 +374,7 @@
         "type": "text",
         "align": "right",
         "baseline": "middle",
-        "fontSize": 11,
-        "fontWeight": 600,
-        "color": "#3a3a37"
+        "style": "route-label"
       },
       "encoding": {
         "longitude": {

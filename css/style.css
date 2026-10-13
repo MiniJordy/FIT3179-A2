@@ -1,7 +1,59 @@
+/* ==== PALETTE: the one place colours are defined ====================================
+   Used by this stylesheet AND by every chart (js/theme.js reads these variables).
+   Change a value here and the page and all charts update together. */
+:root {
+  /* Main two-colour scheme: Merlot + Rosé */
+  --merlot: #5a1f36;        /* structure: part headers, bubbles, origin dot */
+  --merlot-deep: #3a1223;   /* darkest heatmap step */
+  --rose: #de7a74;          /* highlights: export routes, slider, stat rules */
+  --rose-text: #bb4f4a;     /* rosé dark enough for text on white */
+  --rose-pale: #f5d3d0;     /* intro text on the merlot header */
+  --rose-faint: #f3c9c5;    /* big faded year on the flow map */
+  --region-fill: #eedee4;   /* wine-region shapes / Australia on the world map */
+  --region-edge: #dcc3cd;
+
+  /* Neutrals */
+  --ink: #1f1f1e;           /* body text, chart titles */
+  --ink-2: #3a3a37;         /* chart labels */
+  --ink-3: #5a5a57;         /* secondary text, captions */
+  --muted: #8a8984;         /* placeholders, leader lines */
+  --paper: #ffffff;         /* page background + gaps between chart marks */
+  --land: #f1f0ed;          /* map land */
+  --grid: #ebe9e5;
+  --axis: #c9c8c1;
+  --border: #d6d4cd;
+  --rule: #e3e3df;
+
+  /* Wine colours (waffle + sunburst) */
+  --wine-red: #9b2343;
+  --wine-white: #d9b84a;
+  --wine-rose: #e08aa3;
+  --wine-other: #8a8984;
+
+  /* Sunburst inner ring (where the wine went) */
+  --flow-exported: #4a3f42;
+  --flow-domestic: #7d7275;
+  --flow-leftover: #bdb5b7;
+  --flow-unsold: #dcd8d9;
+
+  /* Heatmap ramp, light to dark (ends on --merlot, --merlot-deep) */
+  --heat-1: #fdf6f5;
+  --heat-2: #f6cfcb;
+  --heat-3: #e5948f;
+  --heat-4: #b4506a;
+
+  /* World regions (bump chart) */
+  --world-ne-asia: #9b2343;
+  --world-n-america: #cf9a2e;
+  --world-europe: #7a4fa0;
+  --world-se-asia: #d36f8f;
+  --world-oceania: #5a78c0;
+}
+
 body {
   margin: 0;
-  background: #ffdecc;
-  color: #1f1f1e;
+  background: var(--paper);
+  color: var(--ink);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.55;
 }
@@ -11,37 +63,37 @@ main {
   padding: 2rem 1rem 4rem;
 }
 h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-.lede { color: #5a5a57; font-size: 1.1rem; margin-top: 0; }
+.lede { color: var(--ink-3); font-size: 1.1rem; margin-top: 0; }
 section { margin: 3rem 0; }
 .chart { width: 100%; }
-.note { font-size: 0.9rem; color: #5a5a57; }
-footer { font-size: 0.8rem; color: #5a5a57; border-top: 1px solid #efb9a2; padding-top: 1rem; }
+.note { font-size: 0.9rem; color: var(--ink-3); }
+footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--rule); padding-top: 1rem; }
 
 /* Vega-Lite input controls (e.g. the year slider on the export map) */
-.vega-bind { margin: 0.6rem 0 0 0; font-size: 0.95rem; color: #3a3a37; }
+.vega-bind { margin: 0.6rem 0 0 0; font-size: 0.95rem; color: var(--ink-2); }
 .vega-bind-name { font-weight: 600; margin-right: 0.4rem; }
-.vega-bind input[type="range"] { width: min(420px, 70vw); vertical-align: middle; accent-color: #9b2343; }
-.vega-bind select { font: inherit; font-size: 0.9rem; padding: 0.15rem 0.4rem; border: 1px solid #d9a58e; border-radius: 6px; background: #fff3ee; color: #1f1f1e; }
+.vega-bind input[type="range"] { width: min(420px, 70vw); vertical-align: middle; accent-color: var(--rose); }
+.vega-bind select { font: inherit; font-size: 0.9rem; padding: 0.15rem 0.4rem; border: 1px solid var(--axis); border-radius: 6px; background: var(--paper); color: var(--ink); }
 
 /* Story structure: five parts, each holding one or more chart sections */
 .part { margin: 4.5rem 0 3rem; }
 /* Coloured part header: a burgundy band that opens each part like a chapter */
-.part-header { background: #7a1530; color: #fdf3f2; border-radius: 12px; padding: 1.6rem 1.8rem 1.4rem; }
-.part-header h2 { font-size: 1.85rem; margin: 0 0 0.35rem; color: #ffffff; }
-.part-header .part-intro { margin: 0; font-size: 1.05rem; color: #f2c4c4; }
+.part-header { background: var(--merlot); color: var(--paper); border-radius: 12px; padding: 1.6rem 1.8rem 1.4rem; }
+.part-header h2 { font-size: 1.85rem; margin: 0 0 0.35rem; color: var(--paper); }
+.part-header .part-intro { margin: 0; font-size: 1.05rem; color: var(--rose-pale); }
 .chart-section { margin: 2.5rem 0; }
 .chart-section h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
-.placeholder { border: 1.5px dashed #e3a68d; border-radius: 10px; padding: 0.5rem 1.2rem; }
-.placeholder h3 { color: #7d6b64; }
-.todo { color: #7d6b64; font-style: italic; }
+.placeholder { border: 1.5px dashed var(--border); border-radius: 10px; padding: 0.5rem 1.2rem; }
+.placeholder h3 { color: var(--muted); }
+.todo { color: var(--muted); font-style: italic; }
 
 /* ---- STAT BANDS (optional) ----------------------------------------------------------
    Three big numbers under each part header. To remove them everywhere, delete this block
    and the <div class="stat-band"> elements in index.html (each is marked with a comment). */
 .stat-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.2rem 0 0.5rem; }
-.stat { border-left: 3px solid #c25e74; padding: 0.2rem 0 0.2rem 0.9rem; }
-.stat-num { display: block; font-size: 2rem; font-weight: 700; line-height: 1.15; color: #7a1530; }
-.stat-label { display: block; font-size: 0.92rem; color: #5a5a57; margin-top: 0.15rem; }
+.stat { border-left: 3px solid var(--rose); padding: 0.2rem 0 0.2rem 0.9rem; }
+.stat-num { display: block; font-size: 2rem; font-weight: 700; line-height: 1.15; color: var(--rose-text); }
+.stat-label { display: block; font-size: 0.92rem; color: var(--ink-3); margin-top: 0.15rem; }
 @media (max-width: 640px) { .stat-band { grid-template-columns: 1fr; } }
 /* ---- end STAT BANDS ---- */
 
@@ -55,5 +107,5 @@ footer { font-size: 0.8rem; color: #5a5a57; border-top: 1px solid #efb9a2; paddi
 .chart + .note { margin-top: 0.4rem; }
 
 /* Key numbers and places in the narrative text */
-main p strong { color: #7a1530; font-weight: 700; }
+main p strong { color: var(--rose-text); font-weight: 700; }
 .note strong { color: inherit; }

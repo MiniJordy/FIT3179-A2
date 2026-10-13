@@ -31,7 +31,7 @@
     {
       "mark": {
         "type": "arc",
-        "stroke": "#ffdecc",
+        "stroke": "var(--paper)",
         "strokeWidth": 2
       },
       "encoding": {
@@ -64,15 +64,7 @@
               "Sparkling & fortified",
               "Unsold"
             ],
-            "range": [
-              "#4a3f42",
-              "#7d7275",
-              "#bdb5b7",
-              "#9b2343",
-              "#d9b84a",
-              "#8a8984",
-              "#dcd8d9"
-            ]
+            "range": "flows"
           },
           "title": "Style of wine",
           "legend": {
@@ -126,7 +118,7 @@
       ],
       "mark": {
         "type": "text",
-        "color": "#ffffff",
+        "color": "var(--paper)",
         "fontSize": 13,
         "fontWeight": 600,
         "lineBreak": "|",
@@ -177,9 +169,9 @@
         "color": {
           "condition": {
             "test": "datum.name === 'White'",
-            "value": "#3a3a37"
+            "value": "var(--ink-2)"
           },
-          "value": "#ffffff"
+          "value": "var(--paper)"
         }
       }
     },
@@ -197,7 +189,7 @@
         "type": "text",
         "fontSize": 12,
         "fontWeight": 600,
-        "color": "#5a5a57",
+        "color": "var(--ink-3)",
         "lineBreak": "|",
         "align": "right",
         "baseline": "middle"
@@ -228,7 +220,7 @@
         "type": "text",
         "fontSize": 24,
         "fontWeight": 700,
-        "color": "#3a3a37",
+        "color": "var(--ink-2)",
         "dy": -10
       },
       "encoding": {
@@ -254,7 +246,7 @@
       "mark": {
         "type": "text",
         "fontSize": 11,
-        "color": "#5a5a57",
+        "color": "var(--ink-3)",
         "dy": 14,
         "lineBreak": "|"
       },

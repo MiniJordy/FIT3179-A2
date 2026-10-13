@@ -31,7 +31,7 @@
         "labelFontSize": 13,
         "labelFontWeight": 600,
         "labelAnchor": "start",
-        "labelColor": "#3a3a37"
+        "labelColor": "var(--ink-2)"
       }
     }
   },
@@ -97,7 +97,7 @@
         "mark": {
           "type": "rect",
           "cornerRadius": 3,
-          "stroke": "#ffdecc",
+          "stroke": "var(--paper)",
           "strokeWidth": 2
         },
         "encoding": {
@@ -110,13 +110,7 @@
                 0,
                 50
               ],
-              "range": [
-                "#fff3ee",
-                "#e9a9ae",
-                "#cc5e70",
-                "#9b2343",
-                "#5c0f24"
-              ],
+              "range": "heat",
               "clamp": true
             },
             "legend": {
@@ -166,10 +160,10 @@
           },
           "color": {
             "condition": {
-              "test": "datum.share_pct >= 20",
-              "value": "#ffffff"
+              "test": "datum.share_pct >= 27",
+              "value": "var(--paper)"
             },
-            "value": "#3a3a37"
+            "value": "var(--ink-2)"
           }
         }
       }

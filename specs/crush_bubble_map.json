@@ -11,7 +11,7 @@
             "text": "Western Australia",
             "fontSize": 12,
             "fontWeight": 500,
-            "color": "#5a5a57"
+            "color": "var(--ink-3)"
           },
           "layer": [
             {
@@ -29,9 +29,7 @@
               ],
               "mark": {
                 "type": "geoshape",
-                "fill": "#fff3ec",
-                "stroke": "#d6d4cd",
-                "strokeWidth": 0.8
+                "style": "land"
               }
             },
             {
@@ -44,9 +42,7 @@
               },
               "mark": {
                 "type": "geoshape",
-                "fill": "#f1dcdd",
-                "stroke": "#dcb9bd",
-                "strokeWidth": 0.6
+                "style": "region"
               },
               "encoding": {
                 "tooltip": [
@@ -101,8 +97,7 @@
               ],
               "mark": {
                 "type": "rule",
-                "color": "#8a8984",
-                "strokeWidth": 0.8
+                "style": "leader-line"
               },
               "encoding": {
                 "longitude": {
@@ -140,10 +135,7 @@
               ],
               "mark": {
                 "type": "circle",
-                "fill": "#9b2343",
-                "fillOpacity": 0.85,
-                "stroke": "#ffdecc",
-                "strokeWidth": 1.2
+                "style": "bubble"
               },
               "encoding": {
                 "longitude": {
@@ -212,8 +204,7 @@
               ],
               "mark": {
                 "type": "rule",
-                "color": "#5a5a57",
-                "strokeWidth": 0.7
+                "style": "callout-line"
               },
               "encoding": {
                 "longitude": {
@@ -248,10 +239,8 @@
                 "type": "text",
                 "align": "left",
                 "baseline": "middle",
-                "fontSize": 10.5,
-                "fontWeight": 600,
-                "color": "#3a3a37",
-                "lineBreak": "|"
+                "lineBreak": "|",
+                "style": "bubble-label"
               },
               "encoding": {
                 "longitude": {
@@ -283,10 +272,8 @@
                 "type": "text",
                 "align": "right",
                 "baseline": "middle",
-                "fontSize": 10.5,
-                "fontWeight": 600,
-                "color": "#3a3a37",
-                "lineBreak": "|"
+                "lineBreak": "|",
+                "style": "bubble-label"
               },
               "encoding": {
                 "longitude": {
@@ -318,10 +305,8 @@
                 "type": "text",
                 "align": "center",
                 "baseline": "middle",
-                "fontSize": 10.5,
-                "fontWeight": 600,
-                "color": "#3a3a37",
-                "lineBreak": "|"
+                "lineBreak": "|",
+                "style": "bubble-label"
               },
               "encoding": {
                 "longitude": {
@@ -372,7 +357,7 @@
             "text": "Grapes crushed",
             "fontSize": 11.5,
             "fontWeight": 600,
-            "color": "#3a3a37"
+            "color": "var(--ink-2)"
           },
           "width": 220,
           "height": 110,
@@ -406,11 +391,8 @@
             {
               "mark": {
                 "type": "circle",
-                "fill": "#9b2343",
-                "fillOpacity": 0.85,
-                "stroke": "#ffdecc",
-                "strokeWidth": 1.2,
-                "yOffset": 0
+                "yOffset": 0,
+                "style": "bubble"
               },
               "encoding": {
                 "y": {
@@ -437,7 +419,7 @@
               "mark": {
                 "type": "text",
                 "fontSize": 10.5,
-                "color": "#5a5a57"
+                "color": "var(--ink-3)"
               },
               "encoding": {
                 "y": {
@@ -465,7 +447,7 @@
         "text": "South-eastern Australia",
         "fontSize": 12,
         "fontWeight": 500,
-        "color": "#5a5a57"
+        "color": "var(--ink-3)"
       },
       "layer": [
         {
@@ -483,9 +465,7 @@
           ],
           "mark": {
             "type": "geoshape",
-            "fill": "#fff3ec",
-            "stroke": "#d6d4cd",
-            "strokeWidth": 0.8
+            "style": "land"
           }
         },
         {
@@ -498,9 +478,7 @@
           },
           "mark": {
             "type": "geoshape",
-            "fill": "#f1dcdd",
-            "stroke": "#dcb9bd",
-            "strokeWidth": 0.6
+            "style": "region"
           },
           "encoding": {
             "tooltip": [
@@ -555,8 +533,7 @@
           ],
           "mark": {
             "type": "rule",
-            "color": "#8a8984",
-            "strokeWidth": 0.8
+            "style": "leader-line"
           },
           "encoding": {
             "longitude": {
@@ -594,10 +571,7 @@
           ],
           "mark": {
             "type": "circle",
-            "fill": "#9b2343",
-            "fillOpacity": 0.85,
-            "stroke": "#ffdecc",
-            "strokeWidth": 1.2
+            "style": "bubble"
           },
           "encoding": {
             "longitude": {
@@ -666,8 +640,7 @@
           ],
           "mark": {
             "type": "rule",
-            "color": "#5a5a57",
-            "strokeWidth": 0.7
+            "style": "callout-line"
           },
           "encoding": {
             "longitude": {
@@ -702,10 +675,8 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 10.5,
-            "fontWeight": 600,
-            "color": "#3a3a37",
-            "lineBreak": "|"
+            "lineBreak": "|",
+            "style": "bubble-label"
           },
           "encoding": {
             "longitude": {
@@ -737,10 +708,8 @@
             "type": "text",
             "align": "right",
             "baseline": "middle",
-            "fontSize": 10.5,
-            "fontWeight": 600,
-            "color": "#3a3a37",
-            "lineBreak": "|"
+            "lineBreak": "|",
+            "style": "bubble-label"
           },
           "encoding": {
             "longitude": {
@@ -772,10 +741,8 @@
             "type": "text",
             "align": "center",
             "baseline": "middle",
-            "fontSize": 10.5,
-            "fontWeight": 600,
-            "color": "#3a3a37",
-            "lineBreak": "|"
+            "lineBreak": "|",
+            "style": "bubble-label"
           },
           "encoding": {
             "longitude": {
