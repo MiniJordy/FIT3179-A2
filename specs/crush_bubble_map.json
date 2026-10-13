@@ -1,0 +1,830 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map 2: tonnes of grapes crushed per wine region, 2026. Proportional symbols nudged apart (Dorling-style); positions pre-computed by scripts/build_bubble_positions.mjs, which also writes the projections below.",
+  "spacing": 20,
+  "hconcat": [
+    {
+      "vconcat": [
+        {
+          "name": "WA",
+          "title": {
+            "text": "Western Australia",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "color": "#5a5a57"
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/world-110m.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "countries"
+                }
+              },
+              "transform": [
+                {
+                  "filter": "datum.id == 36"
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "fill": "#fff3ec",
+                "stroke": "#d6d4cd",
+                "strokeWidth": 0.8
+              }
+            },
+            {
+              "data": {
+                "url": "data/gi_regions.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "wine_gi_regions"
+                }
+              },
+              "mark": {
+                "type": "geoshape",
+                "fill": "#f1dcdd",
+                "stroke": "#dcb9bd",
+                "strokeWidth": 0.6
+              },
+              "encoding": {
+                "tooltip": [
+                  {
+                    "field": "region",
+                    "title": "Wine region"
+                  },
+                  {
+                    "field": "properties.STATE",
+                    "title": "State"
+                  },
+                  {
+                    "field": "crush_text",
+                    "title": "Grapes crushed"
+                  }
+                ]
+              },
+              "transform": [
+                {
+                  "calculate": "datum.properties.GI_NAME === 'Mclaren Vale' ? 'McLaren Vale' : datum.properties.GI_NAME",
+                  "as": "region"
+                },
+                {
+                  "lookup": "region",
+                  "from": {
+                    "data": {
+                      "url": "data/regions_bubbles_2026.csv"
+                    },
+                    "key": "region",
+                    "fields": [
+                      "tonnes"
+                    ]
+                  }
+                },
+                {
+                  "calculate": "isValid(datum.tonnes) ? format(datum.tonnes, ',') + ' t' : indexof(['Murray Darling', 'Swan Hill'], datum.region) >= 0 ? 'Counted in Murray Darling–Swan Hill' : indexof(['Granite Belt', 'South Burnett'], datum.region) >= 0 ? 'Counted in the Queensland total' : 'N/A'",
+                  "as": "crush_text"
+                }
+              ]
+            },
+            {
+              "data": {
+                "url": "data/regions_bubbles_2026.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.view === 'WA'"
+                },
+                {
+                  "filter": "datum.moved === 'true' || datum.moved === true"
+                }
+              ],
+              "mark": {
+                "type": "rule",
+                "color": "#8a8984",
+                "strokeWidth": 0.8
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "lat",
+                  "type": "quantitative"
+                },
+                "longitude2": {
+                  "field": "dlon"
+                },
+                "latitude2": {
+                  "field": "dlat"
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_bubbles_2026.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.view === 'WA'"
+                },
+                {
+                  "calculate": "max(datum.tonnes, 2500)",
+                  "as": "size_t"
+                },
+                {
+                  "calculate": "datum.red_tonnes / datum.tonnes",
+                  "as": "red_share"
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "fill": "#9b2343",
+                "fillOpacity": 0.85,
+                "stroke": "#ffdecc",
+                "strokeWidth": 1.2
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "dlon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "dlat",
+                  "type": "quantitative"
+                },
+                "size": {
+                  "field": "size_t",
+                  "type": "quantitative",
+                  "title": "Grapes crushed (tonnes)",
+                  "scale": {
+                    "domain": [
+                      0,
+                      340000
+                    ],
+                    "range": [
+                      0,
+                      4400
+                    ]
+                  },
+                  "legend": null
+                },
+                "order": {
+                  "field": "tonnes",
+                  "sort": "descending"
+                },
+                "tooltip": [
+                  {
+                    "field": "region",
+                    "title": "Wine region"
+                  },
+                  {
+                    "field": "state",
+                    "title": "State"
+                  },
+                  {
+                    "field": "tonnes",
+                    "title": "Grapes crushed (t)",
+                    "format": ","
+                  },
+                  {
+                    "field": "red_share",
+                    "title": "Red grapes",
+                    "format": ".0%"
+                  },
+                  {
+                    "field": "value_per_tonne",
+                    "title": "Avg value ($/t)",
+                    "format": "$,"
+                  }
+                ]
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_bubbles_2026.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.view === 'WA' && isValid(datum.c1lon)"
+                }
+              ],
+              "mark": {
+                "type": "rule",
+                "color": "#5a5a57",
+                "strokeWidth": 0.7
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "c1lon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "c1lat",
+                  "type": "quantitative"
+                },
+                "longitude2": {
+                  "field": "c2lon"
+                },
+                "latitude2": {
+                  "field": "c2lat"
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_bubbles_2026.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.view === 'WA'"
+                },
+                {
+                  "filter": "datum.label && datum.lalign === 'left'"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "fontSize": 10.5,
+                "fontWeight": 600,
+                "color": "#3a3a37",
+                "lineBreak": "|"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "llon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "llat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "label"
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_bubbles_2026.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.view === 'WA'"
+                },
+                {
+                  "filter": "datum.label && datum.lalign === 'right'"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "fontSize": 10.5,
+                "fontWeight": 600,
+                "color": "#3a3a37",
+                "lineBreak": "|"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "llon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "llat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "label"
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_bubbles_2026.csv"
+              },
+              "transform": [
+                {
+                  "filter": "datum.view === 'WA'"
+                },
+                {
+                  "filter": "datum.label && datum.lalign === 'center'"
+                }
+              ],
+              "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "fontSize": 10.5,
+                "fontWeight": 600,
+                "color": "#3a3a37",
+                "lineBreak": "|"
+              },
+              "encoding": {
+                "longitude": {
+                  "field": "llon",
+                  "type": "quantitative"
+                },
+                "latitude": {
+                  "field": "llat",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "label"
+                }
+              }
+            }
+          ],
+          "width": 220,
+          "height": 260,
+          "projection": {
+            "type": "conicEqualArea",
+            "parallels": [
+              -30,
+              -36
+            ],
+            "rotate": [
+              -117,
+              0
+            ],
+            "scale": 3302.489,
+            "translate": [
+              128.849,
+              -3150.264
+            ],
+            "clipExtent": [
+              [
+                0,
+                0
+              ],
+              [
+                220,
+                260
+              ]
+            ]
+          }
+        },
+        {
+          "title": {
+            "text": "Grapes crushed",
+            "fontSize": 11.5,
+            "fontWeight": 600,
+            "color": "#3a3a37"
+          },
+          "width": 220,
+          "height": 110,
+          "data": {
+            "values": [
+              {
+                "t": 10000,
+                "x": 0
+              },
+              {
+                "t": 100000,
+                "x": 1
+              },
+              {
+                "t": 300000,
+                "x": 2
+              }
+            ]
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "ordinal",
+              "axis": null,
+              "scale": {
+                "paddingOuter": 0.3
+              }
+            }
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "circle",
+                "fill": "#9b2343",
+                "fillOpacity": 0.85,
+                "stroke": "#ffdecc",
+                "strokeWidth": 1.2,
+                "yOffset": 0
+              },
+              "encoding": {
+                "y": {
+                  "value": 45
+                },
+                "size": {
+                  "field": "t",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      0,
+                      340000
+                    ],
+                    "range": [
+                      0,
+                      4400
+                    ]
+                  },
+                  "legend": null
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "fontSize": 10.5,
+                "color": "#5a5a57"
+              },
+              "encoding": {
+                "y": {
+                  "value": 100
+                },
+                "text": {
+                  "field": "lab"
+                }
+              },
+              "transform": [
+                {
+                  "calculate": "format(datum.t, ',') + ' t'",
+                  "as": "lab"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "spacing": 24
+    },
+    {
+      "name": "SE",
+      "title": {
+        "text": "South-eastern Australia",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "color": "#5a5a57"
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "data/world-110m.json",
+            "format": {
+              "type": "topojson",
+              "feature": "countries"
+            }
+          },
+          "transform": [
+            {
+              "filter": "datum.id == 36"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "#fff3ec",
+            "stroke": "#d6d4cd",
+            "strokeWidth": 0.8
+          }
+        },
+        {
+          "data": {
+            "url": "data/gi_regions.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "wine_gi_regions"
+            }
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": "#f1dcdd",
+            "stroke": "#dcb9bd",
+            "strokeWidth": 0.6
+          },
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "region",
+                "title": "Wine region"
+              },
+              {
+                "field": "properties.STATE",
+                "title": "State"
+              },
+              {
+                "field": "crush_text",
+                "title": "Grapes crushed"
+              }
+            ]
+          },
+          "transform": [
+            {
+              "calculate": "datum.properties.GI_NAME === 'Mclaren Vale' ? 'McLaren Vale' : datum.properties.GI_NAME",
+              "as": "region"
+            },
+            {
+              "lookup": "region",
+              "from": {
+                "data": {
+                  "url": "data/regions_bubbles_2026.csv"
+                },
+                "key": "region",
+                "fields": [
+                  "tonnes"
+                ]
+              }
+            },
+            {
+              "calculate": "isValid(datum.tonnes) ? format(datum.tonnes, ',') + ' t' : indexof(['Murray Darling', 'Swan Hill'], datum.region) >= 0 ? 'Counted in Murray Darling–Swan Hill' : indexof(['Granite Belt', 'South Burnett'], datum.region) >= 0 ? 'Counted in the Queensland total' : 'N/A'",
+              "as": "crush_text"
+            }
+          ]
+        },
+        {
+          "data": {
+            "url": "data/regions_bubbles_2026.csv"
+          },
+          "transform": [
+            {
+              "filter": "datum.view === 'SE'"
+            },
+            {
+              "filter": "datum.moved === 'true' || datum.moved === true"
+            }
+          ],
+          "mark": {
+            "type": "rule",
+            "color": "#8a8984",
+            "strokeWidth": 0.8
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "dlon"
+            },
+            "latitude2": {
+              "field": "dlat"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "data/regions_bubbles_2026.csv"
+          },
+          "transform": [
+            {
+              "filter": "datum.view === 'SE'"
+            },
+            {
+              "calculate": "max(datum.tonnes, 2500)",
+              "as": "size_t"
+            },
+            {
+              "calculate": "datum.red_tonnes / datum.tonnes",
+              "as": "red_share"
+            }
+          ],
+          "mark": {
+            "type": "circle",
+            "fill": "#9b2343",
+            "fillOpacity": 0.85,
+            "stroke": "#ffdecc",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "longitude": {
+              "field": "dlon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "dlat",
+              "type": "quantitative"
+            },
+            "size": {
+              "field": "size_t",
+              "type": "quantitative",
+              "title": "Grapes crushed (tonnes)",
+              "scale": {
+                "domain": [
+                  0,
+                  340000
+                ],
+                "range": [
+                  0,
+                  4400
+                ]
+              },
+              "legend": null
+            },
+            "order": {
+              "field": "tonnes",
+              "sort": "descending"
+            },
+            "tooltip": [
+              {
+                "field": "region",
+                "title": "Wine region"
+              },
+              {
+                "field": "state",
+                "title": "State"
+              },
+              {
+                "field": "tonnes",
+                "title": "Grapes crushed (t)",
+                "format": ","
+              },
+              {
+                "field": "red_share",
+                "title": "Red grapes",
+                "format": ".0%"
+              },
+              {
+                "field": "value_per_tonne",
+                "title": "Avg value ($/t)",
+                "format": "$,"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "data/regions_bubbles_2026.csv"
+          },
+          "transform": [
+            {
+              "filter": "datum.view === 'SE' && isValid(datum.c1lon)"
+            }
+          ],
+          "mark": {
+            "type": "rule",
+            "color": "#5a5a57",
+            "strokeWidth": 0.7
+          },
+          "encoding": {
+            "longitude": {
+              "field": "c1lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "c1lat",
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "c2lon"
+            },
+            "latitude2": {
+              "field": "c2lat"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "data/regions_bubbles_2026.csv"
+          },
+          "transform": [
+            {
+              "filter": "datum.view === 'SE'"
+            },
+            {
+              "filter": "datum.label && datum.lalign === 'left'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 10.5,
+            "fontWeight": 600,
+            "color": "#3a3a37",
+            "lineBreak": "|"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "llon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "llat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "data/regions_bubbles_2026.csv"
+          },
+          "transform": [
+            {
+              "filter": "datum.view === 'SE'"
+            },
+            {
+              "filter": "datum.label && datum.lalign === 'right'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "fontSize": 10.5,
+            "fontWeight": 600,
+            "color": "#3a3a37",
+            "lineBreak": "|"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "llon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "llat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        },
+        {
+          "data": {
+            "url": "data/regions_bubbles_2026.csv"
+          },
+          "transform": [
+            {
+              "filter": "datum.view === 'SE'"
+            },
+            {
+              "filter": "datum.label && datum.lalign === 'center'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "fontSize": 10.5,
+            "fontWeight": 600,
+            "color": "#3a3a37",
+            "lineBreak": "|"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "llon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "llat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        }
+      ],
+      "width": 580,
+      "height": 560,
+      "projection": {
+        "type": "conicEqualArea",
+        "parallels": [
+          -30,
+          -40
+        ],
+        "rotate": [
+          -144,
+          0
+        ],
+        "scale": 1751.476,
+        "translate": [
+          312.961,
+          -1515.18
+        ],
+        "clipExtent": [
+          [
+            0,
+            0
+          ],
+          [
+            580,
+            560
+          ]
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "size": "shared"
+    }
+  }
+}

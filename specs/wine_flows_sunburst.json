@@ -1,0 +1,277 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart 8: sunburst of the 1,133 million litres of wine made in 2024-25. Inner ring: exported / sold in Australia / left over (production minus sales). Outer ring: wine style. Angles pre-computed in scripts/build_datasets.py.",
+  "width": 440,
+  "height": 440,
+  "data": {
+    "url": "data/wine_flows_2024_25.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "ml": "number",
+        "pct_of_group": "number",
+        "pct_of_total": "number",
+        "t1": "number",
+        "t2": "number",
+        "mid": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.ring === 'inner' ? 64 : 151",
+      "as": "r1"
+    },
+    {
+      "calculate": "datum.ring === 'inner' ? 148 : 205",
+      "as": "r2"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "stroke": "#ffdecc",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "theta": {
+          "field": "t1",
+          "type": "quantitative",
+          "scale": null
+        },
+        "theta2": {
+          "field": "t2"
+        },
+        "radius": {
+          "field": "r1",
+          "type": "quantitative",
+          "scale": null
+        },
+        "radius2": {
+          "field": "r2"
+        },
+        "color": {
+          "field": "name",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Exported",
+              "Sold in Australia",
+              "Left over",
+              "Red & rosé",
+              "White",
+              "Sparkling & fortified",
+              "Unsold"
+            ],
+            "range": [
+              "#4a3f42",
+              "#7d7275",
+              "#bdb5b7",
+              "#9b2343",
+              "#d9b84a",
+              "#8a8984",
+              "#dcd8d9"
+            ]
+          },
+          "title": "Style of wine",
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "values": [
+              "Red & rosé",
+              "White",
+              "Sparkling & fortified"
+            ],
+            "symbolType": "square",
+            "labelFontSize": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "group",
+            "title": "Where it went"
+          },
+          {
+            "field": "name",
+            "title": "Wine"
+          },
+          {
+            "field": "ml",
+            "title": "Million litres",
+            "format": ",.0f"
+          },
+          {
+            "field": "pct_of_total",
+            "title": "Share of all wine made (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "pct_of_group",
+            "title": "Share of this group (%)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.ring === 'inner' && datum.group !== 'Left over'"
+        },
+        {
+          "calculate": "replace(datum.name, 'Sold in ', 'Sold in|') + '|' + format(datum.ml, ',.0f') + ' ML'",
+          "as": "lab"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#ffffff",
+        "fontSize": 13,
+        "fontWeight": 600,
+        "lineBreak": "|",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "theta": {
+          "field": "mid",
+          "type": "quantitative",
+          "scale": null
+        },
+        "radius": {
+          "value": 106
+        },
+        "text": {
+          "field": "lab"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.ring === 'outer' && datum.name !== 'Unsold' && (datum.t2 - datum.t1) > 0.3"
+        },
+        {
+          "calculate": "format(datum.pct_of_group, '.0f') + '%'",
+          "as": "lab"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "baseline": "middle"
+      },
+      "encoding": {
+        "theta": {
+          "field": "mid",
+          "type": "quantitative",
+          "scale": null
+        },
+        "radius": {
+          "value": 178
+        },
+        "text": {
+          "field": "lab"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.name === 'White'",
+            "value": "#3a3a37"
+          },
+          "value": "#ffffff"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.ring === 'inner' && datum.group === 'Left over'"
+        },
+        {
+          "calculate": "'Left over|' + format(datum.ml, ',.0f') + ' ML'",
+          "as": "lab"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#5a5a57",
+        "lineBreak": "|",
+        "align": "right",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "theta": {
+          "field": "mid",
+          "type": "quantitative",
+          "scale": null
+        },
+        "radius": {
+          "value": 222
+        },
+        "text": {
+          "field": "lab"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "1,133"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 24,
+        "fontWeight": 700,
+        "color": "#3a3a37",
+        "dy": -10
+      },
+      "encoding": {
+        "theta": {
+          "value": 0
+        },
+        "radius": {
+          "value": 0
+        },
+        "text": {
+          "field": "t"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "s": "million litres|made"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#5a5a57",
+        "dy": 14,
+        "lineBreak": "|"
+      },
+      "encoding": {
+        "theta": {
+          "value": 0
+        },
+        "radius": {
+          "value": 0
+        },
+        "text": {
+          "field": "s"
+        }
+      }
+    }
+  ],
+  "view": {
+    "stroke": null
+  }
+}

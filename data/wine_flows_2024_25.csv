@@ -1,0 +1,11 @@
+ring,group,name,ml,pct_of_group,pct_of_total,t1,t2,mid
+outer,Exported,Red & rosé,373.0,58.5,32.9,0.0,2.06852,1.03426
+outer,Exported,White,253.0,39.7,22.3,2.06852,3.47156,2.77004
+outer,Exported,Sparkling & fortified,12.7,2.0,1.1,3.47156,3.54215,3.50685
+inner,Exported,Exported,638.0,100.0,56.3,0.0,3.54215,1.77108
+outer,Sold in Australia,Red & rosé,168.0,37.9,14.8,3.54215,4.47382,4.00798
+outer,Sold in Australia,White,195.0,44.0,17.2,4.47382,5.55521,5.01451
+outer,Sold in Australia,Sparkling & fortified,80.0,18.1,7.1,5.55521,5.99886,5.77704
+inner,Sold in Australia,Sold in Australia,443.0,100.0,39.1,3.54215,5.99886,4.77051
+outer,Left over,Unsold,52.0,100.0,4.6,5.99886,6.28723,6.14305
+inner,Left over,Left over,52.0,100.0,4.6,5.99886,6.28723,6.14305

@@ -1,0 +1,322 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart 9: rank of Australia's 11 main wine export markets by value (A$), 2014-2025. Markets shown are those in the overall top 10 in more than one year; they are ranked against each other.",
+  "width": "container",
+  "height": 480,
+  "data": {
+    "url": "data/exports_by_market_2014_2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "value_aud_m": "number",
+        "value_usd_m": "number",
+        "volume_ml": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "true_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "value_aud_m",
+          "order": "descending"
+        }
+      ],
+      "groupby": [
+        "year"
+      ]
+    },
+    {
+      "calculate": "datum.true_rank <= 10 ? 1 : 0",
+      "as": "in_top10"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "in_top10",
+          "as": "years_in_top10"
+        }
+      ],
+      "groupby": [
+        "market"
+      ]
+    },
+    {
+      "filter": "datum.years_in_top10 >= 2"
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "value_aud_m",
+          "order": "descending"
+        }
+      ],
+      "groupby": [
+        "year"
+      ]
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 8,
+        "labelFontSize": 12,
+        "offset": 8
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          1,
+          11
+        ],
+        "reverse": true,
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "labelExpr": "'#' + datum.value",
+        "grid": false,
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 112,
+        "labelFontSize": 13,
+        "labelColor": "#3a3a37"
+      }
+    },
+    "detail": {
+      "field": "market"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "color": {
+          "field": "world_region",
+          "type": "nominal",
+          "title": "Region of the world",
+          "scale": {
+            "domain": [
+              "Northeast Asia",
+              "North America",
+              "Europe",
+              "Southeast Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#9b2343",
+              "#cf9a2e",
+              "#7a4fa0",
+              "#d36f8f",
+              "#5a78c0"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 5,
+            "symbolType": "circle",
+            "titleOrient": "left"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": true,
+            "value": 0.95
+          },
+          "value": 0.12
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 55,
+        "stroke": "#ffdecc",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "world_region",
+          "type": "nominal",
+          "title": "Region of the world",
+          "scale": {
+            "domain": [
+              "Northeast Asia",
+              "North America",
+              "Europe",
+              "Southeast Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#9b2343",
+              "#cf9a2e",
+              "#7a4fa0",
+              "#d36f8f",
+              "#5a78c0"
+            ]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.12
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Market"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "rank",
+            "title": "Rank on this chart"
+          },
+          {
+            "field": "true_rank",
+            "title": "Rank among all markets"
+          },
+          {
+            "field": "value_aud_m",
+            "title": "Export value (A$m)",
+            "format": ",.0f"
+          }
+        ]
+      },
+      "transform": [],
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": [
+              "market"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout",
+            "nearest": true
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2025"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "fontSize": 13.5,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "market"
+        },
+        "color": {
+          "value": "#3a3a37"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.2
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2014"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -12,
+        "fontSize": 13.5,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "market"
+        },
+        "color": {
+          "value": "#3a3a37"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.2
+        }
+      }
+    }
+  ],
+  "padding": {
+    "left": 5,
+    "right": 115,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  }
+}

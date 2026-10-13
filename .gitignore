@@ -1,0 +1,17 @@
+# Files kept on this computer but NOT published to GitHub
+
+# Original downloads from Wine Australia, UN Comtrade and the RBA (~10 MB; third-party reports).
+# The page only loads the processed files in data/. Sources are listed in README.md and on the page.
+data/raw/
+
+# Early mockups built with made-up numbers
+Claude outputs/
+
+# Assignment paperwork
+*.docx
+Data Visualisation 2 Specifications.pdf
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

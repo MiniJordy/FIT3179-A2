@@ -1,0 +1,1427 @@
+year,market,world_region,value_usd_m,value_aud_m,volume_ml
+2014,USA,North America,404.37,449.79,168.62
+2014,UK,Europe,344.91,383.66,258.19
+2014,China,Northeast Asia,190.28,211.66,41.14
+2014,Canada,North America,156.91,174.54,58.61
+2014,Hong Kong,Northeast Asia,111.93,124.51,11.13
+2014,New Zealand,Oceania,68.98,76.73,30.04
+2014,Netherlands,Europe,56.12,62.43,41.49
+2014,Singapore,Southeast Asia,53.23,59.21,8.7
+2014,Japan,Northeast Asia,36.49,40.59,9.74
+2014,Malaysia,Southeast Asia,31.07,34.56,8.69
+2014,Denmark,Europe,21.96,24.43,12.55
+2014,Germany,Europe,21.81,24.26,10.0
+2014,Sweden,Europe,17.85,19.86,5.66
+2014,United Arab Emirates,Rest of world,15.19,16.89,3.6
+2014,Italy,Rest of world,13.46,14.97,10.18
+2014,Taiwan,Northeast Asia,12.46,13.86,1.73
+2014,Thailand,Southeast Asia,12.14,13.5,3.88
+2014,Finland,Europe,12.01,13.36,6.32
+2014,Belgium,Europe,11.48,12.78,8.07
+2014,Ireland,Europe,8.17,9.09,2.41
+2014,South Korea,Northeast Asia,7.5,8.34,1.32
+2014,Norway,Europe,6.3,7.01,2.34
+2014,Philippines,Southeast Asia,5.12,5.7,1.23
+2014,Viet Nam,Southeast Asia,4.9,5.46,1.0
+2014,South Africa,Rest of world,4.63,5.15,0.07
+2014,Bunkers,Rest of world,4.14,4.61,0.74
+2014,Russian Federation,Rest of world,3.62,4.02,7.51
+2014,Papua New Guinea,Oceania,3.6,4.01,0.57
+2014,Indonesia,Southeast Asia,3.38,3.76,0.38
+2014,India,Rest of world,3.37,3.75,1.0
+2014,Latvia,Rest of world,3.21,3.57,0.92
+2014,France,Europe,2.91,3.24,1.37
+2014,Fiji,Oceania,2.57,2.86,0.69
+2014,Poland,Rest of world,2.19,2.43,0.81
+2014,Switzerland,Europe,1.24,1.38,5.87
+2014,Qatar,Rest of world,1.11,1.24,0.34
+2014,New Caledonia,Rest of world,1.06,1.18,0.28
+2014,Cambodia,Rest of world,1.02,1.14,0.25
+2014,Brazil,Rest of world,0.94,1.05,0.23
+2014,Spain,Rest of world,0.87,0.97,0.29
+2014,Sri Lanka,Rest of world,0.8,0.89,0.19
+2014,Vanuatu,Rest of world,0.68,0.75,0.17
+2014,Mexico,Rest of world,0.65,0.73,0.18
+2014,Trinidad and Tobago,Rest of world,0.58,0.64,0.2
+2014,"China, Macao SAR",Rest of world,0.57,0.64,0.04
+2014,Estonia,Rest of world,0.5,0.55,0.11
+2014,Jamaica,Rest of world,0.44,0.49,0.15
+2014,Solomon Isds,Rest of world,0.4,0.44,0.1
+2014,Nepal,Rest of world,0.37,0.41,0.14
+2014,Israel,Rest of world,0.32,0.36,0.05
+2014,Guam,Rest of world,0.29,0.33,0.07
+2014,Iceland,Rest of world,0.29,0.33,0.05
+2014,Nigeria,Rest of world,0.29,0.32,0.06
+2014,Türkiye,Rest of world,0.28,0.31,0.04
+2014,Bermuda,Rest of world,0.27,0.3,0.08
+2014,Barbados,Rest of world,0.26,0.29,0.08
+2014,Norfolk Isds,Rest of world,0.26,0.28,0.06
+2014,Ukraine,Rest of world,0.25,0.27,0.03
+2014,Curaçao,Rest of world,0.23,0.26,0.07
+2014,Cook Isds,Rest of world,0.22,0.24,0.04
+2014,Bahrain,Rest of world,0.21,0.24,0.13
+2014,Oman,Rest of world,0.21,0.24,0.12
+2014,Christmas Isds,Rest of world,0.21,0.23,0.02
+2014,Timor-Leste,Rest of world,0.21,0.23,0.1
+2014,Maldives,Rest of world,0.18,0.2,0.04
+2014,Cayman Isds,Rest of world,0.18,0.2,0.06
+2014,Uruguay,Rest of world,0.17,0.19,0.04
+2014,Bangladesh,Rest of world,0.16,0.18,0.03
+2014,Malta,Rest of world,0.15,0.17,0.03
+2014,Bahamas,Rest of world,0.15,0.17,0.05
+2014,Kenya,Rest of world,0.15,0.17,0.04
+2014,Austria,Rest of world,0.14,0.15,0.03
+2014,Dominican Rep.,Rest of world,0.14,0.15,0.05
+2014,French Polynesia,Rest of world,0.13,0.15,0.01
+2014,Samoa,Rest of world,0.13,0.14,0.04
+2014,Mongolia,Rest of world,0.13,0.14,0.02
+2014,Mauritius,Rest of world,0.13,0.14,0.03
+2014,Myanmar,Rest of world,0.13,0.14,0.01
+2014,Ghana,Rest of world,0.12,0.13,0.03
+2014,Tuvalu,Rest of world,0.1,0.11,0.08
+2014,Costa Rica,Rest of world,0.1,0.11,0.04
+2014,Panama,Rest of world,0.1,0.11,0.03
+2014,Lithuania,Rest of world,0.08,0.09,0.02
+2014,Czechia,Rest of world,0.07,0.08,0.05
+2014,Dominica,Rest of world,0.07,0.08,0.02
+2014,Tonga,Rest of world,0.07,0.07,0.01
+2014,Uganda,Rest of world,0.06,0.07,0.02
+2014,Br. Virgin Isds,Rest of world,0.06,0.07,0.02
+2014,Cyprus,Rest of world,0.06,0.06,0.01
+2014,Naoero,Rest of world,0.06,0.06,0.02
+2014,Greece,Rest of world,0.05,0.05,0.0
+2014,Marshall Isds,Rest of world,0.04,0.05,0.01
+2014,Chile,Rest of world,0.04,0.04,0.01
+2014,Peru,Rest of world,0.04,0.04,0.0
+2014,Cocos Isds,Rest of world,0.04,0.04,0.0
+2014,Kiribati,Rest of world,0.04,0.04,0.06
+2014,Saint Helena,Rest of world,0.03,0.04,0.0
+2014,Lao People's Dem. Rep.,Rest of world,0.03,0.03,0.0
+2014,Turks and Caicos Isds,Rest of world,0.03,0.03,0.01
+2014,Saint Lucia,Rest of world,0.03,0.03,0.01
+2014,Slovakia,Rest of world,0.02,0.03,0.01
+2014,Bulgaria,Rest of world,0.02,0.03,0.0
+2014,Saint Kitts and Nevis,Rest of world,0.02,0.03,0.01
+2014,Seychelles,Rest of world,0.02,0.03,0.0
+2014,Sierra Leone,Rest of world,0.02,0.03,0.01
+2014,Colombia,Rest of world,0.02,0.02,0.02
+2014,Antarctica,Rest of world,0.02,0.02,0.0
+2014,N. Mariana Isds,Rest of world,0.02,0.02,0.01
+2014,El Salvador,Rest of world,0.02,0.02,0.01
+2014,Saudi Arabia,Rest of world,0.01,0.02,0.0
+2014,Serbia,Rest of world,0.01,0.01,0.0
+2014,American Samoa,Rest of world,0.01,0.01,0.0
+2014,FS Micronesia,Rest of world,0.01,0.01,0.0
+2014,Eswatini,Rest of world,0.01,0.01,0.0
+2014,Lebanon,Rest of world,0.01,0.01,0.0
+2014,Syria,Rest of world,0.01,0.01,0.0
+2014,Burkina Faso,Rest of world,0.01,0.01,0.0
+2014,Palau,Rest of world,0.0,0.0,0.0
+2014,Romania,Rest of world,0.0,0.0,0.0
+2014,North Macedonia,Rest of world,0.0,0.0,0.0
+2014,Yemen,Rest of world,0.0,0.0,0.0
+2014,Portugal,Rest of world,0.0,0.0,0.0
+2014,Mali,Rest of world,0.0,0.0,0.0
+2015,USA,North America,367.59,492.41,163.2
+2015,UK,Europe,289.52,387.83,246.97
+2015,China,Northeast Asia,273.57,366.47,69.06
+2015,Canada,North America,144.36,193.38,62.23
+2015,Hong Kong,Northeast Asia,111.88,149.87,11.62
+2015,New Zealand,Oceania,58.98,79.0,27.31
+2015,Singapore,Southeast Asia,48.8,65.37,5.75
+2015,Netherlands,Europe,45.54,61.01,42.34
+2015,Malaysia,Southeast Asia,40.03,53.62,5.13
+2015,Japan,Northeast Asia,34.9,46.75,13.02
+2015,Italy,Rest of world,21.43,28.71,17.42
+2015,Germany,Europe,19.98,26.77,12.46
+2015,Denmark,Europe,18.3,24.51,12.2
+2015,Sweden,Europe,15.68,21.01,5.61
+2015,Taiwan,Northeast Asia,12.99,17.4,2.11
+2015,Thailand,Southeast Asia,12.25,16.41,3.45
+2015,Belgium,Europe,12.1,16.21,11.0
+2015,United Arab Emirates,Rest of world,12.02,16.11,3.42
+2015,Finland,Europe,11.04,14.79,6.88
+2015,South Korea,Northeast Asia,9.3,12.46,1.84
+2015,Ireland,Europe,7.94,10.63,2.95
+2015,Viet Nam,Southeast Asia,7.01,9.39,0.85
+2015,Philippines,Southeast Asia,4.99,6.69,1.46
+2015,South Africa,Rest of world,4.95,6.63,0.07
+2015,Bunkers,Rest of world,4.51,6.04,0.78
+2015,Norway,Europe,3.58,4.8,1.89
+2015,India,Rest of world,3.22,4.32,1.11
+2015,Fiji,Oceania,2.87,3.84,0.79
+2015,Indonesia,Southeast Asia,2.79,3.73,0.41
+2015,Papua New Guinea,Oceania,2.48,3.33,1.08
+2015,France,Europe,2.27,3.04,1.07
+2015,Poland,Rest of world,2.27,3.04,0.86
+2015,Latvia,Rest of world,2.14,2.87,0.62
+2015,Russian Federation,Rest of world,1.77,2.38,3.41
+2015,Spain,Rest of world,0.95,1.27,0.35
+2015,Qatar,Rest of world,0.92,1.24,0.39
+2015,New Caledonia,Rest of world,0.86,1.16,0.32
+2015,Brazil,Rest of world,0.82,1.09,0.27
+2015,Sri Lanka,Rest of world,0.8,1.07,0.17
+2015,Switzerland,Europe,0.76,1.02,0.21
+2015,Cambodia,Rest of world,0.71,0.96,0.12
+2015,Mexico,Rest of world,0.58,0.78,0.17
+2015,Vanuatu,Rest of world,0.51,0.68,0.17
+2015,Solomon Isds,Rest of world,0.48,0.64,0.1
+2015,Trinidad and Tobago,Rest of world,0.48,0.64,0.17
+2015,"China, Macao SAR",Rest of world,0.39,0.52,0.04
+2015,Jamaica,Rest of world,0.36,0.48,0.1
+2015,Norfolk Isds,Rest of world,0.31,0.41,0.08
+2015,Colombia,Rest of world,0.3,0.4,0.07
+2015,Barbados,Rest of world,0.27,0.36,0.08
+2015,Guam,Rest of world,0.26,0.35,0.06
+2015,Nepal,Rest of world,0.26,0.35,0.14
+2015,Bermuda,Rest of world,0.22,0.29,0.07
+2015,Curaçao,Rest of world,0.21,0.28,0.09
+2015,Cook Isds,Rest of world,0.2,0.27,0.04
+2015,French Polynesia,Rest of world,0.2,0.27,0.02
+2015,Bahamas,Rest of world,0.2,0.26,0.06
+2015,Oman,Rest of world,0.19,0.25,0.14
+2015,Timor-Leste,Rest of world,0.19,0.25,0.04
+2015,Mauritius,Rest of world,0.18,0.25,0.04
+2015,Austria,Rest of world,0.17,0.22,0.01
+2015,Uruguay,Rest of world,0.16,0.22,0.03
+2015,Estonia,Rest of world,0.15,0.21,0.04
+2015,Ukraine,Rest of world,0.15,0.2,0.13
+2015,Türkiye,Rest of world,0.15,0.2,0.03
+2015,"Areas, nes",Rest of world,0.15,0.2,0.11
+2015,Ghana,Rest of world,0.14,0.19,0.05
+2015,Kenya,Rest of world,0.13,0.17,0.03
+2015,Myanmar,Rest of world,0.13,0.17,0.03
+2015,Malta,Rest of world,0.13,0.17,0.03
+2015,Samoa,Rest of world,0.12,0.17,0.05
+2015,Maldives,Rest of world,0.12,0.16,0.08
+2015,Nigeria,Rest of world,0.11,0.15,0.03
+2015,Dominican Rep.,Rest of world,0.11,0.14,0.03
+2015,Saint Helena,Rest of world,0.1,0.14,0.01
+2015,Bangladesh,Rest of world,0.1,0.14,0.02
+2015,Iceland,Rest of world,0.09,0.13,0.02
+2015,Panama,Rest of world,0.09,0.13,0.04
+2015,Cayman Isds,Rest of world,0.09,0.12,0.03
+2015,Christmas Isds,Rest of world,0.09,0.11,0.01
+2015,Mongolia,Rest of world,0.08,0.1,0.01
+2015,Guyana,Rest of world,0.07,0.1,0.01
+2015,Tuvalu,Rest of world,0.07,0.09,0.07
+2015,Costa Rica,Rest of world,0.07,0.09,0.02
+2015,Br. Virgin Isds,Rest of world,0.07,0.09,0.02
+2015,Tonga,Rest of world,0.07,0.09,0.01
+2015,Chile,Rest of world,0.06,0.09,0.0
+2015,Lithuania,Rest of world,0.06,0.09,0.01
+2015,Israel,Rest of world,0.06,0.09,0.01
+2015,Saint Lucia,Rest of world,0.05,0.07,0.01
+2015,Togo,Rest of world,0.05,0.06,0.01
+2015,Cocos Isds,Rest of world,0.04,0.06,0.0
+2015,Bulgaria,Rest of world,0.04,0.05,0.01
+2015,Kiribati,Rest of world,0.03,0.04,0.01
+2015,Marshall Isds,Rest of world,0.03,0.04,0.01
+2015,Peru,Rest of world,0.03,0.04,0.01
+2015,Naoero,Rest of world,0.03,0.04,0.01
+2015,American Samoa,Rest of world,0.03,0.04,0.01
+2015,Guatemala,Rest of world,0.03,0.04,0.01
+2015,Czechia,Rest of world,0.03,0.03,0.01
+2015,Suriname,Rest of world,0.03,0.03,0.01
+2015,Egypt,Rest of world,0.02,0.03,0.0
+2015,Antarctica,Rest of world,0.02,0.03,0.0
+2015,Rep. of Moldova,Rest of world,0.02,0.03,0.0
+2015,Lao People's Dem. Rep.,Rest of world,0.02,0.03,0.0
+2015,Greece,Rest of world,0.02,0.03,0.0
+2015,FS Micronesia,Rest of world,0.02,0.03,0.0
+2015,Pakistan,Rest of world,0.02,0.03,0.0
+2015,N. Mariana Isds,Rest of world,0.02,0.02,0.01
+2015,Lebanon,Rest of world,0.02,0.02,0.0
+2015,United Rep. of Tanzania,Rest of world,0.01,0.02,0.01
+2015,Cyprus,Rest of world,0.01,0.01,0.0
+2015,Angola,Rest of world,0.0,0.01,0.0
+2015,Seychelles,Rest of world,0.0,0.01,0.0
+2015,Brunei Darussalam,Rest of world,0.0,0.0,0.0
+2015,Eswatini,Rest of world,0.0,0.0,0.0
+2015,Mali,Rest of world,0.0,0.0,0.0
+2016,China,Northeast Asia,385.15,518.1,101.14
+2016,USA,North America,356.98,480.2,165.25
+2016,UK,Europe,265.72,357.44,236.34
+2016,Canada,North America,144.01,193.72,60.96
+2016,Hong Kong,Northeast Asia,100.06,134.6,10.79
+2016,New Zealand,Oceania,61.42,82.61,30.41
+2016,Singapore,Southeast Asia,54.58,73.42,5.87
+2016,Netherlands,Europe,42.27,56.86,34.57
+2016,Malaysia,Southeast Asia,41.34,55.61,4.88
+2016,Japan,Northeast Asia,34.84,46.86,11.61
+2016,Germany,Europe,21.09,28.38,17.12
+2016,Denmark,Europe,17.76,23.88,12.36
+2016,Sweden,Europe,16.72,22.49,6.36
+2016,Belgium,Europe,15.46,20.8,13.7
+2016,United Arab Emirates,Rest of world,15.24,20.49,3.34
+2016,Thailand,Southeast Asia,13.87,18.65,3.6
+2016,Italy,Rest of world,12.92,17.38,13.02
+2016,Taiwan,Northeast Asia,12.55,16.89,2.06
+2016,Ireland,Europe,11.51,15.48,4.11
+2016,Finland,Europe,11.47,15.42,6.72
+2016,South Korea,Northeast Asia,10.5,14.12,2.4
+2016,Philippines,Southeast Asia,5.61,7.55,1.6
+2016,Bunkers,Rest of world,5.53,7.43,0.88
+2016,Viet Nam,Southeast Asia,4.62,6.22,0.65
+2016,Norway,Europe,4.26,5.73,2.01
+2016,Indonesia,Southeast Asia,3.66,4.92,0.59
+2016,South Africa,Rest of world,3.44,4.63,0.07
+2016,India,Rest of world,3.31,4.46,1.16
+2016,Papua New Guinea,Oceania,2.81,3.78,0.54
+2016,Latvia,Rest of world,2.74,3.68,0.94
+2016,Fiji,Oceania,2.66,3.58,0.77
+2016,Poland,Rest of world,2.26,3.04,1.07
+2016,France,Europe,1.75,2.35,1.06
+2016,Spain,Rest of world,1.38,1.86,0.84
+2016,Brazil,Rest of world,1.34,1.8,0.42
+2016,Sri Lanka,Rest of world,1.0,1.35,0.21
+2016,Vanuatu,Rest of world,0.92,1.24,0.3
+2016,Cambodia,Rest of world,0.87,1.16,0.21
+2016,New Caledonia,Rest of world,0.82,1.1,0.3
+2016,Mexico,Rest of world,0.79,1.07,0.25
+2016,Switzerland,Europe,0.78,1.05,0.23
+2016,Myanmar,Rest of world,0.75,1.01,0.14
+2016,Uruguay,Rest of world,0.71,0.95,0.1
+2016,Russian Federation,Rest of world,0.68,0.91,0.34
+2016,Qatar,Rest of world,0.61,0.82,0.26
+2016,Trinidad and Tobago,Rest of world,0.59,0.79,0.21
+2016,Solomon Isds,Rest of world,0.47,0.63,0.12
+2016,Nigeria,Rest of world,0.4,0.54,0.02
+2016,"China, Macao SAR",Rest of world,0.38,0.52,0.04
+2016,Ghana,Rest of world,0.32,0.44,0.03
+2016,Jamaica,Rest of world,0.31,0.41,0.1
+2016,Lithuania,Rest of world,0.3,0.41,0.08
+2016,Barbados,Rest of world,0.29,0.39,0.09
+2016,Nepal,Rest of world,0.29,0.38,0.17
+2016,Estonia,Rest of world,0.28,0.38,0.09
+2016,Bahamas,Rest of world,0.25,0.34,0.08
+2016,Norfolk Isds,Rest of world,0.23,0.31,0.06
+2016,Cayman Isds,Rest of world,0.22,0.3,0.06
+2016,Cook Isds,Rest of world,0.22,0.3,0.05
+2016,Saint Helena,Rest of world,0.22,0.3,0.03
+2016,Mauritius,Rest of world,0.2,0.27,0.04
+2016,Malta,Rest of world,0.19,0.25,0.04
+2016,Bermuda,Rest of world,0.18,0.25,0.04
+2016,Kenya,Rest of world,0.18,0.24,0.05
+2016,Timor-Leste,Rest of world,0.17,0.23,0.02
+2016,Guam,Rest of world,0.17,0.22,0.04
+2016,Slovenia,Rest of world,0.15,0.21,0.04
+2016,Israel,Rest of world,0.14,0.19,0.03
+2016,Oman,Rest of world,0.14,0.19,0.1
+2016,Ukraine,Rest of world,0.14,0.18,0.11
+2016,Curaçao,Rest of world,0.13,0.18,0.05
+2016,Samoa,Rest of world,0.12,0.16,0.04
+2016,Bahrain,Rest of world,0.12,0.16,0.1
+2016,Iceland,Rest of world,0.12,0.16,0.02
+2016,Dominican Rep.,Rest of world,0.11,0.15,0.04
+2016,Bangladesh,Rest of world,0.11,0.15,0.03
+2016,Austria,Rest of world,0.11,0.15,0.01
+2016,Christmas Isds,Rest of world,0.11,0.14,0.01
+2016,Chile,Rest of world,0.11,0.14,0.01
+2016,Costa Rica,Rest of world,0.1,0.13,0.04
+2016,Maldives,Rest of world,0.1,0.13,0.01
+2016,Peru,Rest of world,0.09,0.12,0.01
+2016,French Polynesia,Rest of world,0.08,0.11,0.01
+2016,Tonga,Rest of world,0.08,0.11,0.02
+2016,Antarctica,Rest of world,0.08,0.1,0.0
+2016,Panama,Rest of world,0.08,0.1,0.03
+2016,Romania,Rest of world,0.07,0.09,0.02
+2016,Greece,Rest of world,0.06,0.09,0.0
+2016,Cyprus,Rest of world,0.06,0.08,0.01
+2016,Br. Virgin Isds,Rest of world,0.06,0.08,0.02
+2016,Mongolia,Rest of world,0.05,0.07,0.01
+2016,Suriname,Rest of world,0.05,0.07,0.02
+2016,Kiribati,Rest of world,0.05,0.07,0.01
+2016,Türkiye,Rest of world,0.05,0.07,0.01
+2016,Lao People's Dem. Rep.,Rest of world,0.05,0.06,0.02
+2016,Tuvalu,Rest of world,0.05,0.06,0.04
+2016,Guyana,Rest of world,0.05,0.06,0.01
+2016,Cuba,Rest of world,0.04,0.06,0.01
+2016,Cocos Isds,Rest of world,0.04,0.05,0.0
+2016,Dominica,Rest of world,0.04,0.05,0.0
+2016,Colombia,Rest of world,0.03,0.05,0.01
+2016,Naoero,Rest of world,0.03,0.05,0.01
+2016,Sierra Leone,Rest of world,0.03,0.04,0.01
+2016,Marshall Isds,Rest of world,0.03,0.04,0.01
+2016,Georgia,Rest of world,0.03,0.04,0.0
+2016,FS Micronesia,Rest of world,0.03,0.04,0.01
+2016,Czechia,Rest of world,0.03,0.03,0.0
+2016,Bulgaria,Rest of world,0.02,0.03,0.0
+2016,United Rep. of Tanzania,Rest of world,0.02,0.03,0.01
+2016,Seychelles,Rest of world,0.02,0.03,0.0
+2016,American Samoa,Rest of world,0.02,0.02,0.0
+2016,Hungary,Rest of world,0.02,0.02,0.0
+2016,Argentina,Rest of world,0.01,0.02,0.02
+2016,Serbia,Rest of world,0.01,0.02,0.0
+2016,Eswatini,Rest of world,0.01,0.01,0.0
+2016,N. Mariana Isds,Rest of world,0.01,0.01,0.0
+2016,Pakistan,Rest of world,0.01,0.01,0.0
+2016,Egypt,Rest of world,0.01,0.01,0.0
+2016,Palau,Rest of world,0.01,0.01,0.0
+2016,Iran,Rest of world,0.01,0.01,0.0
+2016,Lebanon,Rest of world,0.0,0.01,0.0
+2016,Brunei Darussalam,Rest of world,0.0,0.0,0.0
+2016,Niue,Rest of world,0.0,0.0,0.0
+2016,Portugal,Rest of world,0.0,0.0,0.0
+2016,Pitcairn,Rest of world,0.0,0.0,0.0
+2016,Mali,Rest of world,0.0,0.0,0.0
+2017,China,Northeast Asia,633.93,824.26,149.84
+2017,USA,North America,357.17,464.4,176.04
+2017,UK,Europe,274.4,356.78,225.66
+2017,Canada,North America,143.08,186.03,60.96
+2017,Hong Kong,Northeast Asia,110.59,143.79,10.35
+2017,New Zealand,Oceania,66.44,86.38,30.14
+2017,Singapore,Southeast Asia,60.98,79.29,6.78
+2017,Netherlands,Europe,47.32,61.52,31.56
+2017,Malaysia,Southeast Asia,37.34,48.55,4.3
+2017,Japan,Northeast Asia,35.58,46.26,13.3
+2017,Germany,Europe,29.69,38.6,24.78
+2017,Belgium,Europe,21.03,27.35,15.7
+2017,United Arab Emirates,Rest of world,18.51,24.06,3.68
+2017,Thailand,Southeast Asia,16.0,20.81,4.91
+2017,Sweden,Europe,15.91,20.69,5.85
+2017,Denmark,Europe,15.47,20.12,9.62
+2017,Finland,Europe,13.23,17.2,6.91
+2017,Ireland,Europe,11.09,14.42,4.04
+2017,South Korea,Northeast Asia,10.8,14.04,2.42
+2017,Taiwan,Northeast Asia,10.35,13.46,2.11
+2017,Philippines,Southeast Asia,9.16,11.91,2.67
+2017,Italy,Rest of world,8.02,10.43,6.89
+2017,Bunkers,Rest of world,6.0,7.81,0.91
+2017,South Africa,Rest of world,5.33,6.93,0.17
+2017,Norway,Europe,5.26,6.84,2.16
+2017,India,Rest of world,4.21,5.47,1.49
+2017,Indonesia,Southeast Asia,4.03,5.25,0.68
+2017,Viet Nam,Southeast Asia,3.97,5.16,0.75
+2017,Latvia,Rest of world,3.85,5.0,1.4
+2017,France,Europe,3.33,4.33,2.15
+2017,Fiji,Oceania,3.1,4.03,0.83
+2017,Poland,Rest of world,2.71,3.52,1.16
+2017,Papua New Guinea,Oceania,2.66,3.46,0.55
+2017,Brazil,Rest of world,1.55,2.01,0.44
+2017,Switzerland,Europe,1.46,1.89,0.46
+2017,Spain,Rest of world,1.37,1.78,1.32
+2017,Sri Lanka,Rest of world,1.06,1.38,0.24
+2017,Qatar,Rest of world,0.99,1.29,0.36
+2017,Vanuatu,Rest of world,0.85,1.1,0.29
+2017,Uruguay,Rest of world,0.85,1.1,0.14
+2017,New Caledonia,Rest of world,0.74,0.96,0.34
+2017,Russian Federation,Rest of world,0.72,0.93,0.1
+2017,Cambodia,Rest of world,0.71,0.93,0.15
+2017,Mexico,Rest of world,0.59,0.77,0.14
+2017,Solomon Isds,Rest of world,0.57,0.74,0.12
+2017,Estonia,Rest of world,0.55,0.72,0.17
+2017,Nigeria,Rest of world,0.45,0.59,0.11
+2017,Jamaica,Rest of world,0.43,0.56,0.15
+2017,Lithuania,Rest of world,0.39,0.51,0.11
+2017,Trinidad and Tobago,Rest of world,0.39,0.51,0.13
+2017,Barbados,Rest of world,0.39,0.51,0.11
+2017,Slovenia,Rest of world,0.39,0.51,0.08
+2017,Norfolk Isds,Rest of world,0.36,0.47,0.08
+2017,"China, Macao SAR",Rest of world,0.34,0.44,0.05
+2017,Kenya,Rest of world,0.33,0.42,0.06
+2017,Nepal,Rest of world,0.3,0.39,0.16
+2017,Ukraine,Rest of world,0.27,0.35,0.05
+2017,Cook Isds,Rest of world,0.27,0.35,0.06
+2017,Malta,Rest of world,0.26,0.34,0.05
+2017,Bahamas,Rest of world,0.25,0.33,0.08
+2017,Saint Helena,Rest of world,0.25,0.32,0.03
+2017,Myanmar,Rest of world,0.22,0.29,0.06
+2017,Samoa,Rest of world,0.21,0.27,0.06
+2017,Oman,Rest of world,0.2,0.26,0.14
+2017,Mauritius,Rest of world,0.2,0.26,0.03
+2017,Israel,Rest of world,0.19,0.24,0.04
+2017,Bahrain,Rest of world,0.18,0.23,0.15
+2017,Christmas Isds,Rest of world,0.16,0.21,0.02
+2017,Iceland,Rest of world,0.15,0.2,0.03
+2017,Bermuda,Rest of world,0.15,0.2,0.05
+2017,Maldives,Rest of world,0.15,0.19,0.03
+2017,Austria,Rest of world,0.14,0.19,0.01
+2017,Argentina,Rest of world,0.14,0.18,0.17
+2017,Timor-Leste,Rest of world,0.13,0.17,0.02
+2017,Curaçao,Rest of world,0.13,0.17,0.05
+2017,Cyprus,Rest of world,0.13,0.17,0.02
+2017,Guam,Rest of world,0.12,0.16,0.03
+2017,Dominican Rep.,Rest of world,0.12,0.15,0.04
+2017,Romania,Rest of world,0.11,0.15,0.03
+2017,Cayman Isds,Rest of world,0.11,0.14,0.04
+2017,Bulgaria,Rest of world,0.1,0.13,0.06
+2017,Mongolia,Rest of world,0.1,0.12,0.02
+2017,French Polynesia,Rest of world,0.09,0.12,0.01
+2017,Lao People's Dem. Rep.,Rest of world,0.08,0.11,0.01
+2017,Panama,Rest of world,0.08,0.1,0.03
+2017,Greece,Rest of world,0.07,0.1,0.0
+2017,Tonga,Rest of world,0.07,0.1,0.02
+2017,Suriname,Rest of world,0.07,0.09,0.02
+2017,Chile,Rest of world,0.07,0.09,0.01
+2017,United Rep. of Tanzania,Rest of world,0.07,0.09,0.01
+2017,Guyana,Rest of world,0.06,0.07,0.01
+2017,Türkiye,Rest of world,0.05,0.07,0.01
+2017,American Samoa,Rest of world,0.05,0.07,0.01
+2017,Saint Lucia,Rest of world,0.05,0.07,0.02
+2017,FS Micronesia,Rest of world,0.05,0.06,0.01
+2017,Tuvalu,Rest of world,0.04,0.05,0.04
+2017,Cocos Isds,Rest of world,0.04,0.05,0.0
+2017,Dominica,Rest of world,0.04,0.05,0.0
+2017,Sierra Leone,Rest of world,0.04,0.05,0.01
+2017,Costa Rica,Rest of world,0.04,0.05,0.01
+2017,Colombia,Rest of world,0.03,0.04,0.01
+2017,Pakistan,Rest of world,0.03,0.04,0.0
+2017,Bangladesh,Rest of world,0.03,0.04,0.01
+2017,Seychelles,Rest of world,0.03,0.04,0.01
+2017,Naoero,Rest of world,0.03,0.03,0.01
+2017,Antarctica,Rest of world,0.02,0.03,0.0
+2017,Br. Virgin Isds,Rest of world,0.02,0.03,0.01
+2017,Saint Kitts and Nevis,Rest of world,0.02,0.03,0.01
+2017,Peru,Rest of world,0.02,0.02,0.0
+2017,Palau,Rest of world,0.02,0.02,0.0
+2017,Kiribati,Rest of world,0.02,0.02,0.0
+2017,Czechia,Rest of world,0.02,0.02,0.0
+2017,Slovakia,Rest of world,0.01,0.02,0.0
+2017,Marshall Isds,Rest of world,0.01,0.01,0.0
+2017,Lebanon,Rest of world,0.01,0.01,0.0
+2017,Luxembourg,Rest of world,0.01,0.01,0.0
+2017,Mali,Rest of world,0.01,0.01,0.0
+2017,N. Mariana Isds,Rest of world,0.01,0.01,0.0
+2017,Niue,Rest of world,0.0,0.0,0.0
+2017,Kazakhstan,Rest of world,0.0,0.0,0.0
+2017,Eswatini,Rest of world,0.0,0.0,0.0
+2017,Brunei Darussalam,Rest of world,0.0,0.0,0.0
+2017,Senegal,Rest of world,0.0,0.0,0.0
+2018,China,Northeast Asia,761.31,1021.61,163.92
+2018,USA,North America,330.91,444.06,164.27
+2018,UK,Europe,304.01,407.95,245.34
+2018,Canada,North America,155.15,208.2,71.86
+2018,Hong Kong,Northeast Asia,96.07,128.92,8.52
+2018,New Zealand,Oceania,73.9,99.17,33.23
+2018,Singapore,Southeast Asia,69.41,93.14,6.72
+2018,Netherlands,Europe,45.83,61.5,31.56
+2018,Japan,Northeast Asia,43.15,57.9,18.01
+2018,Malaysia,Southeast Asia,25.76,34.56,3.51
+2018,United Arab Emirates,Rest of world,25.36,34.04,4.47
+2018,Belgium,Europe,24.23,32.51,21.63
+2018,Germany,Europe,23.24,31.19,17.41
+2018,Thailand,Southeast Asia,20.35,27.3,6.46
+2018,Denmark,Europe,19.0,25.5,11.76
+2018,Sweden,Europe,17.18,23.06,5.85
+2018,Taiwan,Northeast Asia,15.34,20.59,2.54
+2018,South Korea,Northeast Asia,14.25,19.12,4.53
+2018,Finland,Europe,11.9,15.96,7.33
+2018,India,Rest of world,7.19,9.65,2.48
+2018,Ireland,Europe,6.61,8.87,2.51
+2018,Philippines,Southeast Asia,6.29,8.44,1.73
+2018,Indonesia,Southeast Asia,5.63,7.55,1.01
+2018,Bunkers,Rest of world,5.42,7.28,0.83
+2018,Viet Nam,Southeast Asia,4.97,6.67,1.04
+2018,South Africa,Rest of world,4.42,5.93,0.16
+2018,Norway,Europe,4.25,5.7,1.81
+2018,Latvia,Rest of world,3.87,5.2,1.25
+2018,Fiji,Oceania,3.4,4.56,0.86
+2018,France,Europe,2.96,3.97,1.03
+2018,Papua New Guinea,Oceania,2.89,3.88,0.55
+2018,Spain,Rest of world,2.62,3.52,2.06
+2018,Poland,Rest of world,2.49,3.34,1.16
+2018,Switzerland,Europe,2.15,2.88,1.0
+2018,Brazil,Rest of world,1.48,1.99,0.98
+2018,Italy,Rest of world,1.27,1.7,1.43
+2018,"China, Macao SAR",Rest of world,1.23,1.65,0.08
+2018,Cambodia,Rest of world,1.09,1.46,0.24
+2018,Mexico,Rest of world,1.0,1.34,0.31
+2018,Sri Lanka,Rest of world,0.99,1.33,0.24
+2018,Vanuatu,Rest of world,0.9,1.2,0.34
+2018,Russian Federation,Rest of world,0.86,1.15,0.21
+2018,Uruguay,Rest of world,0.81,1.09,0.13
+2018,Portugal,Rest of world,0.63,0.85,1.2
+2018,Qatar,Rest of world,0.62,0.84,0.25
+2018,Lithuania,Rest of world,0.48,0.65,0.1
+2018,Solomon Isds,Rest of world,0.48,0.64,0.09
+2018,New Caledonia,Rest of world,0.48,0.64,0.22
+2018,Jamaica,Rest of world,0.45,0.6,0.15
+2018,Estonia,Rest of world,0.42,0.56,0.11
+2018,Barbados,Rest of world,0.41,0.55,0.13
+2018,Trinidad and Tobago,Rest of world,0.39,0.53,0.13
+2018,Myanmar,Rest of world,0.35,0.47,0.08
+2018,Ukraine,Rest of world,0.34,0.46,0.06
+2018,Maldives,Rest of world,0.29,0.39,0.1
+2018,Norfolk Isds,Rest of world,0.28,0.38,0.07
+2018,Bahrain,Rest of world,0.28,0.38,0.19
+2018,Oman,Rest of world,0.27,0.36,0.2
+2018,Cayman Isds,Rest of world,0.27,0.36,0.07
+2018,Cook Isds,Rest of world,0.26,0.35,0.07
+2018,Malta,Rest of world,0.26,0.34,0.05
+2018,Kenya,Rest of world,0.26,0.34,0.06
+2018,Bahamas,Rest of world,0.21,0.28,0.06
+2018,Mongolia,Rest of world,0.2,0.27,0.04
+2018,Timor-Leste,Rest of world,0.2,0.27,0.04
+2018,Slovenia,Rest of world,0.18,0.24,0.04
+2018,Cyprus,Rest of world,0.17,0.22,0.03
+2018,Saint Helena,Rest of world,0.15,0.21,0.02
+2018,Samoa,Rest of world,0.15,0.2,0.05
+2018,Israel,Rest of world,0.15,0.2,0.03
+2018,Guam,Rest of world,0.14,0.19,0.03
+2018,Mauritius,Rest of world,0.13,0.17,0.02
+2018,Greece,Rest of world,0.11,0.15,0.01
+2018,Bermuda,Rest of world,0.1,0.13,0.02
+2018,Austria,Rest of world,0.1,0.13,0.01
+2018,Christmas Isds,Rest of world,0.1,0.13,0.01
+2018,Lao People's Dem. Rep.,Rest of world,0.1,0.13,0.01
+2018,Dominican Rep.,Rest of world,0.09,0.13,0.03
+2018,Costa Rica,Rest of world,0.09,0.12,0.04
+2018,Panama,Rest of world,0.08,0.11,0.02
+2018,Peru,Rest of world,0.08,0.11,0.01
+2018,Curaçao,Rest of world,0.08,0.11,0.03
+2018,Colombia,Rest of world,0.07,0.1,0.02
+2018,Czechia,Rest of world,0.07,0.09,0.01
+2018,French Polynesia,Rest of world,0.07,0.09,0.01
+2018,Bangladesh,Rest of world,0.07,0.09,0.02
+2018,Ghana,Rest of world,0.06,0.09,0.01
+2018,Nigeria,Rest of world,0.06,0.08,0.01
+2018,Chile,Rest of world,0.06,0.08,0.01
+2018,Dominica,Rest of world,0.06,0.08,0.01
+2018,Türkiye,Rest of world,0.06,0.08,0.02
+2018,American Samoa,Rest of world,0.06,0.08,0.02
+2018,Suriname,Rest of world,0.05,0.07,0.02
+2018,Saint Lucia,Rest of world,0.05,0.07,0.02
+2018,Cocos Isds,Rest of world,0.05,0.06,0.01
+2018,Tonga,Rest of world,0.05,0.06,0.01
+2018,FS Micronesia,Rest of world,0.04,0.06,0.01
+2018,Nepal,Rest of world,0.04,0.06,0.01
+2018,Tuvalu,Rest of world,0.04,0.05,0.03
+2018,Bulgaria,Rest of world,0.04,0.05,0.01
+2018,Sierra Leone,Rest of world,0.04,0.05,0.01
+2018,Marshall Isds,Rest of world,0.03,0.05,0.01
+2018,Azerbaijan,Rest of world,0.03,0.04,0.0
+2018,Br. Virgin Isds,Rest of world,0.03,0.04,0.0
+2018,Grenada,Rest of world,0.03,0.04,0.01
+2018,Romania,Rest of world,0.03,0.04,0.0
+2018,Benin,Rest of world,0.03,0.03,0.0
+2018,Dem. Rep. of the Congo,Rest of world,0.02,0.03,0.0
+2018,Antarctica,Rest of world,0.02,0.03,0.0
+2018,Naoero,Rest of world,0.02,0.03,0.0
+2018,Kiribati,Rest of world,0.02,0.02,0.01
+2018,N. Mariana Isds,Rest of world,0.02,0.02,0.0
+2018,Palau,Rest of world,0.02,0.02,0.0
+2018,Seychelles,Rest of world,0.02,0.02,0.0
+2018,Belarus,Rest of world,0.01,0.02,0.0
+2018,Luxembourg,Rest of world,0.01,0.02,0.0
+2018,Guyana,Rest of world,0.01,0.02,0.0
+2018,Pakistan,Rest of world,0.01,0.01,0.0
+2018,Serbia,Rest of world,0.01,0.01,0.0
+2018,El Salvador,Rest of world,0.01,0.01,0.0
+2018,Lebanon,Rest of world,0.01,0.01,0.0
+2018,Cuba,Rest of world,0.01,0.01,0.0
+2018,Saudi Arabia,Rest of world,0.0,0.01,0.0
+2018,Brunei Darussalam,Rest of world,0.0,0.01,0.0
+2018,Eswatini,Rest of world,0.0,0.01,0.0
+2018,Niue,Rest of world,0.0,0.0,0.0
+2018,Saint Vincent and the Grenadines,Rest of world,0.0,0.0,0.0
+2019,China,Northeast Asia,790.31,1135.17,135.48
+2019,USA,North America,301.95,433.71,139.73
+2019,UK,Europe,256.9,369.0,220.86
+2019,Canada,North America,128.68,184.83,55.13
+2019,Hong Kong,Northeast Asia,87.5,125.68,10.86
+2019,Singapore,Southeast Asia,73.05,104.93,7.65
+2019,New Zealand,Oceania,66.72,95.83,30.45
+2019,Netherlands,Europe,41.68,59.86,26.85
+2019,Japan,Northeast Asia,37.84,54.36,16.81
+2019,Malaysia,Southeast Asia,24.84,35.67,2.91
+2019,United Arab Emirates,Rest of world,23.71,34.05,4.23
+2019,Belgium,Europe,22.95,32.97,21.0
+2019,Denmark,Europe,20.04,28.79,14.83
+2019,Germany,Europe,19.96,28.67,16.04
+2019,Thailand,Southeast Asia,16.77,24.09,4.45
+2019,Sweden,Europe,14.87,21.37,5.2
+2019,South Korea,Northeast Asia,14.81,21.27,3.15
+2019,Taiwan,Northeast Asia,12.57,18.05,3.59
+2019,Indonesia,Southeast Asia,9.61,13.81,1.06
+2019,Philippines,Southeast Asia,9.04,12.99,2.64
+2019,Finland,Europe,8.92,12.81,5.03
+2019,Ireland,Europe,5.82,8.36,2.28
+2019,South Africa,Rest of world,5.41,7.77,0.43
+2019,Viet Nam,Southeast Asia,5.2,7.46,1.12
+2019,Latvia,Rest of world,4.97,7.13,1.69
+2019,India,Rest of world,4.85,6.97,1.69
+2019,Bunkers,Rest of world,4.36,6.26,0.7
+2019,Norway,Europe,3.98,5.72,1.75
+2019,Fiji,Oceania,3.04,4.37,0.87
+2019,France,Europe,2.99,4.29,0.98
+2019,Poland,Rest of world,2.88,4.14,1.37
+2019,Papua New Guinea,Oceania,2.7,3.88,0.56
+2019,Switzerland,Europe,1.73,2.48,0.4
+2019,Cambodia,Rest of world,1.23,1.77,0.29
+2019,Vanuatu,Rest of world,1.06,1.52,0.47
+2019,Russian Federation,Rest of world,1.05,1.51,0.22
+2019,Brazil,Rest of world,1.0,1.43,0.27
+2019,Spain,Rest of world,0.93,1.34,0.54
+2019,Mexico,Rest of world,0.9,1.3,0.19
+2019,Sri Lanka,Rest of world,0.83,1.19,0.22
+2019,Slovenia,Rest of world,0.71,1.01,0.18
+2019,Qatar,Rest of world,0.66,0.95,0.26
+2019,Italy,Rest of world,0.57,0.82,0.46
+2019,Maldives,Rest of world,0.49,0.7,0.15
+2019,Jamaica,Rest of world,0.48,0.69,0.17
+2019,Myanmar,Rest of world,0.47,0.67,0.11
+2019,"China, Macao SAR",Rest of world,0.46,0.66,0.05
+2019,Ukraine,Rest of world,0.45,0.65,0.12
+2019,Solomon Isds,Rest of world,0.41,0.59,0.11
+2019,Bermuda,Rest of world,0.39,0.56,0.08
+2019,Cyprus,Rest of world,0.38,0.55,0.09
+2019,Uruguay,Rest of world,0.38,0.54,0.07
+2019,New Caledonia,Rest of world,0.37,0.53,0.16
+2019,Trinidad and Tobago,Rest of world,0.35,0.5,0.12
+2019,Lithuania,Rest of world,0.34,0.49,0.08
+2019,Estonia,Rest of world,0.33,0.47,0.09
+2019,Kenya,Rest of world,0.31,0.45,0.09
+2019,Cayman Isds,Rest of world,0.3,0.44,0.07
+2019,Norfolk Isds,Rest of world,0.3,0.43,0.08
+2019,Nepal,Rest of world,0.28,0.4,0.12
+2019,Bahamas,Rest of world,0.28,0.4,0.08
+2019,Malta,Rest of world,0.27,0.38,0.05
+2019,Cook Isds,Rest of world,0.26,0.38,0.06
+2019,Israel,Rest of world,0.26,0.37,0.05
+2019,Bangladesh,Rest of world,0.23,0.33,0.04
+2019,Bahrain,Rest of world,0.22,0.32,0.16
+2019,Barbados,Rest of world,0.21,0.3,0.06
+2019,Guam,Rest of world,0.16,0.24,0.04
+2019,Timor-Leste,Rest of world,0.16,0.23,0.03
+2019,Czechia,Rest of world,0.14,0.2,0.02
+2019,Samoa,Rest of world,0.13,0.19,0.04
+2019,Mauritius,Rest of world,0.13,0.19,0.03
+2019,Mongolia,Rest of world,0.12,0.18,0.03
+2019,Colombia,Rest of world,0.11,0.16,0.03
+2019,Morocco,Rest of world,0.11,0.16,0.02
+2019,Tonga,Rest of world,0.11,0.15,0.03
+2019,Greece,Rest of world,0.1,0.14,0.01
+2019,Austria,Rest of world,0.09,0.13,0.01
+2019,Saint Helena,Rest of world,0.09,0.13,0.01
+2019,Curaçao,Rest of world,0.09,0.12,0.03
+2019,Panama,Rest of world,0.08,0.12,0.02
+2019,Dominican Rep.,Rest of world,0.08,0.11,0.03
+2019,Chile,Rest of world,0.07,0.11,0.01
+2019,Christmas Isds,Rest of world,0.07,0.1,0.01
+2019,Türkiye,Rest of world,0.07,0.1,0.02
+2019,Suriname,Rest of world,0.07,0.1,0.02
+2019,American Samoa,Rest of world,0.07,0.1,0.02
+2019,Saint Lucia,Rest of world,0.05,0.08,0.02
+2019,French Polynesia,Rest of world,0.05,0.08,0.01
+2019,FS Micronesia,Rest of world,0.05,0.07,0.01
+2019,Romania,Rest of world,0.05,0.07,0.01
+2019,Belarus,Rest of world,0.05,0.07,0.0
+2019,Lao People's Dem. Rep.,Rest of world,0.04,0.06,0.01
+2019,Dominica,Rest of world,0.04,0.05,0.01
+2019,Tuvalu,Rest of world,0.04,0.05,0.03
+2019,Cocos Isds,Rest of world,0.03,0.05,0.0
+2019,Nigeria,Rest of world,0.03,0.04,0.01
+2019,Guyana,Rest of world,0.03,0.04,0.0
+2019,Antarctica,Rest of world,0.03,0.04,0.0
+2019,Grenada,Rest of world,0.03,0.04,0.01
+2019,Seychelles,Rest of world,0.02,0.04,0.0
+2019,Cameroon,Rest of world,0.02,0.03,0.0
+2019,N. Mariana Isds,Rest of world,0.02,0.03,0.01
+2019,Naoero,Rest of world,0.02,0.03,0.01
+2019,Marshall Isds,Rest of world,0.02,0.03,0.0
+2019,Kiribati,Rest of world,0.02,0.03,0.01
+2019,Palau,Rest of world,0.02,0.02,0.0
+2019,Belize,Rest of world,0.01,0.02,0.0
+2019,Guatemala,Rest of world,0.01,0.02,0.0
+2019,Serbia,Rest of world,0.01,0.02,0.0
+2019,Saudi Arabia,Rest of world,0.01,0.01,0.0
+2019,Peru,Rest of world,0.01,0.01,0.0
+2019,Lebanon,Rest of world,0.01,0.01,0.0
+2019,Niger,Rest of world,0.01,0.01,0.0
+2019,Pitcairn,Rest of world,0.01,0.01,0.0
+2019,Bulgaria,Rest of world,0.0,0.0,0.0
+2019,Brunei Darussalam,Rest of world,0.0,0.0,0.0
+2019,Niue,Rest of world,0.0,0.0,0.0
+2019,Haiti,Rest of world,0.0,0.0,0.0
+2019,Ghana,Rest of world,0.0,0.0,0.0
+2020,China,Northeast Asia,681.28,981.11,96.57
+2020,UK,Europe,346.27,498.66,273.71
+2020,USA,North America,304.21,438.09,138.72
+2020,Canada,North America,132.82,191.27,56.17
+2020,Hong Kong,Northeast Asia,99.69,143.57,8.15
+2020,New Zealand,Oceania,76.5,110.17,33.65
+2020,Singapore,Southeast Asia,57.1,82.22,7.13
+2020,Netherlands,Europe,38.54,55.5,22.91
+2020,Belgium,Europe,32.21,46.38,28.4
+2020,Malaysia,Southeast Asia,30.01,43.21,2.92
+2020,Japan,Northeast Asia,28.99,41.75,12.35
+2020,Denmark,Europe,27.44,39.52,20.03
+2020,Germany,Europe,22.06,31.77,17.85
+2020,Sweden,Europe,19.05,27.43,5.89
+2020,South Korea,Northeast Asia,18.56,26.73,3.98
+2020,Thailand,Southeast Asia,15.9,22.9,3.37
+2020,Taiwan,Northeast Asia,12.92,18.6,2.51
+2020,Ireland,Europe,9.99,14.39,3.65
+2020,Finland,Europe,9.46,13.63,5.38
+2020,United Arab Emirates,Rest of world,9.06,13.05,2.33
+2020,Latvia,Rest of world,8.39,12.08,2.22
+2020,Indonesia,Southeast Asia,7.84,11.29,0.51
+2020,Philippines,Southeast Asia,6.04,8.69,1.48
+2020,Norway,Europe,5.78,8.32,2.65
+2020,India,Rest of world,4.8,6.91,1.47
+2020,France,Europe,4.15,5.97,1.6
+2020,Viet Nam,Southeast Asia,2.66,3.82,0.5
+2020,Poland,Rest of world,2.55,3.67,1.26
+2020,Papua New Guinea,Oceania,2.02,2.91,0.42
+2020,Bunkers,Rest of world,1.36,1.96,0.23
+2020,Brazil,Rest of world,1.3,1.87,0.37
+2020,Fiji,Oceania,1.25,1.8,0.42
+2020,Russian Federation,Rest of world,1.13,1.63,0.19
+2020,Spain,Rest of world,1.02,1.47,0.68
+2020,Mexico,Rest of world,0.94,1.35,0.22
+2020,Switzerland,Europe,0.84,1.21,0.23
+2020,Cambodia,Rest of world,0.83,1.19,0.17
+2020,Vanuatu,Rest of world,0.82,1.18,0.4
+2020,Qatar,Rest of world,0.73,1.05,0.45
+2020,Sri Lanka,Rest of world,0.58,0.84,0.15
+2020,Solomon Isds,Rest of world,0.56,0.81,0.25
+2020,South Africa,Rest of world,0.54,0.78,0.04
+2020,"China, Macao SAR",Rest of world,0.47,0.68,0.03
+2020,Italy,Rest of world,0.46,0.66,0.19
+2020,Ukraine,Rest of world,0.39,0.56,0.13
+2020,Jamaica,Rest of world,0.38,0.54,0.13
+2020,Lithuania,Rest of world,0.36,0.52,0.09
+2020,New Caledonia,Rest of world,0.36,0.52,0.17
+2020,Trinidad and Tobago,Rest of world,0.33,0.47,0.12
+2020,Myanmar,Rest of world,0.32,0.46,0.03
+2020,Bermuda,Rest of world,0.25,0.36,0.03
+2020,Slovenia,Rest of world,0.25,0.36,0.05
+2020,Kenya,Rest of world,0.25,0.36,0.06
+2020,Panama,Rest of world,0.24,0.35,0.07
+2020,Barbados,Rest of world,0.24,0.34,0.06
+2020,Cayman Isds,Rest of world,0.24,0.34,0.07
+2020,Cyprus,Rest of world,0.23,0.33,0.06
+2020,Bahrain,Rest of world,0.21,0.3,0.15
+2020,Timor-Leste,Rest of world,0.18,0.25,0.04
+2020,Norfolk Isds,Rest of world,0.17,0.25,0.06
+2020,Israel,Rest of world,0.17,0.25,0.03
+2020,Malta,Rest of world,0.17,0.25,0.04
+2020,Cook Isds,Rest of world,0.17,0.24,0.05
+2020,Nigeria,Rest of world,0.15,0.22,0.04
+2020,Bahamas,Rest of world,0.15,0.22,0.05
+2020,Colombia,Rest of world,0.14,0.2,0.04
+2020,Estonia,Rest of world,0.13,0.19,0.03
+2020,Dominican Rep.,Rest of world,0.12,0.17,0.02
+2020,Christmas Isds,Rest of world,0.11,0.17,0.01
+2020,Algeria,Rest of world,0.11,0.16,0.1
+2020,Türkiye,Rest of world,0.11,0.16,0.02
+2020,Tonga,Rest of world,0.09,0.13,0.04
+2020,Samoa,Rest of world,0.09,0.13,0.03
+2020,Guam,Rest of world,0.08,0.12,0.02
+2020,Dominica,Rest of world,0.08,0.11,0.01
+2020,Austria,Rest of world,0.08,0.11,0.0
+2020,Benin,Rest of world,0.07,0.1,0.01
+2020,Maldives,Rest of world,0.07,0.1,0.03
+2020,Niger,Rest of world,0.07,0.1,0.02
+2020,Curaçao,Rest of world,0.06,0.09,0.02
+2020,Saint Lucia,Rest of world,0.05,0.08,0.02
+2020,Grenada,Rest of world,0.05,0.08,0.02
+2020,Mauritius,Rest of world,0.05,0.07,0.01
+2020,Greece,Rest of world,0.04,0.06,0.0
+2020,American Samoa,Rest of world,0.04,0.06,0.01
+2020,Antarctica,Rest of world,0.04,0.05,0.0
+2020,Czechia,Rest of world,0.04,0.05,0.0
+2020,Suriname,Rest of world,0.03,0.05,0.01
+2020,Belarus,Rest of world,0.03,0.05,0.0
+2020,Cocos Isds,Rest of world,0.03,0.04,0.0
+2020,FS Micronesia,Rest of world,0.03,0.04,0.01
+2020,Palau,Rest of world,0.03,0.04,0.01
+2020,Naoero,Rest of world,0.03,0.04,0.0
+2020,Chile,Rest of world,0.02,0.03,0.0
+2020,Ghana,Rest of world,0.02,0.03,0.01
+2020,Romania,Rest of world,0.02,0.03,0.0
+2020,Peru,Rest of world,0.02,0.03,0.0
+2020,Kiribati,Rest of world,0.02,0.03,0.01
+2020,Brunei Darussalam,Rest of world,0.01,0.02,0.0
+2020,Saint Helena,Rest of world,0.01,0.02,0.0
+2020,French Polynesia,Rest of world,0.01,0.01,0.0
+2020,Luxembourg,Rest of world,0.0,0.01,0.0
+2020,Haiti,Rest of world,0.0,0.01,0.0
+2020,Argentina,Rest of world,0.0,0.0,0.0
+2020,Nepal,Rest of world,0.0,0.0,0.0
+2020,Seychelles,Rest of world,0.0,0.0,0.0
+2020,Portugal,Rest of world,0.0,0.0,0.0
+2020,Pakistan,Rest of world,0.0,0.0,0.0
+2020,Tuvalu,Rest of world,0.0,0.0,0.0
+2020,Marshall Isds,Rest of world,0.0,0.0,0.0
+2020,Oman,Rest of world,0.0,0.0,0.0
+2020,N. Mariana Isds,Rest of world,0.0,0.0,0.0
+2020,Bhutan,Rest of world,0.0,0.0,0.0
+2020,Mongolia,Rest of world,0.0,0.0,0.0
+2021,UK,Europe,363.54,484.92,247.11
+2021,USA,North America,315.5,420.83,126.66
+2021,Hong Kong,Northeast Asia,150.81,201.16,8.81
+2021,Canada,North America,125.22,167.03,48.63
+2021,Singapore,Southeast Asia,122.3,163.13,7.97
+2021,New Zealand,Oceania,85.48,114.01,32.27
+2021,Netherlands,Europe,48.15,64.22,28.09
+2021,Japan,Northeast Asia,38.95,51.96,12.25
+2021,South Korea,Northeast Asia,36.92,49.25,6.27
+2021,Denmark,Europe,33.19,44.28,22.41
+2021,Belgium,Europe,29.37,39.18,24.41
+2021,Malaysia,Southeast Asia,26.23,34.98,2.49
+2021,Taiwan,Northeast Asia,23.5,31.34,3.3
+2021,China,Northeast Asia,22.61,30.16,6.37
+2021,Thailand,Southeast Asia,21.36,28.5,3.08
+2021,Sweden,Europe,19.47,25.97,5.5
+2021,Germany,Europe,17.6,23.47,11.55
+2021,United Arab Emirates,Rest of world,13.12,17.5,3.57
+2021,Indonesia,Southeast Asia,11.63,15.51,0.79
+2021,Ireland,Europe,10.2,13.61,3.04
+2021,Philippines,Southeast Asia,9.74,12.99,2.15
+2021,India,Rest of world,9.0,12.0,2.57
+2021,Finland,Europe,8.82,11.76,4.42
+2021,Latvia,Rest of world,8.6,11.47,2.36
+2021,Norway,Europe,7.07,9.43,2.79
+2021,Poland,Rest of world,6.27,8.36,1.98
+2021,France,Europe,6.21,8.28,4.17
+2021,Viet Nam,Southeast Asia,4.39,5.86,0.72
+2021,South Africa,Rest of world,3.43,4.57,0.02
+2021,Papua New Guinea,Oceania,2.85,3.8,0.37
+2021,Fiji,Oceania,2.72,3.63,0.97
+2021,Christmas Isds,Rest of world,1.32,1.76,0.02
+2021,Cambodia,Rest of world,1.24,1.66,0.17
+2021,Brazil,Rest of world,1.14,1.52,0.33
+2021,Switzerland,Europe,1.12,1.49,0.27
+2021,Vanuatu,Rest of world,1.01,1.35,0.47
+2021,Russian Federation,Rest of world,0.97,1.3,0.15
+2021,Mexico,Rest of world,0.95,1.27,0.19
+2021,"China, Macao SAR",Rest of world,0.88,1.17,0.04
+2021,Qatar,Rest of world,0.78,1.04,0.25
+2021,Spain,Rest of world,0.78,1.04,0.46
+2021,Maldives,Rest of world,0.63,0.84,0.17
+2021,Ukraine,Rest of world,0.57,0.77,0.19
+2021,Solomon Isds,Rest of world,0.55,0.74,0.11
+2021,Jamaica,Rest of world,0.51,0.68,0.18
+2021,Slovenia,Rest of world,0.5,0.66,0.09
+2021,Trinidad and Tobago,Rest of world,0.47,0.63,0.17
+2021,Lithuania,Rest of world,0.43,0.57,0.08
+2021,Kenya,Rest of world,0.42,0.56,0.13
+2021,Sri Lanka,Rest of world,0.41,0.55,0.11
+2021,Norfolk Isds,Rest of world,0.37,0.5,0.08
+2021,New Caledonia,Rest of world,0.37,0.49,0.13
+2021,Cook Isds,Rest of world,0.34,0.46,0.1
+2021,Nepal,Rest of world,0.32,0.43,0.11
+2021,Barbados,Rest of world,0.31,0.41,0.1
+2021,Italy,Rest of world,0.26,0.34,0.15
+2021,Bahamas,Rest of world,0.25,0.34,0.08
+2021,Bermuda,Rest of world,0.24,0.33,0.03
+2021,Israel,Rest of world,0.22,0.29,0.05
+2021,Malta,Rest of world,0.21,0.28,0.04
+2021,Cayman Isds,Rest of world,0.21,0.27,0.05
+2021,Greece,Rest of world,0.2,0.26,0.01
+2021,Estonia,Rest of world,0.2,0.26,0.06
+2021,Uruguay,Rest of world,0.19,0.25,0.02
+2021,Samoa,Rest of world,0.19,0.25,0.06
+2021,Türkiye,Rest of world,0.18,0.23,0.04
+2021,Guam,Rest of world,0.16,0.21,0.04
+2021,Curaçao,Rest of world,0.15,0.2,0.05
+2021,Tonga,Rest of world,0.15,0.2,0.04
+2021,Colombia,Rest of world,0.14,0.19,0.05
+2021,Bahrain,Rest of world,0.13,0.18,0.08
+2021,Georgia,Rest of world,0.13,0.18,0.08
+2021,Bulgaria,Rest of world,0.12,0.15,0.01
+2021,American Samoa,Rest of world,0.11,0.15,0.03
+2021,Romania,Rest of world,0.1,0.13,0.02
+2021,Dominican Rep.,Rest of world,0.08,0.11,0.03
+2021,Palau,Rest of world,0.08,0.11,0.0
+2021,Timor-Leste,Rest of world,0.08,0.1,0.02
+2021,Cocos Isds,Rest of world,0.08,0.1,0.01
+2021,Mongolia,Rest of world,0.08,0.1,0.02
+2021,Czechia,Rest of world,0.07,0.1,0.01
+2021,Nigeria,Rest of world,0.07,0.09,0.04
+2021,Bunkers,Rest of world,0.06,0.09,0.01
+2021,Ghana,Rest of world,0.06,0.08,0.02
+2021,Austria,Rest of world,0.06,0.07,0.0
+2021,Grenada,Rest of world,0.05,0.07,0.02
+2021,Saint Lucia,Rest of world,0.05,0.07,0.02
+2021,Cyprus,Rest of world,0.05,0.07,0.01
+2021,Costa Rica,Rest of world,0.05,0.06,0.0
+2021,Mauritius,Rest of world,0.04,0.06,0.01
+2021,Antigua and Barbuda,Rest of world,0.04,0.05,0.0
+2021,Niger,Rest of world,0.04,0.05,0.01
+2021,Bangladesh,Rest of world,0.04,0.05,0.01
+2021,FS Micronesia,Rest of world,0.04,0.05,0.01
+2021,Panama,Rest of world,0.04,0.05,0.01
+2021,Cameroon,Rest of world,0.03,0.04,0.01
+2021,Uganda,Rest of world,0.03,0.04,0.0
+2021,Naoero,Rest of world,0.03,0.04,0.0
+2021,Suriname,Rest of world,0.03,0.04,0.01
+2021,Tuvalu,Rest of world,0.03,0.04,0.02
+2021,Oman,Rest of world,0.03,0.03,0.01
+2021,Peru,Rest of world,0.02,0.03,0.0
+2021,Brunei Darussalam,Rest of world,0.02,0.03,0.0
+2021,N. Mariana Isds,Rest of world,0.02,0.03,0.01
+2021,Portugal,Rest of world,0.02,0.03,0.0
+2021,Myanmar,Rest of world,0.02,0.03,0.0
+2021,United Rep. of Tanzania,Rest of world,0.02,0.03,0.01
+2021,Marshall Isds,Rest of world,0.02,0.02,0.0
+2021,Morocco,Rest of world,0.02,0.02,0.0
+2021,Antarctica,Rest of world,0.01,0.02,0.0
+2021,Kazakhstan,Rest of world,0.01,0.02,0.0
+2021,French Polynesia,Rest of world,0.01,0.02,0.0
+2021,Kiribati,Rest of world,0.01,0.01,0.0
+2021,Belarus,Rest of world,0.01,0.01,0.0
+2021,Pitcairn,Rest of world,0.0,0.0,0.0
+2022,USA,North America,288.11,415.51,144.36
+2022,UK,Europe,287.25,414.26,223.74
+2022,Canada,North America,132.39,190.92,67.51
+2022,Hong Kong,Northeast Asia,119.12,171.8,7.91
+2022,Singapore,Southeast Asia,92.93,134.02,8.45
+2022,New Zealand,Oceania,77.67,112.01,31.96
+2022,Malaysia,Southeast Asia,46.22,66.66,5.57
+2022,Thailand,Southeast Asia,44.59,64.31,7.32
+2022,Japan,Northeast Asia,40.87,58.95,14.17
+2022,Netherlands,Europe,36.75,53.0,24.23
+2022,South Korea,Northeast Asia,31.4,45.29,4.92
+2022,Denmark,Europe,28.02,40.41,19.21
+2022,Belgium,Europe,20.77,29.96,20.13
+2022,Taiwan,Northeast Asia,19.47,28.08,3.0
+2022,Sweden,Europe,17.59,25.37,4.76
+2022,United Arab Emirates,Rest of world,15.05,21.71,3.79
+2022,Germany,Europe,14.67,21.16,10.68
+2022,Indonesia,Southeast Asia,13.34,19.24,0.92
+2022,Philippines,Southeast Asia,11.8,17.02,2.96
+2022,China,Northeast Asia,10.81,15.58,3.08
+2022,India,Rest of world,9.96,14.36,3.41
+2022,Ireland,Europe,9.52,13.73,2.92
+2022,"China, Macao SAR",Rest of world,8.77,12.65,0.26
+2022,Viet Nam,Southeast Asia,8.47,12.21,2.11
+2022,France,Europe,7.72,11.14,6.04
+2022,Finland,Europe,7.29,10.51,4.88
+2022,Spain,Rest of world,6.98,10.06,1.97
+2022,Fiji,Oceania,6.0,8.66,1.62
+2022,Brazil,Rest of world,5.46,7.87,0.78
+2022,Norway,Europe,4.74,6.83,2.08
+2022,Latvia,Rest of world,4.08,5.89,1.09
+2022,Bunkers,Rest of world,3.26,4.71,0.5
+2022,Poland,Rest of world,2.55,3.68,1.21
+2022,Papua New Guinea,Oceania,2.51,3.62,0.47
+2022,Qatar,Rest of world,1.69,2.44,0.45
+2022,Mexico,Rest of world,1.44,2.07,0.31
+2022,Vanuatu,Rest of world,1.19,1.72,0.52
+2022,Myanmar,Rest of world,1.11,1.6,0.09
+2022,Cambodia,Rest of world,0.9,1.3,0.19
+2022,Uruguay,Rest of world,0.79,1.14,0.09
+2022,Switzerland,Europe,0.7,1.01,0.17
+2022,Maldives,Rest of world,0.65,0.94,0.42
+2022,Solomon Isds,Rest of world,0.57,0.82,0.12
+2022,Sri Lanka,Rest of world,0.54,0.78,0.15
+2022,South Africa,Rest of world,0.47,0.68,0.25
+2022,Barbados,Rest of world,0.45,0.65,0.12
+2022,Kenya,Rest of world,0.44,0.64,0.13
+2022,New Caledonia,Rest of world,0.41,0.59,0.15
+2022,Mongolia,Rest of world,0.4,0.58,0.1
+2022,Jamaica,Rest of world,0.38,0.55,0.13
+2022,Norfolk Isds,Rest of world,0.37,0.53,0.08
+2022,Lithuania,Rest of world,0.35,0.51,0.08
+2022,Slovenia,Rest of world,0.31,0.45,0.07
+2022,Bahrain,Rest of world,0.29,0.41,0.13
+2022,Cook Isds,Rest of world,0.28,0.4,0.07
+2022,Israel,Rest of world,0.25,0.36,0.06
+2022,Guam,Rest of world,0.25,0.36,0.06
+2022,Bulgaria,Rest of world,0.25,0.36,0.08
+2022,Timor-Leste,Rest of world,0.23,0.34,0.04
+2022,Estonia,Rest of world,0.23,0.34,0.06
+2022,Italy,Rest of world,0.23,0.33,0.07
+2022,Tonga,Rest of world,0.21,0.31,0.1
+2022,Mauritius,Rest of world,0.21,0.3,0.05
+2022,Bahamas,Rest of world,0.2,0.29,0.06
+2022,Romania,Rest of world,0.18,0.25,0.05
+2022,Samoa,Rest of world,0.17,0.24,0.07
+2022,Cayman Isds,Rest of world,0.17,0.24,0.05
+2022,Christmas Isds,Rest of world,0.16,0.23,0.02
+2022,Nigeria,Rest of world,0.16,0.23,0.04
+2022,Greece,Rest of world,0.15,0.22,0.02
+2022,Nepal,Rest of world,0.15,0.21,0.05
+2022,Türkiye,Rest of world,0.14,0.2,0.05
+2022,Bermuda,Rest of world,0.13,0.19,0.03
+2022,Malta,Rest of world,0.13,0.18,0.03
+2022,Austria,Rest of world,0.12,0.17,0.0
+2022,Colombia,Rest of world,0.11,0.16,0.03
+2022,Paraguay,Rest of world,0.09,0.14,0.0
+2022,Curaçao,Rest of world,0.09,0.13,0.03
+2022,Naoero,Rest of world,0.08,0.12,0.01
+2022,Grenada,Rest of world,0.08,0.12,0.03
+2022,Cameroon,Rest of world,0.08,0.12,0.02
+2022,American Samoa,Rest of world,0.08,0.11,0.03
+2022,Cocos Isds,Rest of world,0.07,0.1,0.01
+2022,Panama,Rest of world,0.07,0.1,0.02
+2022,Czechia,Rest of world,0.07,0.1,0.01
+2022,Peru,Rest of world,0.07,0.1,0.01
+2022,Russian Federation,Rest of world,0.06,0.09,0.02
+2022,United Rep. of Tanzania,Rest of world,0.06,0.09,0.03
+2022,Ukraine,Rest of world,0.06,0.08,0.01
+2022,Trinidad and Tobago,Rest of world,0.05,0.08,0.02
+2022,Ecuador,Rest of world,0.05,0.07,0.0
+2022,Georgia,Rest of world,0.04,0.06,0.01
+2022,Lao People's Dem. Rep.,Rest of world,0.04,0.06,0.0
+2022,Marshall Isds,Rest of world,0.04,0.06,0.01
+2022,FS Micronesia,Rest of world,0.04,0.05,0.01
+2022,Suriname,Rest of world,0.03,0.05,0.01
+2022,Guyana,Rest of world,0.03,0.05,0.01
+2022,Cyprus,Rest of world,0.03,0.05,0.01
+2022,Bangladesh,Rest of world,0.03,0.05,0.01
+2022,Dominica,Rest of world,0.03,0.04,0.01
+2022,Saint Lucia,Rest of world,0.03,0.04,0.01
+2022,Dominican Rep.,Rest of world,0.03,0.04,0.01
+2022,French Polynesia,Rest of world,0.02,0.03,0.0
+2022,Oman,Rest of world,0.02,0.03,0.02
+2022,Palau,Rest of world,0.02,0.03,0.01
+2022,Antarctica,Rest of world,0.02,0.03,0.0
+2022,Seychelles,Rest of world,0.01,0.02,0.0
+2022,Croatia,Rest of world,0.01,0.02,0.0
+2022,Saint Helena,Rest of world,0.01,0.02,0.0
+2022,Mali,Rest of world,0.01,0.01,0.0
+2022,Hungary,Rest of world,0.01,0.01,0.0
+2022,Tuvalu,Rest of world,0.01,0.01,0.0
+2022,Turks and Caicos Isds,Rest of world,0.01,0.01,0.0
+2022,Kiribati,Rest of world,0.01,0.01,0.0
+2022,Kazakhstan,Rest of world,0.01,0.01,0.0
+2022,N. Mariana Isds,Rest of world,0.0,0.01,0.0
+2022,Ghana,Rest of world,0.0,0.01,0.0
+2022,Brunei Darussalam,Rest of world,0.0,0.0,0.0
+2022,Pitcairn,Rest of world,0.0,0.0,0.0
+2022,Niue,Rest of world,0.0,0.0,0.0
+2022,Sudan,Rest of world,0.0,0.0,0.0
+2023,UK,Europe,265.67,400.16,225.26
+2023,USA,North America,261.18,393.41,139.29
+2023,Hong Kong,Northeast Asia,200.24,301.62,9.91
+2023,Canada,North America,95.04,143.15,71.97
+2023,Singapore,Southeast Asia,85.54,128.84,7.7
+2023,New Zealand,Oceania,75.4,113.58,30.44
+2023,Thailand,Southeast Asia,40.36,60.8,6.97
+2023,Netherlands,Europe,35.8,53.93,27.83
+2023,Japan,Northeast Asia,31.53,47.49,11.79
+2023,Malaysia,Southeast Asia,31.38,47.26,2.73
+2023,Denmark,Europe,25.13,37.86,20.68
+2023,South Korea,Northeast Asia,19.84,29.88,3.64
+2023,Taiwan,Northeast Asia,18.0,27.11,2.79
+2023,"China, Macao SAR",Rest of world,15.85,23.88,0.34
+2023,Belgium,Europe,14.51,21.86,15.03
+2023,Sweden,Europe,13.47,20.29,3.71
+2023,Philippines,Southeast Asia,10.12,15.25,2.6
+2023,Ireland,Europe,9.69,14.6,2.84
+2023,Germany,Europe,9.52,14.33,7.62
+2023,United Arab Emirates,Rest of world,9.27,13.97,2.55
+2023,China,Northeast Asia,8.98,13.53,1.45
+2023,France,Europe,7.85,11.83,4.99
+2023,India,Rest of world,7.72,11.63,2.7
+2023,Viet Nam,Southeast Asia,7.59,11.43,2.4
+2023,Bunkers,Rest of world,7.08,10.67,1.16
+2023,Finland,Europe,5.81,8.74,4.28
+2023,Indonesia,Southeast Asia,5.6,8.43,0.98
+2023,Spain,Rest of world,5.11,7.7,1.41
+2023,Fiji,Oceania,4.38,6.6,1.22
+2023,Norway,Europe,4.33,6.53,1.78
+2023,South Africa,Rest of world,3.7,5.58,0.12
+2023,Latvia,Rest of world,3.44,5.18,0.82
+2023,Papua New Guinea,Oceania,2.8,4.22,0.47
+2023,Mexico,Rest of world,1.47,2.21,0.42
+2023,Vanuatu,Rest of world,1.42,2.14,0.62
+2023,Brazil,Rest of world,1.26,1.9,0.39
+2023,Poland,Rest of world,1.18,1.77,0.59
+2023,Switzerland,Europe,0.83,1.26,0.18
+2023,Sri Lanka,Rest of world,0.8,1.2,0.21
+2023,Cambodia,Rest of world,0.7,1.05,0.14
+2023,Myanmar,Rest of world,0.65,0.98,0.06
+2023,Kenya,Rest of world,0.62,0.93,0.17
+2023,Norfolk Isds,Rest of world,0.48,0.73,0.09
+2023,Maldives,Rest of world,0.44,0.67,0.09
+2023,Solomon Isds,Rest of world,0.43,0.65,0.1
+2023,Jamaica,Rest of world,0.39,0.59,0.14
+2023,Bahamas,Rest of world,0.38,0.57,0.1
+2023,Qatar,Rest of world,0.35,0.53,0.15
+2023,Trinidad and Tobago,Rest of world,0.31,0.47,0.11
+2023,Barbados,Rest of world,0.3,0.45,0.09
+2023,Italy,Rest of world,0.3,0.45,0.13
+2023,New Caledonia,Rest of world,0.3,0.45,0.08
+2023,Nepal,Rest of world,0.28,0.43,0.14
+2023,Tonga,Rest of world,0.28,0.42,0.1
+2023,Samoa,Rest of world,0.25,0.37,0.09
+2023,Cook Isds,Rest of world,0.24,0.36,0.06
+2023,Uruguay,Rest of world,0.22,0.34,0.02
+2023,Timor-Leste,Rest of world,0.22,0.33,0.05
+2023,Lithuania,Rest of world,0.21,0.32,0.09
+2023,Estonia,Rest of world,0.19,0.28,0.06
+2023,Romania,Rest of world,0.19,0.28,0.06
+2023,Nigeria,Rest of world,0.18,0.27,0.04
+2023,Bermuda,Rest of world,0.18,0.27,0.02
+2023,Guam,Rest of world,0.17,0.26,0.04
+2023,Cayman Isds,Rest of world,0.15,0.23,0.04
+2023,Slovenia,Rest of world,0.14,0.21,0.03
+2023,Bulgaria,Rest of world,0.14,0.21,0.06
+2023,Bahrain,Rest of world,0.13,0.19,0.08
+2023,Curaçao,Rest of world,0.12,0.19,0.04
+2023,Christmas Isds,Rest of world,0.11,0.17,0.02
+2023,Israel,Rest of world,0.11,0.16,0.03
+2023,Bangladesh,Rest of world,0.11,0.16,0.03
+2023,Mongolia,Rest of world,0.1,0.16,0.02
+2023,Greece,Rest of world,0.1,0.15,0.01
+2023,Czechia,Rest of world,0.09,0.14,0.02
+2023,Malta,Rest of world,0.09,0.14,0.01
+2023,Türkiye,Rest of world,0.09,0.13,0.02
+2023,Austria,Rest of world,0.09,0.13,0.0
+2023,United Rep. of Tanzania,Rest of world,0.08,0.12,0.03
+2023,Ukraine,Rest of world,0.07,0.11,0.01
+2023,Kiribati,Rest of world,0.07,0.1,0.02
+2023,Suriname,Rest of world,0.06,0.1,0.02
+2023,American Samoa,Rest of world,0.06,0.09,0.01
+2023,Cocos Isds,Rest of world,0.05,0.08,0.0
+2023,Marshall Isds,Rest of world,0.05,0.07,0.01
+2023,Panama,Rest of world,0.04,0.07,0.01
+2023,Colombia,Rest of world,0.03,0.05,0.01
+2023,FS Micronesia,Rest of world,0.03,0.05,0.01
+2023,Uganda,Rest of world,0.03,0.05,0.01
+2023,Naoero,Rest of world,0.03,0.04,0.0
+2023,Saint Lucia,Rest of world,0.03,0.04,0.01
+2023,Oman,Rest of world,0.03,0.04,0.02
+2023,Grenada,Rest of world,0.03,0.04,0.01
+2023,French Polynesia,Rest of world,0.02,0.04,0.0
+2023,Costa Rica,Rest of world,0.02,0.04,0.01
+2023,Georgia,Rest of world,0.02,0.03,0.02
+2023,Mauritius,Rest of world,0.02,0.03,0.01
+2023,Antarctica,Rest of world,0.02,0.03,0.0
+2023,Armenia,Rest of world,0.01,0.02,0.0
+2023,Seychelles,Rest of world,0.01,0.02,0.0
+2023,Palau,Rest of world,0.01,0.02,0.0
+2023,Tuvalu,Rest of world,0.0,0.01,0.0
+2023,Hungary,Rest of world,0.0,0.01,0.0
+2023,Serbia,Rest of world,0.0,0.01,0.0
+2023,Pitcairn,Rest of world,0.0,0.01,0.0
+2023,Peru,Rest of world,0.0,0.0,0.0
+2023,Niue,Rest of world,0.0,0.0,0.0
+2023,Cyprus,Rest of world,0.0,0.0,0.0
+2023,N. Mariana Isds,Rest of world,0.0,0.0,0.0
+2024,China,Northeast Asia,578.29,879.0,81.65
+2024,UK,Europe,257.73,391.74,216.5
+2024,USA,North America,237.55,361.07,111.39
+2024,Hong Kong,Northeast Asia,113.25,172.13,9.46
+2024,Canada,North America,101.02,153.54,64.54
+2024,New Zealand,Oceania,76.34,116.03,28.64
+2024,Singapore,Southeast Asia,66.24,100.68,6.28
+2024,Japan,Northeast Asia,32.49,49.38,11.81
+2024,Thailand,Southeast Asia,30.33,46.1,8.08
+2024,Malaysia,Southeast Asia,28.3,43.02,3.06
+2024,Netherlands,Europe,23.84,36.23,18.3
+2024,Denmark,Europe,22.63,34.4,21.32
+2024,Belgium,Europe,20.88,31.73,22.5
+2024,South Korea,Northeast Asia,18.78,28.55,3.66
+2024,Taiwan,Northeast Asia,15.88,24.14,2.51
+2024,Sweden,Europe,14.67,22.3,4.03
+2024,United Arab Emirates,Rest of world,13.6,20.67,3.22
+2024,Philippines,Southeast Asia,9.84,14.95,2.89
+2024,Ireland,Europe,9.27,14.09,2.7
+2024,Germany,Europe,8.76,13.32,7.52
+2024,Bunkers,Rest of world,6.54,9.94,1.22
+2024,Finland,Europe,6.23,9.47,4.46
+2024,India,Rest of world,6.13,9.32,2.18
+2024,Latvia,Rest of world,6.06,9.22,1.07
+2024,Fiji,Oceania,5.59,8.5,2.03
+2024,France,Europe,5.59,8.5,3.51
+2024,Viet Nam,Southeast Asia,5.03,7.64,2.01
+2024,Indonesia,Southeast Asia,4.31,6.56,0.58
+2024,Norway,Europe,3.29,5.0,1.16
+2024,Papua New Guinea,Oceania,3.16,4.8,0.5
+2024,South Africa,Rest of world,2.96,4.5,6.96
+2024,"China, Macao SAR",Rest of world,2.84,4.31,0.14
+2024,Qatar,Rest of world,1.75,2.65,0.36
+2024,Poland,Rest of world,1.54,2.34,1.51
+2024,Spain,Rest of world,1.5,2.28,0.47
+2024,Switzerland,Europe,1.34,2.03,0.34
+2024,Brazil,Rest of world,1.27,1.92,0.35
+2024,Vanuatu,Rest of world,1.2,1.82,0.56
+2024,Mexico,Rest of world,1.1,1.68,0.2
+2024,Cambodia,Rest of world,0.81,1.22,0.16
+2024,Sri Lanka,Rest of world,0.75,1.14,0.23
+2024,Kenya,Rest of world,0.67,1.02,0.18
+2024,Norfolk Isds,Rest of world,0.54,0.82,0.08
+2024,Italy,Rest of world,0.54,0.82,0.06
+2024,Solomon Isds,Rest of world,0.52,0.79,0.12
+2024,Mongolia,Rest of world,0.4,0.62,0.12
+2024,Jamaica,Rest of world,0.4,0.6,0.15
+2024,Maldives,Rest of world,0.38,0.58,0.18
+2024,Cook Isds,Rest of world,0.35,0.53,0.09
+2024,Bahamas,Rest of world,0.28,0.42,0.09
+2024,Trinidad and Tobago,Rest of world,0.27,0.42,0.1
+2024,Cayman Isds,Rest of world,0.27,0.42,0.07
+2024,Romania,Rest of world,0.27,0.41,0.15
+2024,Tonga,Rest of world,0.26,0.4,0.13
+2024,Barbados,Rest of world,0.25,0.39,0.08
+2024,Bahrain,Rest of world,0.25,0.38,0.08
+2024,New Caledonia,Rest of world,0.24,0.36,0.08
+2024,Nigeria,Rest of world,0.23,0.35,0.04
+2024,Greece,Rest of world,0.19,0.29,0.02
+2024,Slovenia,Rest of world,0.18,0.28,0.04
+2024,Timor-Leste,Rest of world,0.18,0.28,0.04
+2024,Paraguay,Rest of world,0.15,0.23,0.02
+2024,Samoa,Rest of world,0.15,0.22,0.05
+2024,Nepal,Rest of world,0.13,0.19,0.05
+2024,Lithuania,Rest of world,0.12,0.19,0.04
+2024,Colombia,Rest of world,0.12,0.18,0.03
+2024,Slovakia,Rest of world,0.11,0.17,0.12
+2024,Kiribati,Rest of world,0.11,0.17,0.04
+2024,Curaçao,Rest of world,0.1,0.16,0.03
+2024,Israel,Rest of world,0.1,0.16,0.03
+2024,Estonia,Rest of world,0.09,0.14,0.03
+2024,Malta,Rest of world,0.09,0.14,0.02
+2024,Guam,Rest of world,0.09,0.13,0.02
+2024,Türkiye,Rest of world,0.09,0.13,0.02
+2024,Bulgaria,Rest of world,0.08,0.12,0.03
+2024,American Samoa,Rest of world,0.07,0.11,0.02
+2024,Dominican Rep.,Rest of world,0.07,0.11,0.02
+2024,Naoero,Rest of world,0.07,0.11,0.01
+2024,Georgia,Rest of world,0.07,0.1,0.0
+2024,Suriname,Rest of world,0.07,0.1,0.02
+2024,Ukraine,Rest of world,0.06,0.1,0.01
+2024,Christmas Isds,Rest of world,0.06,0.09,0.01
+2024,Turks and Caicos Isds,Rest of world,0.06,0.09,0.01
+2024,Cocos Isds,Rest of world,0.06,0.09,0.01
+2024,Peru,Rest of world,0.05,0.08,0.01
+2024,FS Micronesia,Rest of world,0.05,0.08,0.02
+2024,Saint Lucia,Rest of world,0.05,0.08,0.02
+2024,Marshall Isds,Rest of world,0.05,0.07,0.01
+2024,Côte d'Ivoire,Rest of world,0.04,0.07,0.02
+2024,Kazakhstan,Rest of world,0.04,0.06,0.0
+2024,Mauritius,Rest of world,0.04,0.06,0.01
+2024,Bermuda,Rest of world,0.03,0.05,0.01
+2024,Cameroon,Rest of world,0.03,0.05,0.01
+2024,Croatia,Rest of world,0.03,0.04,0.0
+2024,Grenada,Rest of world,0.03,0.04,0.01
+2024,Costa Rica,Rest of world,0.03,0.04,0.0
+2024,Dominica,Rest of world,0.03,0.04,0.01
+2024,Senegal,Rest of world,0.03,0.04,0.01
+2024,Guatemala,Rest of world,0.03,0.04,0.01
+2024,Oman,Rest of world,0.02,0.04,0.02
+2024,Czechia,Rest of world,0.02,0.04,0.0
+2024,Ghana,Rest of world,0.02,0.03,0.0
+2024,French Polynesia,Rest of world,0.02,0.03,0.0
+2024,Austria,Rest of world,0.02,0.03,0.01
+2024,Palau,Rest of world,0.02,0.03,0.01
+2024,Lao People's Dem. Rep.,Rest of world,0.01,0.02,0.0
+2024,Brunei Darussalam,Rest of world,0.01,0.02,0.0
+2024,Argentina,Rest of world,0.01,0.02,0.0
+2024,Antarctica,Rest of world,0.01,0.01,0.0
+2024,Myanmar,Rest of world,0.01,0.01,0.0
+2024,Zimbabwe,Rest of world,0.01,0.01,0.0
+2024,Seychelles,Rest of world,0.01,0.01,0.0
+2024,Cyprus,Rest of world,0.01,0.01,0.0
+2024,Hungary,Rest of world,0.01,0.01,0.0
+2024,N. Mariana Isds,Rest of world,0.0,0.01,0.0
+2024,Br. Virgin Isds,Rest of world,0.0,0.01,0.0
+2024,Serbia,Rest of world,0.0,0.0,0.0
+2024,Panama,Rest of world,0.0,0.0,0.0
+2024,Portugal,Rest of world,0.0,0.0,0.0
+2025,China,Northeast Asia,457.03,707.58,67.77
+2025,UK,Europe,249.72,386.62,201.65
+2025,USA,North America,208.8,323.27,123.36
+2025,Canada,North America,113.81,176.21,64.68
+2025,Singapore,Southeast Asia,79.3,122.78,6.9
+2025,Hong Kong,Northeast Asia,73.94,114.47,7.92
+2025,New Zealand,Oceania,69.83,108.12,24.84
+2025,Thailand,Southeast Asia,40.99,63.47,8.23
+2025,Japan,Northeast Asia,32.17,49.81,11.24
+2025,Malaysia,Southeast Asia,31.33,48.51,2.51
+2025,Netherlands,Europe,23.1,35.76,17.07
+2025,Denmark,Europe,21.04,32.58,22.84
+2025,South Korea,Northeast Asia,18.87,29.22,5.07
+2025,Taiwan,Northeast Asia,18.62,28.83,2.6
+2025,Belgium,Europe,14.71,22.78,16.42
+2025,Sweden,Europe,11.67,18.08,3.12
+2025,United Arab Emirates,Rest of world,10.88,16.84,2.63
+2025,Indonesia,Southeast Asia,8.2,12.7,0.67
+2025,Philippines,Southeast Asia,7.84,12.14,2.52
+2025,India,Rest of world,6.34,9.81,1.68
+2025,France,Europe,6.26,9.69,5.04
+2025,Germany,Europe,6.09,9.42,4.28
+2025,Ireland,Europe,5.74,8.89,1.85
+2025,Finland,Europe,5.32,8.24,3.97
+2025,Viet Nam,Southeast Asia,5.15,7.98,1.67
+2025,Bunkers,Rest of world,4.83,7.48,0.81
+2025,Spain,Rest of world,4.69,7.25,1.71
+2025,Fiji,Oceania,4.1,6.34,1.16
+2025,South Africa,Rest of world,2.82,4.37,8.41
+2025,Norway,Europe,2.81,4.36,0.87
+2025,Papua New Guinea,Oceania,2.23,3.45,0.42
+2025,Myanmar,Rest of world,2.17,3.35,0.63
+2025,Poland,Rest of world,1.71,2.64,1.9
+2025,Latvia,Rest of world,1.51,2.33,0.35
+2025,Vanuatu,Rest of world,1.21,1.87,0.54
+2025,Brazil,Rest of world,1.14,1.76,0.39
+2025,Cambodia,Rest of world,1.07,1.65,0.24
+2025,Qatar,Rest of world,1.05,1.62,0.23
+2025,Mexico,Rest of world,0.89,1.38,0.19
+2025,Sri Lanka,Rest of world,0.74,1.15,0.26
+2025,Switzerland,Europe,0.55,0.86,0.25
+2025,Nepal,Rest of world,0.45,0.7,0.17
+2025,Norfolk Isds,Rest of world,0.43,0.66,0.05
+2025,Jamaica,Rest of world,0.38,0.59,0.12
+2025,Maldives,Rest of world,0.38,0.58,0.13
+2025,Barbados,Rest of world,0.37,0.58,0.11
+2025,Bahamas,Rest of world,0.36,0.56,0.11
+2025,Mongolia,Rest of world,0.35,0.54,0.1
+2025,"China, Macao SAR",Rest of world,0.31,0.48,0.03
+2025,Solomon Isds,Rest of world,0.3,0.46,0.07
+2025,Cook Isds,Rest of world,0.29,0.46,0.06
+2025,Kenya,Rest of world,0.26,0.4,0.07
+2025,New Caledonia,Rest of world,0.24,0.37,0.09
+2025,Timor-Leste,Rest of world,0.18,0.28,0.03
+2025,Tonga,Rest of world,0.16,0.26,0.07
+2025,Samoa,Rest of world,0.15,0.24,0.05
+2025,Italy,Rest of world,0.15,0.23,0.02
+2025,Trinidad and Tobago,Rest of world,0.15,0.23,0.06
+2025,Bahrain,Rest of world,0.14,0.21,0.04
+2025,Cayman Isds,Rest of world,0.13,0.2,0.04
+2025,Slovakia,Rest of world,0.13,0.19,0.02
+2025,Greece,Rest of world,0.11,0.18,0.01
+2025,Nigeria,Rest of world,0.1,0.16,0.03
+2025,Curaçao,Rest of world,0.1,0.15,0.03
+2025,Guam,Rest of world,0.09,0.14,0.02
+2025,Kiribati,Rest of world,0.08,0.12,0.03
+2025,Romania,Rest of world,0.08,0.12,0.02
+2025,Suriname,Rest of world,0.08,0.12,0.02
+2025,Ukraine,Rest of world,0.07,0.11,0.02
+2025,Christmas Isds,Rest of world,0.07,0.11,0.01
+2025,Colombia,Rest of world,0.07,0.1,0.02
+2025,Bermuda,Rest of world,0.07,0.1,0.02
+2025,Mauritius,Rest of world,0.06,0.1,0.01
+2025,Slovenia,Rest of world,0.06,0.09,0.01
+2025,Austria,Rest of world,0.06,0.09,0.01
+2025,Bulgaria,Rest of world,0.06,0.09,0.03
+2025,Naoero,Rest of world,0.06,0.09,0.01
+2025,Saint Lucia,Rest of world,0.06,0.09,0.02
+2025,Cocos Isds,Rest of world,0.05,0.08,0.01
+2025,Grenada,Rest of world,0.05,0.08,0.02
+2025,Türkiye,Rest of world,0.05,0.08,0.02
+2025,American Samoa,Rest of world,0.05,0.08,0.01
+2025,Israel,Rest of world,0.05,0.08,0.02
+2025,Panama,Rest of world,0.04,0.06,0.01
+2025,FS Micronesia,Rest of world,0.04,0.06,0.01
+2025,Lithuania,Rest of world,0.03,0.05,0.01
+2025,Palau,Rest of world,0.03,0.05,0.01
+2025,Peru,Rest of world,0.03,0.05,0.0
+2025,French Polynesia,Rest of world,0.03,0.04,0.01
+2025,Guatemala,Rest of world,0.03,0.04,0.01
+2025,Malta,Rest of world,0.03,0.04,0.0
+2025,Estonia,Rest of world,0.03,0.04,0.01
+2025,Marshall Isds,Rest of world,0.03,0.04,0.01
+2025,Czechia,Rest of world,0.03,0.04,0.0
+2025,Lao People's Dem. Rep.,Rest of world,0.02,0.03,0.01
+2025,Argentina,Rest of world,0.01,0.02,0.0
+2025,Costa Rica,Rest of world,0.01,0.02,0.0
+2025,Tuvalu,Rest of world,0.01,0.02,0.01
+2025,Hungary,Rest of world,0.01,0.02,0.0
+2025,Chile,Rest of world,0.01,0.01,0.0
+2025,Seychelles,Rest of world,0.01,0.01,0.0
+2025,Belize,Rest of world,0.01,0.01,0.0
+2025,Cyprus,Rest of world,0.01,0.01,0.0
+2025,Portugal,Rest of world,0.01,0.01,0.0
+2025,Zimbabwe,Rest of world,0.01,0.01,0.0
+2025,Niger,Rest of world,0.0,0.01,0.0
+2025,N. Mariana Isds,Rest of world,0.0,0.01,0.0
+2025,Oman,Rest of world,0.0,0.01,0.0
+2025,Antarctica,Rest of world,0.0,0.01,0.0
+2025,Brunei Darussalam,Rest of world,0.0,0.0,0.0
+2025,Morocco,Rest of world,0.0,0.0,0.0
+2025,Saudi Arabia,Rest of world,0.0,0.0,0.0

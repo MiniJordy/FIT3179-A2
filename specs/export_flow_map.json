@@ -1,0 +1,425 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map 3: value (A$) of wine exported to the 14 markets that were in Australia's top 10 at some point in 2014-2025, with a year slider. Curved routes pre-computed by scripts/build_export_flows.py.",
+  "width": "container",
+  "height": 470,
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -150,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.id != 10"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffdecc",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.id == 36",
+            "value": "#e9b9be"
+          },
+          "value": "#fff3ec"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": -122,
+            "lat": -30
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "text": {
+          "expr": "'' + year"
+        },
+        "fontSize": 56,
+        "fontWeight": 700,
+        "color": "#f0b39c",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/export_routes_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "value_aud_m": "number",
+            "share_pct": "number",
+            "volume_ml": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "line",
+        "opacity": 0.75,
+        "strokeCap": "round",
+        "interpolate": "basis",
+        "color": "#9b2343"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "order": {
+          "field": "t",
+          "type": "quantitative"
+        },
+        "detail": {
+          "field": "market"
+        },
+        "strokeWidth": {
+          "field": "value_aud_m",
+          "type": "quantitative",
+          "title": "Export value (A$ million)",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              1150
+            ],
+            "range": [
+              0,
+              12
+            ]
+          },
+          "legend": {
+            "values": [
+              50,
+              300,
+              1000
+            ],
+            "orient": "bottom-left",
+            "symbolStrokeColor": "#9b2343",
+            "symbolType": "stroke",
+            "fillColor": "#ffdecc",
+            "padding": 8
+          }
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Market"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "value_aud_m",
+            "title": "Export value (A$m)",
+            "format": ",.0f"
+          },
+          {
+            "field": "share_pct",
+            "title": "Share of all exports (%)",
+            "format": ".1f"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/export_markets_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "value_aud_m": "number",
+            "share_pct": "number",
+            "volume_ml": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "circle",
+        "size": 45,
+        "opacity": 1,
+        "stroke": "#ffdecc",
+        "strokeWidth": 1,
+        "color": "#9b2343"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "market",
+            "title": "Market"
+          },
+          {
+            "field": "rank",
+            "title": "Rank"
+          },
+          {
+            "field": "value_aud_m",
+            "title": "Export value (A$m)",
+            "format": ",.0f"
+          },
+          {
+            "field": "volume_ml",
+            "title": "Volume (million litres)",
+            "format": ",.1f"
+          },
+          {
+            "field": "share_pct",
+            "title": "Share of exports (%)",
+            "format": ".1f"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 134.4,
+            "lat": -25.6
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "color": "#5c0f24",
+        "size": 70,
+        "opacity": 1,
+        "stroke": "#ffdecc",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/export_markets_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "value_aud_m": "number",
+            "share_pct": "number",
+            "volume_ml": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        },
+        {
+          "filter": "datum.label_align === 'center'"
+        },
+        {
+          "calculate": "show === 'Export value (A$)' ? datum.market + '  $' + format(datum.value_aud_m, ',.0f') + 'm' : datum.market + '  ' + format(datum.share_pct, '.0f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#3a3a37"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/export_markets_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "value_aud_m": "number",
+            "share_pct": "number",
+            "volume_ml": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        },
+        {
+          "filter": "datum.label_align === 'left'"
+        },
+        {
+          "calculate": "show === 'Export value (A$)' ? datum.market + '  $' + format(datum.value_aud_m, ',.0f') + 'm' : datum.market + '  ' + format(datum.share_pct, '.0f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#3a3a37"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/export_markets_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "value_aud_m": "number",
+            "share_pct": "number",
+            "volume_ml": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        },
+        {
+          "filter": "datum.label_align === 'right'"
+        },
+        {
+          "calculate": "show === 'Export value (A$)' ? datum.market + '  $' + format(datum.value_aud_m, ',.0f') + 'm' : datum.market + '  ' + format(datum.share_pct, '.0f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#3a3a37"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "year",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 2014,
+        "max": 2025,
+        "step": 1,
+        "name": "Year "
+      }
+    },
+    {
+      "name": "show",
+      "value": "Export value (A$)",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Export value (A$)",
+          "Share of all exports (%)"
+        ],
+        "name": "Show "
+      }
+    }
+  ]
+}

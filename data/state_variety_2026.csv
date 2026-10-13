@@ -1,0 +1,61 @@
+state,variety,colour,tonnes,state_tonnes,share_pct
+NSW,Chardonnay,White,72335,324736,22.3
+NSW,Shiraz,Red,39287,324736,12.1
+NSW,Cabernet Sauvignon,Red,17271,324736,5.3
+NSW,Sauvignon Blanc,White,39307,324736,12.1
+NSW,Pinot Gris/Grigio,White,36764,324736,11.3
+NSW,Merlot,Red,14478,324736,4.5
+NSW,Pinot Noir,Red,7752,324736,2.4
+NSW,Muscat Gordo Blanco,White,9414,324736,2.9
+NSW,Semillon,White,15188,324736,4.7
+NSW,Colombard,White,8956,324736,2.8
+QLD,Chardonnay,White,68,541,12.6
+QLD,Shiraz,Red,91,541,16.8
+QLD,Cabernet Sauvignon,Red,50,541,9.2
+QLD,Sauvignon Blanc,White,18,541,3.3
+QLD,Pinot Gris/Grigio,White,34,541,6.3
+QLD,Merlot,Red,44,541,8.1
+QLD,Pinot Noir,Red,12,541,2.2
+QLD,Muscat Gordo Blanco,White,1,541,0.2
+QLD,Semillon,White,13,541,2.4
+QLD,Colombard,White,0,541,0.0
+SA,Chardonnay,White,122792,562780,21.8
+SA,Shiraz,Red,132043,562780,23.5
+SA,Cabernet Sauvignon,Red,98723,562780,17.5
+SA,Sauvignon Blanc,White,38578,562780,6.9
+SA,Pinot Gris/Grigio,White,15556,562780,2.8
+SA,Merlot,Red,27143,562780,4.8
+SA,Pinot Noir,Red,17908,562780,3.2
+SA,Muscat Gordo Blanco,White,16128,562780,2.9
+SA,Semillon,White,8261,562780,1.5
+SA,Colombard,White,14900,562780,2.6
+TAS,Chardonnay,White,2618,9772,26.8
+TAS,Shiraz,Red,141,9772,1.4
+TAS,Cabernet Sauvignon,Red,48,9772,0.5
+TAS,Sauvignon Blanc,White,662,9772,6.8
+TAS,Pinot Gris/Grigio,White,858,9772,8.8
+TAS,Merlot,Red,33,9772,0.3
+TAS,Pinot Noir,Red,4749,9772,48.6
+TAS,Muscat Gordo Blanco,White,0,9772,0.0
+TAS,Semillon,White,0,9772,0.0
+TAS,Colombard,White,0,9772,0.0
+VIC,Chardonnay,White,43205,161330,26.8
+VIC,Shiraz,Red,24397,161330,15.1
+VIC,Cabernet Sauvignon,Red,13801,161330,8.6
+VIC,Sauvignon Blanc,White,10394,161330,6.4
+VIC,Pinot Gris/Grigio,White,12302,161330,7.6
+VIC,Merlot,Red,5559,161330,3.4
+VIC,Pinot Noir,Red,8844,161330,5.5
+VIC,Muscat Gordo Blanco,White,8436,161330,5.2
+VIC,Semillon,White,4578,161330,2.8
+VIC,Colombard,White,2310,161330,1.4
+WA,Chardonnay,White,5983,23709,25.2
+WA,Shiraz,Red,3155,23709,13.3
+WA,Cabernet Sauvignon,Red,3820,23709,16.1
+WA,Sauvignon Blanc,White,3558,23709,15.0
+WA,Pinot Gris/Grigio,White,391,23709,1.6
+WA,Merlot,Red,453,23709,1.9
+WA,Pinot Noir,Red,340,23709,1.4
+WA,Muscat Gordo Blanco,White,3,23709,0.0
+WA,Semillon,White,1951,23709,8.2
+WA,Colombard,White,0,23709,0.0

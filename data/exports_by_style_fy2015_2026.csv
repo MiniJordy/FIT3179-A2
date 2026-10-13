@@ -1,0 +1,433 @@
+fy,year_end,style,measure,value
+FY2015,2015,Total wine,volume_kl,724499.0
+FY2016,2016,Total wine,volume_kl,728505.0
+FY2017,2017,Total wine,volume_kl,777616.0
+FY2018,2018,Total wine,volume_kl,852034.0
+FY2019,2019,Total wine,volume_kl,801176.0
+FY2020,2020,Total wine,volume_kl,729680.0
+FY2021,2021,Total wine,volume_kl,692913.0
+FY2022,2022,Total wine,volume_kl,625241.0
+FY2023,2023,Total wine,volume_kl,620713.0
+FY2024,2024,Total wine,volume_kl,619193.0
+FY2025,2025,Total wine,volume_kl,638406.0
+FY2026,2026,Total wine,volume_kl,598298.0
+FY2015,2015,Total still wine,volume_kl,710170.0
+FY2016,2016,Total still wine,volume_kl,715935.0
+FY2017,2017,Total still wine,volume_kl,760882.0
+FY2018,2018,Total still wine,volume_kl,837332.0
+FY2019,2019,Total still wine,volume_kl,788864.0
+FY2020,2020,Total still wine,volume_kl,718874.0
+FY2021,2021,Total still wine,volume_kl,675060.0
+FY2022,2022,Total still wine,volume_kl,610447.0
+FY2023,2023,Total still wine,volume_kl,607758.0
+FY2024,2024,Total still wine,volume_kl,606091.0
+FY2025,2025,Total still wine,volume_kl,625849.0
+FY2026,2026,Total still wine,volume_kl,586320.0
+FY2015,2015,White – Bottled,volume_kl,90303.0
+FY2016,2016,White – Bottled,volume_kl,90054.0
+FY2017,2017,White – Bottled,volume_kl,92284.0
+FY2018,2018,White – Bottled,volume_kl,96555.0
+FY2019,2019,White – Bottled,volume_kl,91638.0
+FY2020,2020,White – Bottled,volume_kl,90931.0
+FY2021,2021,White – Bottled,volume_kl,82069.0
+FY2022,2022,White – Bottled,volume_kl,85490.0
+FY2023,2023,White – Bottled,volume_kl,68946.0
+FY2024,2024,White – Bottled,volume_kl,68513.0
+FY2025,2025,White – Bottled,volume_kl,65292.0
+FY2026,2026,White – Bottled,volume_kl,58167.0
+FY2015,2015,White – Unpackaged,volume_kl,211726.0
+FY2016,2016,White – Unpackaged,volume_kl,199858.0
+FY2017,2017,White – Unpackaged,volume_kl,201220.0
+FY2018,2018,White – Unpackaged,volume_kl,208040.0
+FY2019,2019,White – Unpackaged,volume_kl,212127.0
+FY2020,2020,White – Unpackaged,volume_kl,186568.0
+FY2021,2021,White – Unpackaged,volume_kl,179174.0
+FY2022,2022,White – Unpackaged,volume_kl,180075.0
+FY2023,2023,White – Unpackaged,volume_kl,206076.0
+FY2024,2024,White – Unpackaged,volume_kl,192487.0
+FY2025,2025,White – Unpackaged,volume_kl,186033.0
+FY2026,2026,White – Unpackaged,volume_kl,182283.0
+FY2015,2015,White – Other,volume_kl,2385.0
+FY2016,2016,White – Other,volume_kl,2308.0
+FY2017,2017,White – Other,volume_kl,2630.0
+FY2018,2018,White – Other,volume_kl,2492.0
+FY2019,2019,White – Other,volume_kl,2513.0
+FY2020,2020,White – Other,volume_kl,2012.0
+FY2021,2021,White – Other,volume_kl,2021.0
+FY2022,2022,White – Other,volume_kl,2011.0
+FY2023,2023,White – Other,volume_kl,1748.0
+FY2024,2024,White – Other,volume_kl,1842.0
+FY2025,2025,White – Other,volume_kl,1744.0
+FY2026,2026,White – Other,volume_kl,3119.0
+FY2015,2015,White – Total,volume_kl,304414.0
+FY2016,2016,White – Total,volume_kl,292219.0
+FY2017,2017,White – Total,volume_kl,296134.0
+FY2018,2018,White – Total,volume_kl,307087.0
+FY2019,2019,White – Total,volume_kl,306278.0
+FY2020,2020,White – Total,volume_kl,279510.0
+FY2021,2021,White – Total,volume_kl,263264.0
+FY2022,2022,White – Total,volume_kl,267576.0
+FY2023,2023,White – Total,volume_kl,276770.0
+FY2024,2024,White – Total,volume_kl,262842.0
+FY2025,2025,White – Total,volume_kl,253068.0
+FY2026,2026,White – Total,volume_kl,243569.0
+FY2015,2015,Red – Bottled,volume_kl,196420.0
+FY2016,2016,Red – Bottled,volume_kl,211690.0
+FY2017,2017,Red – Bottled,volume_kl,233981.0
+FY2018,2018,Red – Bottled,volume_kl,259941.0
+FY2019,2019,Red – Bottled,volume_kl,243799.0
+FY2020,2020,Red – Bottled,volume_kl,217734.0
+FY2021,2021,Red – Bottled,volume_kl,166176.0
+FY2022,2022,Red – Bottled,volume_kl,130450.0
+FY2023,2023,Red – Bottled,volume_kl,103778.0
+FY2024,2024,Red – Bottled,volume_kl,110486.0
+FY2025,2025,Red – Bottled,volume_kl,126257.0
+FY2026,2026,Red – Bottled,volume_kl,110697.0
+FY2015,2015,Red – Unpackaged,volume_kl,189548.0
+FY2016,2016,Red – Unpackaged,volume_kl,193182.0
+FY2017,2017,Red – Unpackaged,volume_kl,211876.0
+FY2018,2018,Red – Unpackaged,volume_kl,250873.0
+FY2019,2019,Red – Unpackaged,volume_kl,217493.0
+FY2020,2020,Red – Unpackaged,volume_kl,201894.0
+FY2021,2021,Red – Unpackaged,volume_kl,224850.0
+FY2022,2022,Red – Unpackaged,volume_kl,195154.0
+FY2023,2023,Red – Unpackaged,volume_kl,211115.0
+FY2024,2024,Red – Unpackaged,volume_kl,215032.0
+FY2025,2025,Red – Unpackaged,volume_kl,229530.0
+FY2026,2026,Red – Unpackaged,volume_kl,214157.0
+FY2015,2015,Red – Other,volume_kl,4934.0
+FY2016,2016,Red – Other,volume_kl,4923.0
+FY2017,2017,Red – Other,volume_kl,5514.0
+FY2018,2018,Red – Other,volume_kl,5069.0
+FY2019,2019,Red – Other,volume_kl,5208.0
+FY2020,2020,Red – Other,volume_kl,4576.0
+FY2021,2021,Red – Other,volume_kl,4870.0
+FY2022,2022,Red – Other,volume_kl,4802.0
+FY2023,2023,Red – Other,volume_kl,3763.0
+FY2024,2024,Red – Other,volume_kl,3765.0
+FY2025,2025,Red – Other,volume_kl,3480.0
+FY2026,2026,Red – Other,volume_kl,4368.0
+FY2015,2015,Red – Total,volume_kl,390903.0
+FY2016,2016,Red – Total,volume_kl,409796.0
+FY2017,2017,Red – Total,volume_kl,451371.0
+FY2018,2018,Red – Total,volume_kl,515882.0
+FY2019,2019,Red – Total,volume_kl,466499.0
+FY2020,2020,Red – Total,volume_kl,424204.0
+FY2021,2021,Red – Total,volume_kl,395897.0
+FY2022,2022,Red – Total,volume_kl,330407.0
+FY2023,2023,Red – Total,volume_kl,318656.0
+FY2024,2024,Red – Total,volume_kl,329283.0
+FY2025,2025,Red – Total,volume_kl,359266.0
+FY2026,2026,Red – Total,volume_kl,329222.0
+FY2015,2015,Rosé – Bottled,volume_kl,2562.0
+FY2016,2016,Rosé – Bottled,volume_kl,4110.0
+FY2017,2017,Rosé – Bottled,volume_kl,5282.0
+FY2018,2018,Rosé – Bottled,volume_kl,5910.0
+FY2019,2019,Rosé – Bottled,volume_kl,6468.0
+FY2020,2020,Rosé – Bottled,volume_kl,6429.0
+FY2021,2021,Rosé – Bottled,volume_kl,5040.0
+FY2022,2022,Rosé – Bottled,volume_kl,3091.0
+FY2023,2023,Rosé – Bottled,volume_kl,3278.0
+FY2024,2024,Rosé – Bottled,volume_kl,3021.0
+FY2025,2025,Rosé – Bottled,volume_kl,3183.0
+FY2026,2026,Rosé – Bottled,volume_kl,3008.0
+FY2015,2015,Rosé – Unpackaged,volume_kl,12131.0
+FY2016,2016,Rosé – Unpackaged,volume_kl,9642.0
+FY2017,2017,Rosé – Unpackaged,volume_kl,7988.0
+FY2018,2018,Rosé – Unpackaged,volume_kl,8242.0
+FY2019,2019,Rosé – Unpackaged,volume_kl,9381.0
+FY2020,2020,Rosé – Unpackaged,volume_kl,8496.0
+FY2021,2021,Rosé – Unpackaged,volume_kl,10627.0
+FY2022,2022,Rosé – Unpackaged,volume_kl,9129.0
+FY2023,2023,Rosé – Unpackaged,volume_kl,8843.0
+FY2024,2024,Rosé – Unpackaged,volume_kl,10731.0
+FY2025,2025,Rosé – Unpackaged,volume_kl,10150.0
+FY2026,2026,Rosé – Unpackaged,volume_kl,10321.0
+FY2015,2015,Rosé – Other,volume_kl,159.0
+FY2016,2016,Rosé – Other,volume_kl,167.0
+FY2017,2017,Rosé – Other,volume_kl,106.0
+FY2018,2018,Rosé – Other,volume_kl,211.0
+FY2019,2019,Rosé – Other,volume_kl,239.0
+FY2020,2020,Rosé – Other,volume_kl,234.0
+FY2021,2021,Rosé – Other,volume_kl,232.0
+FY2022,2022,Rosé – Other,volume_kl,245.0
+FY2023,2023,Rosé – Other,volume_kl,210.0
+FY2024,2024,Rosé – Other,volume_kl,214.0
+FY2025,2025,Rosé – Other,volume_kl,182.0
+FY2026,2026,Rosé – Other,volume_kl,200.0
+FY2015,2015,Rosé – Total,volume_kl,14853.0
+FY2016,2016,Rosé – Total,volume_kl,13919.0
+FY2017,2017,Rosé – Total,volume_kl,13376.0
+FY2018,2018,Rosé – Total,volume_kl,14363.0
+FY2019,2019,Rosé – Total,volume_kl,16087.0
+FY2020,2020,Rosé – Total,volume_kl,15159.0
+FY2021,2021,Rosé – Total,volume_kl,15899.0
+FY2022,2022,Rosé – Total,volume_kl,12465.0
+FY2023,2023,Rosé – Total,volume_kl,12331.0
+FY2024,2024,Rosé – Total,volume_kl,13966.0
+FY2025,2025,Rosé – Total,volume_kl,13514.0
+FY2026,2026,Rosé – Total,volume_kl,13529.0
+FY2015,2015,Fortified,volume_kl,998.0
+FY2016,2016,Fortified,volume_kl,938.0
+FY2017,2017,Fortified,volume_kl,955.0
+FY2018,2018,Fortified,volume_kl,805.0
+FY2019,2019,Fortified,volume_kl,819.0
+FY2020,2020,Fortified,volume_kl,705.0
+FY2021,2021,Fortified,volume_kl,715.0
+FY2022,2022,Fortified,volume_kl,749.0
+FY2023,2023,Fortified,volume_kl,634.0
+FY2024,2024,Fortified,volume_kl,599.0
+FY2025,2025,Fortified,volume_kl,634.0
+FY2026,2026,Fortified,volume_kl,709.0
+FY2015,2015,Sparkling,volume_kl,8277.0
+FY2016,2016,Sparkling,volume_kl,7412.0
+FY2017,2017,Sparkling,volume_kl,7119.0
+FY2018,2018,Sparkling,volume_kl,7032.0
+FY2019,2019,Sparkling,volume_kl,6739.0
+FY2020,2020,Sparkling,volume_kl,5298.0
+FY2021,2021,Sparkling,volume_kl,5805.0
+FY2022,2022,Sparkling,volume_kl,5987.0
+FY2023,2023,Sparkling,volume_kl,5609.0
+FY2024,2024,Sparkling,volume_kl,6231.0
+FY2025,2025,Sparkling,volume_kl,5966.0
+FY2026,2026,Sparkling,volume_kl,6014.0
+FY2015,2015,Carbonated,volume_kl,2220.0
+FY2016,2016,Carbonated,volume_kl,2807.0
+FY2017,2017,Carbonated,volume_kl,7187.0
+FY2018,2018,Carbonated,volume_kl,5588.0
+FY2019,2019,Carbonated,volume_kl,3517.0
+FY2020,2020,Carbonated,volume_kl,3165.0
+FY2021,2021,Carbonated,volume_kl,3095.0
+FY2022,2022,Carbonated,volume_kl,2252.0
+FY2023,2023,Carbonated,volume_kl,2815.0
+FY2024,2024,Carbonated,volume_kl,2879.0
+FY2025,2025,Carbonated,volume_kl,2660.0
+FY2026,2026,Carbonated,volume_kl,2465.0
+FY2015,2015,Other wine,volume_kl,2834.0
+FY2016,2016,Other wine,volume_kl,1414.0
+FY2017,2017,Other wine,volume_kl,1473.0
+FY2018,2018,Other wine,volume_kl,1277.0
+FY2019,2019,Other wine,volume_kl,1236.0
+FY2020,2020,Other wine,volume_kl,1638.0
+FY2021,2021,Other wine,volume_kl,8237.0
+FY2022,2022,Other wine,volume_kl,5805.0
+FY2023,2023,Other wine,volume_kl,3898.0
+FY2024,2024,Other wine,volume_kl,3394.0
+FY2025,2025,Other wine,volume_kl,3297.0
+FY2026,2026,Other wine,volume_kl,2791.0
+FY2015,2015,Total wine,value_aud_m,1892.7
+FY2016,2016,Total wine,value_aud_m,2110.5
+FY2017,2017,Total wine,value_aud_m,2308.0
+FY2018,2018,Total wine,value_aud_m,2759.3
+FY2019,2019,Total wine,value_aud_m,2865.4
+FY2020,2020,Total wine,value_aud_m,2840.2
+FY2021,2021,Total wine,value_aud_m,2559.7
+FY2022,2022,Total wine,value_aud_m,2082.8
+FY2023,2023,Total wine,value_aud_m,1865.1
+FY2024,2024,Total wine,value_aud_m,2188.6
+FY2025,2025,Total wine,value_aud_m,2480.6
+FY2026,2026,Total wine,value_aud_m,2297.7
+FY2015,2015,Total still wine,value_aud_m,1822.7
+FY2016,2016,Total still wine,value_aud_m,2038.9
+FY2017,2017,Total still wine,value_aud_m,2222.0
+FY2018,2018,Total still wine,value_aud_m,2681.5
+FY2019,2019,Total still wine,value_aud_m,2787.6
+FY2020,2020,Total still wine,value_aud_m,2773.8
+FY2021,2021,Total still wine,value_aud_m,2461.2
+FY2022,2022,Total still wine,value_aud_m,1998.5
+FY2023,2023,Total still wine,value_aud_m,1789.1
+FY2024,2024,Total still wine,value_aud_m,2113.0
+FY2025,2025,Total still wine,value_aud_m,2404.9
+FY2026,2026,Total still wine,value_aud_m,2224.3
+FY2015,2015,White – Bottled,value_aud_m,325.6
+FY2016,2016,White – Bottled,value_aud_m,352.6
+FY2017,2017,White – Bottled,value_aud_m,356.3
+FY2018,2018,White – Bottled,value_aud_m,375.2
+FY2019,2019,White – Bottled,value_aud_m,381.7
+FY2020,2020,White – Bottled,value_aud_m,388.0
+FY2021,2021,White – Bottled,value_aud_m,338.6
+FY2022,2022,White – Bottled,value_aud_m,361.2
+FY2023,2023,White – Bottled,value_aud_m,310.8
+FY2024,2024,White – Bottled,value_aud_m,320.3
+FY2025,2025,White – Bottled,value_aud_m,318.0
+FY2026,2026,White – Bottled,value_aud_m,280.6
+FY2015,2015,White – Unpackaged,value_aud_m,174.3
+FY2016,2016,White – Unpackaged,value_aud_m,173.0
+FY2017,2017,White – Unpackaged,value_aud_m,174.6
+FY2018,2018,White – Unpackaged,value_aud_m,193.0
+FY2019,2019,White – Unpackaged,value_aud_m,210.2
+FY2020,2020,White – Unpackaged,value_aud_m,197.8
+FY2021,2021,White – Unpackaged,value_aud_m,197.0
+FY2022,2022,White – Unpackaged,value_aud_m,209.4
+FY2023,2023,White – Unpackaged,value_aud_m,233.9
+FY2024,2024,White – Unpackaged,value_aud_m,223.8
+FY2025,2025,White – Unpackaged,value_aud_m,221.5
+FY2026,2026,White – Unpackaged,value_aud_m,216.0
+FY2015,2015,White – Other,value_aud_m,5.5
+FY2016,2016,White – Other,value_aud_m,4.7
+FY2017,2017,White – Other,value_aud_m,5.7
+FY2018,2018,White – Other,value_aud_m,6.2
+FY2019,2019,White – Other,value_aud_m,5.3
+FY2020,2020,White – Other,value_aud_m,4.3
+FY2021,2021,White – Other,value_aud_m,4.4
+FY2022,2022,White – Other,value_aud_m,4.6
+FY2023,2023,White – Other,value_aud_m,4.4
+FY2024,2024,White – Other,value_aud_m,4.4
+FY2025,2025,White – Other,value_aud_m,4.6
+FY2026,2026,White – Other,value_aud_m,7.0
+FY2015,2015,White – Total,value_aud_m,505.3
+FY2016,2016,White – Total,value_aud_m,530.3
+FY2017,2017,White – Total,value_aud_m,536.7
+FY2018,2018,White – Total,value_aud_m,574.5
+FY2019,2019,White – Total,value_aud_m,597.2
+FY2020,2020,White – Total,value_aud_m,590.1
+FY2021,2021,White – Total,value_aud_m,540.0
+FY2022,2022,White – Total,value_aud_m,575.2
+FY2023,2023,White – Total,value_aud_m,549.1
+FY2024,2024,White – Total,value_aud_m,548.5
+FY2025,2025,White – Total,value_aud_m,544.1
+FY2026,2026,White – Total,value_aud_m,503.7
+FY2015,2015,Red – Bottled,value_aud_m,1075.2
+FY2016,2016,Red – Bottled,value_aud_m,1261.8
+FY2017,2017,Red – Bottled,value_aud_m,1414.6
+FY2018,2018,Red – Bottled,value_aud_m,1758.4
+FY2019,2019,Red – Bottled,value_aud_m,1826.9
+FY2020,2020,Red – Bottled,value_aud_m,1820.6
+FY2021,2021,Red – Bottled,value_aud_m,1506.6
+FY2022,2022,Red – Bottled,value_aud_m,1102.3
+FY2023,2023,Red – Bottled,value_aud_m,958.6
+FY2024,2024,Red – Bottled,value_aud_m,1291.2
+FY2025,2025,Red – Bottled,value_aud_m,1564.6
+FY2026,2026,Red – Bottled,value_aud_m,1448.4
+FY2015,2015,Red – Unpackaged,value_aud_m,207.5
+FY2016,2016,Red – Unpackaged,value_aud_m,209.2
+FY2017,2017,Red – Unpackaged,value_aud_m,230.6
+FY2018,2018,Red – Unpackaged,value_aud_m,302.4
+FY2019,2019,Red – Unpackaged,value_aud_m,311.0
+FY2020,2020,Red – Unpackaged,value_aud_m,309.1
+FY2021,2021,Red – Unpackaged,value_aud_m,364.4
+FY2022,2022,Red – Unpackaged,value_aud_m,279.0
+FY2023,2023,Red – Unpackaged,value_aud_m,242.3
+FY2024,2024,Red – Unpackaged,value_aud_m,234.6
+FY2025,2025,Red – Unpackaged,value_aud_m,258.5
+FY2026,2026,Red – Unpackaged,value_aud_m,232.7
+FY2015,2015,Red – Other,value_aud_m,11.0
+FY2016,2016,Red – Other,value_aud_m,10.1
+FY2017,2017,Red – Other,value_aud_m,11.5
+FY2018,2018,Red – Other,value_aud_m,10.8
+FY2019,2019,Red – Other,value_aud_m,11.0
+FY2020,2020,Red – Other,value_aud_m,10.6
+FY2021,2021,Red – Other,value_aud_m,11.8
+FY2022,2022,Red – Other,value_aud_m,13.1
+FY2023,2023,Red – Other,value_aud_m,11.2
+FY2024,2024,Red – Other,value_aud_m,9.9
+FY2025,2025,Red – Other,value_aud_m,8.8
+FY2026,2026,Red – Other,value_aud_m,10.7
+FY2015,2015,Red – Total,value_aud_m,1293.8
+FY2016,2016,Red – Total,value_aud_m,1481.1
+FY2017,2017,Red – Total,value_aud_m,1656.7
+FY2018,2018,Red – Total,value_aud_m,2071.7
+FY2019,2019,Red – Total,value_aud_m,2148.9
+FY2020,2020,Red – Total,value_aud_m,2140.3
+FY2021,2021,Red – Total,value_aud_m,1882.9
+FY2022,2022,Red – Total,value_aud_m,1394.4
+FY2023,2023,Red – Total,value_aud_m,1212.1
+FY2024,2024,Red – Total,value_aud_m,1535.7
+FY2025,2025,Red – Total,value_aud_m,1831.8
+FY2026,2026,Red – Total,value_aud_m,1691.9
+FY2015,2015,Rosé – Bottled,value_aud_m,10.8
+FY2016,2016,Rosé – Bottled,value_aud_m,17.2
+FY2017,2017,Rosé – Bottled,value_aud_m,21.6
+FY2018,2018,Rosé – Bottled,value_aud_m,26.2
+FY2019,2019,Rosé – Bottled,value_aud_m,29.6
+FY2020,2020,Rosé – Bottled,value_aud_m,31.7
+FY2021,2021,Rosé – Bottled,value_aud_m,23.9
+FY2022,2022,Rosé – Bottled,value_aud_m,17.3
+FY2023,2023,Rosé – Bottled,value_aud_m,18.3
+FY2024,2024,Rosé – Bottled,value_aud_m,17.6
+FY2025,2025,Rosé – Bottled,value_aud_m,19.0
+FY2026,2026,Rosé – Bottled,value_aud_m,17.6
+FY2015,2015,Rosé – Unpackaged,value_aud_m,12.2
+FY2016,2016,Rosé – Unpackaged,value_aud_m,9.8
+FY2017,2017,Rosé – Unpackaged,value_aud_m,6.9
+FY2018,2018,Rosé – Unpackaged,value_aud_m,8.5
+FY2019,2019,Rosé – Unpackaged,value_aud_m,11.2
+FY2020,2020,Rosé – Unpackaged,value_aud_m,11.1
+FY2021,2021,Rosé – Unpackaged,value_aud_m,13.8
+FY2022,2022,Rosé – Unpackaged,value_aud_m,11.0
+FY2023,2023,Rosé – Unpackaged,value_aud_m,9.0
+FY2024,2024,Rosé – Unpackaged,value_aud_m,10.6
+FY2025,2025,Rosé – Unpackaged,value_aud_m,9.4
+FY2026,2026,Rosé – Unpackaged,value_aud_m,10.4
+FY2015,2015,Rosé – Other,value_aud_m,0.6
+FY2016,2016,Rosé – Other,value_aud_m,0.5
+FY2017,2017,Rosé – Other,value_aud_m,0.2
+FY2018,2018,Rosé – Other,value_aud_m,0.7
+FY2019,2019,Rosé – Other,value_aud_m,0.7
+FY2020,2020,Rosé – Other,value_aud_m,0.6
+FY2021,2021,Rosé – Other,value_aud_m,0.5
+FY2022,2022,Rosé – Other,value_aud_m,0.7
+FY2023,2023,Rosé – Other,value_aud_m,0.6
+FY2024,2024,Rosé – Other,value_aud_m,0.6
+FY2025,2025,Rosé – Other,value_aud_m,0.5
+FY2026,2026,Rosé – Other,value_aud_m,0.7
+FY2015,2015,Rosé – Total,value_aud_m,23.6
+FY2016,2016,Rosé – Total,value_aud_m,27.5
+FY2017,2017,Rosé – Total,value_aud_m,28.7
+FY2018,2018,Rosé – Total,value_aud_m,35.4
+FY2019,2019,Rosé – Total,value_aud_m,41.5
+FY2020,2020,Rosé – Total,value_aud_m,43.3
+FY2021,2021,Rosé – Total,value_aud_m,38.3
+FY2022,2022,Rosé – Total,value_aud_m,28.9
+FY2023,2023,Rosé – Total,value_aud_m,27.9
+FY2024,2024,Rosé – Total,value_aud_m,28.8
+FY2025,2025,Rosé – Total,value_aud_m,28.9
+FY2026,2026,Rosé – Total,value_aud_m,28.8
+FY2015,2015,Fortified,value_aud_m,5.9
+FY2016,2016,Fortified,value_aud_m,5.9
+FY2017,2017,Fortified,value_aud_m,6.0
+FY2018,2018,Fortified,value_aud_m,6.0
+FY2019,2019,Fortified,value_aud_m,7.1
+FY2020,2020,Fortified,value_aud_m,5.9
+FY2021,2021,Fortified,value_aud_m,5.3
+FY2022,2022,Fortified,value_aud_m,6.2
+FY2023,2023,Fortified,value_aud_m,5.5
+FY2024,2024,Fortified,value_aud_m,4.3
+FY2025,2025,Fortified,value_aud_m,5.0
+FY2026,2026,Fortified,value_aud_m,5.5
+FY2015,2015,Sparkling,value_aud_m,42.7
+FY2016,2016,Sparkling,value_aud_m,42.4
+FY2017,2017,Sparkling,value_aud_m,39.9
+FY2018,2018,Sparkling,value_aud_m,39.1
+FY2019,2019,Sparkling,value_aud_m,39.4
+FY2020,2020,Sparkling,value_aud_m,30.8
+FY2021,2021,Sparkling,value_aud_m,35.2
+FY2022,2022,Sparkling,value_aud_m,40.1
+FY2023,2023,Sparkling,value_aud_m,38.1
+FY2024,2024,Sparkling,value_aud_m,40.0
+FY2025,2025,Sparkling,value_aud_m,40.0
+FY2026,2026,Sparkling,value_aud_m,41.1
+FY2015,2015,Carbonated,value_aud_m,10.6
+FY2016,2016,Carbonated,value_aud_m,13.3
+FY2017,2017,Carbonated,value_aud_m,30.1
+FY2018,2018,Carbonated,value_aud_m,23.2
+FY2019,2019,Carbonated,value_aud_m,17.6
+FY2020,2020,Carbonated,value_aud_m,17.3
+FY2021,2021,Carbonated,value_aud_m,16.3
+FY2022,2022,Carbonated,value_aud_m,12.0
+FY2023,2023,Carbonated,value_aud_m,15.1
+FY2024,2024,Carbonated,value_aud_m,16.3
+FY2025,2025,Carbonated,value_aud_m,16.0
+FY2026,2026,Carbonated,value_aud_m,15.2
+FY2015,2015,Other wine,value_aud_m,10.8
+FY2016,2016,Other wine,value_aud_m,9.9
+FY2017,2017,Other wine,value_aud_m,10.0
+FY2018,2018,Other wine,value_aud_m,9.5
+FY2019,2019,Other wine,value_aud_m,13.6
+FY2020,2020,Other wine,value_aud_m,12.4
+FY2021,2021,Other wine,value_aud_m,41.7
+FY2022,2022,Other wine,value_aud_m,26.0
+FY2023,2023,Other wine,value_aud_m,17.3
+FY2024,2024,Other wine,value_aud_m,15.0
+FY2025,2025,Other wine,value_aud_m,14.8
+FY2026,2026,Other wine,value_aud_m,11.6
