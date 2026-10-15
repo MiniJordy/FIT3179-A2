@@ -8,19 +8,21 @@ The map always shows the same set of markets: every market that is in the top TO
 Years outside the top TOP_N are kept, so a falling market's line thins out instead of vanishing.
 Every market in that set needs an entry in PLACES.
 Each route is a quadratic Bezier curve drawn in lon/lat. The control point sits beside the straight
-line's midpoint, pushed sideways by BEND x route length, so routes going the same way fan apart.
+line's midpoint, pushed sideways by bend x BEND_SCALE x route length, so routes going the same way fan apart.
 """
 import csv, collections
 
 TOP_N = 10
 ORIGIN = (134.4, -25.6)          # centre of Australia: one symbolic starting point for every route
+BEND_SCALE = 2.2                 # multiplies every route's bend below; bigger = curvier routes that are easier to tell apart
+MAX_BEND = 0.5                   # cap so the longest routes don't loop off the map
 
 # market: (lon, lat, bend, label_lon, label_lat, label_align)  -- label '' = no label (tooltip only)
 # Points are country centres, except Singapore and Hong Kong (city).
 PLACES = {
     'China':       (104.0, 35.0,  0.12, 104.0, 41.0, 'center'),
     'UK':          (-2.0,  53.0,  0.06, -2.0,  59.5, 'center'),
-    'USA':         (-98.0, 39.0, -0.20, -94.0, 38.0, 'left'),
+    'USA':         (-98.0, 39.0, -0.09, -94.0, 38.0, 'left'),
     'Canada':      (-100.0, 56.0, -0.32, -100.0, 62.5, 'center'),
     'Singapore':   (103.8, 1.35, -0.10, 99.5,  -2.5, 'right'),
     'Hong Kong':   (114.2, 22.3, -0.16, 110.5, 24.0, 'right'),
@@ -42,6 +44,7 @@ for r in csv.DictReader(open('data/exports_by_market_2014_2025.csv', encoding='u
 def curve(lon, lat, bend):
     """41 points along a quadratic Bezier from ORIGIN to (lon, lat)."""
     L = lon + 360 if lon < -30 else lon               # go east across the Pacific to the Americas
+    bend = max(-MAX_BEND, min(MAX_BEND, bend * BEND_SCALE))
     x0, y0 = ORIGIN; dx, dy = L - x0, lat - y0
     cx, cy = (x0 + L) / 2 - dy * bend, (y0 + lat) / 2 + dx * bend   # control point beside the midpoint
     return [((1 - t) ** 2 * x0 + 2 * (1 - t) * t * cx + t * t * L, (1 - t) ** 2 * y0 + 2 * (1 - t) * t * cy + t * t * lat)
@@ -69,5 +72,5 @@ for year in sorted(by_year):
 
 for path, data in (('data/export_markets_by_year.csv', markets), ('data/export_routes_by_year.csv', routes)):
     with open(path, 'w', newline='', encoding='utf-8') as f:
-        w = csv.DictWriter(f, fieldnames=list(data[0])); w.writeheader(); w.writerows(data)
+        w = csv.DictWriter(f, fieldnames=list(data[0]), lineterminator='\n'); w.writeheader(); w.writerows(data)
     print(f'wrote {path}: {len(data)} rows')

@@ -1,8 +1,37 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Map 3: value (A$) of wine exported to the 14 markets that were in Australia's top 10 at some point in 2014-2025, with a year slider. Curved routes pre-computed by scripts/build_export_flows.py.",
+  "description": "Map 3: value (A$) of wine exported to the 14 markets that were in Australia's top 10 at some point in 2014-2025, with a year slider. Curved routes pre-computed by scripts/build_export_flows.py. Only the top_n biggest markets in the chosen year are coloured; the rest are grey. A note panel (bottom right) explains key events in the years that had them (2015, 2019, 2020, 2021, 2023, 2024); event sources are listed in the page footer.",
   "width": "container",
   "height": 470,
+  "params": [
+    {
+      "name": "year",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 2014,
+        "max": 2025,
+        "step": 1,
+        "name": "Year "
+      }
+    },
+    {
+      "name": "show",
+      "value": "Export value (A$)",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Export value (A$)",
+          "Share of all exports (%)"
+        ],
+        "name": "Show "
+      }
+    },
+    {
+      "name": "top_n",
+      "value": 3
+    }
+  ],
   "projection": {
     "type": "equalEarth",
     "rotate": [
@@ -42,10 +71,7 @@
     {
       "data": {
         "values": [
-          {
-            "lon": -122,
-            "lat": -30
-          }
+          {}
         ]
       },
       "mark": {
@@ -53,20 +79,105 @@
         "text": {
           "expr": "'' + year"
         },
-        "fontSize": 56,
+        "fontSize": 46,
         "fontWeight": 700,
         "color": "var(--rose-faint)",
-        "align": "center",
-        "baseline": "middle"
+        "align": "left",
+        "baseline": "alphabetic"
       },
       "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
+        "x": {
+          "value": {
+            "expr": "width - 290"
+          }
         },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
+        "y": {
+          "value": {
+            "expr": "height - 78"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2015,
+            "lines": [
+              "Dec 2015: the China–Australia",
+              "free trade agreement starts",
+              "phasing out that tariff."
+            ]
+          },
+          {
+            "year": 2019,
+            "lines": [
+              "Jan 2019: China's tariff on",
+              "Australian wine reaches zero.",
+              "China now buys almost two in",
+              "every five export dollars."
+            ]
+          },
+          {
+            "year": 2020,
+            "lines": [
+              "Nov 2020: China puts temporary",
+              "anti-dumping charges of up to",
+              "212% on Australian bottled wine."
+            ]
+          },
+          {
+            "year": 2021,
+            "lines": [
+              "Mar 2021: China makes the duties",
+              "permanent at up to 218%. Sales",
+              "to China fall from $981m to $30m."
+            ]
+          },
+          {
+            "year": 2023,
+            "lines": [
+              "May 2023: a free trade deal ends",
+              "the UK's tariff on Australian wine.",
+              "Hong Kong buys a record $302m."
+            ]
+          },
+          {
+            "year": 2024,
+            "lines": [
+              "Mar 2024: China lifts the duties.",
+              "Sales jump back to $879m and",
+              "China is the top market again."
+            ]
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 12.5,
+        "lineHeight": 17,
+        "color": "var(--ink-2)"
+      },
+      "encoding": {
+        "x": {
+          "value": {
+            "expr": "width - 288"
+          }
+        },
+        "y": {
+          "value": {
+            "expr": "height - 70"
+          }
+        },
+        "text": {
+          "field": "lines"
         }
       }
     },
@@ -85,10 +196,134 @@
       },
       "mark": {
         "type": "line",
+        "opacity": 0.45,
+        "strokeCap": "round",
+        "interpolate": "basis"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "order": {
+          "field": "t",
+          "type": "quantitative"
+        },
+        "detail": {
+          "field": "market"
+        },
+        "strokeWidth": {
+          "field": "value_aud_m",
+          "type": "quantitative",
+          "title": "Export value (A$ million)",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              1150
+            ],
+            "range": [
+              0,
+              12
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "market",
+            "title": "Market"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "value_aud_m",
+            "title": "Export value (A$m)",
+            "format": ",.0f"
+          },
+          {
+            "field": "share_pct",
+            "title": "Share of all exports (%)",
+            "format": ".1f"
+          }
+        ],
+        "color": {
+          "field": "size_group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Top",
+              "Other"
+            ],
+            "range": [
+              "var(--rose)",
+              "var(--muted)"
+            ]
+          },
+          "legend": {
+            "orient": "bottom-left",
+            "symbolType": "stroke",
+            "symbolStrokeWidth": 4,
+            "labelExpr": "datum.label === 'Top' ? 'Top ' + top_n + ' markets that year' : 'Other markets'",
+            "fillColor": "var(--paper)",
+            "padding": 8
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year"
+        },
+        {
+          "window": [
+            {
+              "op": "dense_rank",
+              "as": "route_rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "value_aud_m",
+              "order": "descending"
+            }
+          ],
+          "groupby": [
+            "year"
+          ]
+        },
+        {
+          "filter": "!(datum.route_rank <= top_n)"
+        },
+        {
+          "calculate": "datum.route_rank <= top_n ? 'Top' : 'Other'",
+          "as": "size_group"
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/export_routes_by_year.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "number",
+            "value_aud_m": "number",
+            "share_pct": "number",
+            "volume_ml": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "line",
         "opacity": 0.75,
         "strokeCap": "round",
-        "interpolate": "basis",
-        "color": "var(--rose)"
+        "interpolate": "basis"
       },
       "encoding": {
         "longitude": {
@@ -153,11 +388,58 @@
             "title": "Share of all exports (%)",
             "format": ".1f"
           }
-        ]
+        ],
+        "color": {
+          "field": "size_group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Top",
+              "Other"
+            ],
+            "range": [
+              "var(--rose)",
+              "var(--muted)"
+            ]
+          },
+          "legend": {
+            "orient": "bottom-left",
+            "symbolType": "stroke",
+            "symbolStrokeWidth": 4,
+            "labelExpr": "datum.label === 'Top' ? 'Top ' + top_n + ' markets that year' : 'Other markets'",
+            "fillColor": "var(--paper)",
+            "padding": 8
+          }
+        }
       },
       "transform": [
         {
           "filter": "datum.year == year"
+        },
+        {
+          "window": [
+            {
+              "op": "dense_rank",
+              "as": "route_rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "value_aud_m",
+              "order": "descending"
+            }
+          ],
+          "groupby": [
+            "year"
+          ]
+        },
+        {
+          "filter": "datum.route_rank <= top_n"
+        },
+        {
+          "calculate": "datum.route_rank <= top_n ? 'Top' : 'Other'",
+          "as": "size_group"
         }
       ]
     },
@@ -179,8 +461,7 @@
         "size": 45,
         "opacity": 1,
         "stroke": "var(--paper)",
-        "strokeWidth": 1,
-        "color": "var(--rose)"
+        "strokeWidth": 1
       },
       "encoding": {
         "longitude": {
@@ -219,7 +500,14 @@
             "title": "Share of exports (%)",
             "format": ".1f"
           }
-        ]
+        ],
+        "color": {
+          "condition": {
+            "test": "datum.rank <= top_n",
+            "value": "var(--rose)"
+          },
+          "value": "var(--muted)"
+        }
       },
       "transform": [
         {
@@ -297,6 +585,13 @@
         },
         "text": {
           "field": "label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.rank <= top_n",
+            "value": "var(--ink-2)"
+          },
+          "value": "var(--muted)"
         }
       }
     },
@@ -342,6 +637,13 @@
         },
         "text": {
           "field": "label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.rank <= top_n",
+            "value": "var(--ink-2)"
+          },
+          "value": "var(--muted)"
         }
       }
     },
@@ -387,33 +689,25 @@
         },
         "text": {
           "field": "label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.rank <= top_n",
+            "value": "var(--ink-2)"
+          },
+          "value": "var(--muted)"
         }
       }
     }
   ],
-  "params": [
-    {
-      "name": "year",
-      "value": 2025,
-      "bind": {
-        "input": "range",
-        "min": 2014,
-        "max": 2025,
-        "step": 1,
-        "name": "Year "
-      }
-    },
-    {
-      "name": "show",
-      "value": "Export value (A$)",
-      "bind": {
-        "input": "select",
-        "options": [
-          "Export value (A$)",
-          "Share of all exports (%)"
-        ],
-        "name": "Show "
+  "config": {
+    "legend": {
+      "layout": {
+        "bottom-left": {
+          "direction": "vertical",
+          "margin": 6
+        }
       }
     }
-  ]
+  }
 }

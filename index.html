@@ -159,7 +159,7 @@
       <p>
         Around <strong>three in every five litres</strong> of Australian wine are sold overseas. <strong>China</strong> is the most
         valuable market again after its tariffs were lifted, while the <strong>UK</strong> buys the most by volume.
-        Each line's thickness shows the value of wine exported to that market. Drag the slider to change the year,
+        Each line's thickness shows the value of wine exported to that market, and the three biggest markets in each year are coloured. Notes in the corner explain the key events in the years they happened. Drag the slider to change the year,
         or use the menu to show the labels as dollars or as a share of all exports.
       </p>
       <div id="export-flow-map" class="chart"></div>
@@ -176,8 +176,8 @@
     <section class="chart-section" id="markets">
       <h3>A changing list of customers</h3>
       <p>
-        China rose to become Australia's most valuable wine market <strong>by 2016</strong>. When China placed tariffs
-        of up to 218% on Australian wine <strong>in late 2020</strong>, sales there <strong>almost stopped</strong>, and China fell out of the top 10 until the
+        China rose to become Australia's most valuable wine market <strong>by 2016</strong>. When China put heavy duties
+        on Australian wine <strong>in late 2020</strong> (up to 218% from March 2021), sales there <strong>almost stopped</strong>, and China fell out of the top 10 until the
         tariffs were removed <strong>in 2024</strong>. Each line follows one of Australia's 11 main export markets and its rank by the
         value of wine it bought. The top three markets of 2025 are coloured; use the options beside the chart to colour a
         region or every market, or hover over a line to follow one market.
@@ -214,6 +214,14 @@
             <a href="https://www.rba.gov.au/statistics/historical-data.html">rba.gov.au</a></li>
           <li id="src-7">World map: <code>world-110m.json</code> from vega-datasets (Natural Earth).
             <a href="https://github.com/vega/vega-datasets">github.com/vega/vega-datasets</a></li>
+          <li id="src-8">Department of Foreign Affairs and Trade, <em>ChAFTA outcomes at a glance</em> (in force 20 December 2015; wine tariffs of 14–20% removed by 1 January 2019).
+            <a href="https://www.dfat.gov.au/trade/agreements/in-force/chafta/fact-sheets/Pages/chafta-outcomes-at-a-glance">dfat.gov.au</a></li>
+          <li id="src-9">Al Jazeera, "China to impose anti-dumping measures on Australian wines", 27 November 2020 (temporary charges of 107.1–212.1% from 28 November 2020).
+            <a href="https://www.aljazeera.com/economy/2020/11/27/china-to-hit-australian-wines-with-anti-dumping-measures">aljazeera.com</a></li>
+          <li id="src-10">Export Finance Australia, "Australia—Wine exports to recover slowly after China lifts tariffs", April 2024 (duties of 116.2–218.4% from March 2021, lifted from 29 March 2024).
+            <a href="https://exportfinance.gov.au/resources/world-risk-developments/2024/april/australia-wine-exports-to-recover-slowly-after-china-lifts-tariffs/">exportfinance.gov.au</a></li>
+          <li id="src-11">Austrade, <em>Australia–United Kingdom Free Trade Agreement</em> (in force 31 May 2023).
+            <a href="https://www.austrade.gov.au/australian/export/free-trade-agreements/aukfta">austrade.gov.au</a></li>
         </ol>
       </div>
       <div>
@@ -235,7 +243,9 @@
           <dt><a href="#exports">Which countries buy it?</a></dt>
           <dd>Australia's reported exports by calendar year, converted from US dollars to Australian dollars at the RBA's
             average exchange rate for each year. Lines start from the centre of Australia and end at each country's centre
-            (city for Singapore and Hong Kong). Sources <a href="#src-5">5</a>, <a href="#src-6">6</a>, <a href="#src-7">7</a>.</dd>
+            (city for Singapore and Hong Kong). Sources <a href="#src-5">5</a>, <a href="#src-6">6</a>, <a href="#src-7">7</a>.
+            Yearly notes: dollar figures come from the map's own data; trade events from sources
+            <a href="#src-8">8</a>–<a href="#src-11">11</a>.</dd>
 
           <dt><a href="#markets">A changing list of customers</a></dt>
           <dd>Same export values as the map above (converted to Australian dollars). Sources <a href="#src-5">5</a>, <a href="#src-6">6</a>.</dd>
