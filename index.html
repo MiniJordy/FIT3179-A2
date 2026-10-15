@@ -50,10 +50,7 @@
         compared with about <strong>$1,480 a tonne</strong> everywhere else. They supply the volume for everyday, affordable wine, while
         smaller regions like the <strong>Barossa Valley</strong> ($1,680 a tonne) and <strong>Tasmania</strong> ($3,720 a tonne) are paid far more for less fruit.
       </p>
-      <p class="note">Source: Wine Australia, <em>National Vintage Report 2026</em>, regional appendix (reported tonnes);
-        region boundaries from Wine Australia's Geographical Indications dataset. Very small regions are drawn larger than
-        their true size so they stay visible.<br>
-        Shaded regions without a circle (N/A in the tooltip) crush less than about 1,000 tonnes; Wine Australia doesn't publish figures for them.</p>
+      <p class="note">Very small regions are drawn larger than their true size so they stay visible. Shaded regions without a circle (N/A in the tooltip) crush less than about 1,000 tonnes; Wine Australia doesn't publish figures for them.</p>
     </section>
   </section>
 
@@ -79,9 +76,7 @@
         Each cell shows a grape variety's share of that state's 2026 crush.
       </p>
       <div id="variety-heatmap" class="chart"></div>
-      <p class="note">Shows the 10 most-crushed varieties nationally; the rest of each state's crush is other varieties.
-        Source: Wine Australia, <em>National Vintage Report 2026</em>, regional appendix (reported tonnes).
-        Queensland is based on only 541 tonnes.</p>
+      <p class="note">Shows the 10 most-crushed varieties nationally; the rest of each state's crush is other varieties. Queensland is based on only 541 tonnes.</p>
     </section>
 
     <section class="chart-section" id="colour">
@@ -93,9 +88,7 @@
         small slice of either. Each square is 1%.
       </p>
       <div id="colour-waffle" class="chart"></div>
-      <p class="note">Sources: Wine Australia, <em>National Vintage Report 2026</em>, regional appendix (reported tonnes);
-        Wine Australia, <em>Australian Wine Export Monitor</em>, financial year 2025–26 (export volume).
-        Sparkling, fortified and other wines are grouped because together they make up only 2% of exports.</p>
+      <p class="note">Sparkling, fortified and other wines are grouped because together they make up only 2% of exports.</p>
     </section>
 
     <section class="chart-section placeholder">
@@ -155,8 +148,7 @@
           <p>
             The inner ring shows where the wine went; the outer ring shows what kind of wine it was.
           </p>
-          <p class="note">Source: Wine Australia, <em>Production, Sales and Inventory Report 2024–25</em> (Tables 2, 6 and 8).
-            "Left over" is wine made minus wine sold that year; some sales came from older stock.</p>
+          <p class="note">"Left over" is wine made minus wine sold that year; some sales came from older stock.</p>
         </div>
         <div id="wine-flows-sunburst" class="chart col-chart"></div>
       </div>
@@ -178,10 +170,7 @@
         $10 a litre</strong>. <strong>Singapore</strong> and <strong>Thailand</strong> are smaller markets, but they pay premium prices and are among Australia's
         fastest-growing customers.
       </p>
-      <p class="note">Shows the 14 markets that were in Australia's top 10 at some point between 2014 and 2025.
-        Source: UN Comtrade (HS 2204, wine of fresh grapes), Australia's reported exports by calendar year,
-        converted from US dollars to Australian dollars at the RBA's average exchange rate for each year.
-        Lines start from the centre of Australia and end at each country's centre (city for Singapore and Hong Kong).</p>
+      <p class="note">Shows the 14 markets that were in Australia's top 10 at some point between 2014 and 2025.</p>
     </section>
 
     <section class="chart-section" id="markets">
@@ -197,14 +186,64 @@
         <div id="export-bump-chart" class="chart"></div>
         <div id="bump-controls" class="chart-controls"></div>
       </div>
-      <p class="note">Source: UN Comtrade (HS 2204, wine of fresh grapes), Australia's reported exports by calendar year,
-        converted to Australian dollars at RBA annual average exchange rates. Shows every market that was in Australia's top 10 in
-        more than one year, ranked against each other (hover to see each market's rank among all export markets).</p>
+      <p class="note">Shows every market that was in Australia's top 10 in more than one year, ranked against each other (hover to see each market's rank among all export markets).</p>
     </section>
   </section>
 
-  <footer>FIT3179 Data Visualisation 2 — Jordan Russo, October 2026</footer>
 </main>
+
+<footer class="page-footer">
+  <div class="footer-inner">
+    <h2>About this page</h2>
+    <p class="byline">Created by <strong>Jordan Russo</strong> for FIT3179 Data Visualisation 2, Monash University. October 2026.</p>
+    <div class="footer-cols">
+      <div>
+        <h3>Data sources</h3>
+        <ol class="source-list">
+          <li id="src-1">Wine Australia, <em>National Vintage Report 2026</em>, regional appendix (reported tonnes).
+            <a href="https://www.wineaustralia.com/market-insights/national-vintage-report">wineaustralia.com</a></li>
+          <li id="src-2">Wine Australia, <em>Wine Geographical Indications Australia</em> (region boundaries).
+            <a href="https://wineaustralia-opendata-wineaustralia.hub.arcgis.com/datasets/2dd4c385f0ed4d109c2e18ae99e819e2">Wine Australia open data</a></li>
+          <li id="src-3">Wine Australia, <em>Australian Wine Export Monitor</em>, financial year 2025–26 (export volume).
+            <a href="https://www.wineaustralia.com/market-insights/australian-wine-exports">wineaustralia.com</a></li>
+          <li id="src-4">Wine Australia, <em>Production, Sales and Inventory Report 2024–25</em> (Tables 2, 6 and 8).
+            <a href="https://www.wineaustralia.com/market-insights/australian-wine-production-sales-and-inventory">wineaustralia.com</a></li>
+          <li id="src-5">UN Comtrade, Australia's reported exports of HS 2204 (wine of fresh grapes) by partner, calendar years 2014–2025.
+            <a href="https://comtradeplus.un.org/">comtradeplus.un.org</a></li>
+          <li id="src-6">Reserve Bank of Australia, Statistical Table F11, AUD/USD annual average exchange rates.
+            <a href="https://www.rba.gov.au/statistics/historical-data.html">rba.gov.au</a></li>
+          <li id="src-7">World map: <code>world-110m.json</code> from vega-datasets (Natural Earth).
+            <a href="https://github.com/vega/vega-datasets">github.com/vega/vega-datasets</a></li>
+        </ol>
+      </div>
+      <div>
+        <h3>Methodology</h3>
+        <dl class="chart-notes">
+          <dt><a href="#regions">Where the grapes are grown</a></dt>
+          <dd>Tonnes crushed per region as reported in the regional appendix. Sources <a href="#src-1">1</a>, <a href="#src-2">2</a>.</dd>
+
+          <dt><a href="#varieties">Every state has its own signature</a></dt>
+          <dd>Each cell is a variety's tonnes divided by the state's total crush. Source <a href="#src-1">1</a>.</dd>
+
+          <dt><a href="#colour">Grown white, shipped red</a></dt>
+          <dd>Grapes crushed are by reported tonnes (2026 vintage); exports are by volume (2025–26). Shares are rounded to
+            whole squares so each grid adds up to 100. Sources <a href="#src-1">1</a>, <a href="#src-3">3</a>.</dd>
+
+          <dt><a href="#flows-sunburst">Where did the year's wine go?</a></dt>
+          <dd>Production, sales and inventory figures for 2024–25. Source <a href="#src-4">4</a>.</dd>
+
+          <dt><a href="#exports">Which countries buy it?</a></dt>
+          <dd>Australia's reported exports by calendar year, converted from US dollars to Australian dollars at the RBA's
+            average exchange rate for each year. Lines start from the centre of Australia and end at each country's centre
+            (city for Singapore and Hong Kong). Sources <a href="#src-5">5</a>, <a href="#src-6">6</a>, <a href="#src-7">7</a>.</dd>
+
+          <dt><a href="#markets">A changing list of customers</a></dt>
+          <dd>Same export values as the map above (converted to Australian dollars). Sources <a href="#src-5">5</a>, <a href="#src-6">6</a>.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="js/theme.js"></script>
 <script>
