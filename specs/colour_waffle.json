@@ -7,7 +7,7 @@
         "text": "Grapes crushed",
         "subtitle": "2026 vintage, by grape colour"
       },
-      "width": 410,
+      "width": "var(--col-width)",
       "height": 210,
       "data": {
         "url": "data/waffle_2026.csv",
@@ -51,7 +51,7 @@
                 "type": "linear",
                 "domain": [
                   0,
-                  19.5
+                  22.1
                 ],
                 "nice": false,
                 "zero": true
@@ -148,7 +148,7 @@
                 "type": "linear",
                 "domain": [
                   0,
-                  19.5
+                  22.1
                 ],
                 "nice": false,
                 "zero": true
@@ -226,7 +226,7 @@
                 "type": "linear",
                 "domain": [
                   0,
-                  19.5
+                  22.1
                 ],
                 "nice": false,
                 "zero": true
@@ -257,7 +257,7 @@
         "text": "Wine exported",
         "subtitle": "2025–26, by volume"
       },
-      "width": 410,
+      "width": "var(--col-width)",
       "height": 210,
       "data": {
         "url": "data/waffle_2026.csv",
@@ -301,7 +301,7 @@
                 "type": "linear",
                 "domain": [
                   0,
-                  19.5
+                  22.1
                 ],
                 "nice": false,
                 "zero": true
@@ -398,7 +398,7 @@
                 "type": "linear",
                 "domain": [
                   0,
-                  19.5
+                  22.1
                 ],
                 "nice": false,
                 "zero": true
@@ -476,7 +476,7 @@
                 "type": "linear",
                 "domain": [
                   0,
-                  19.5
+                  22.1
                 ],
                 "nice": false,
                 "zero": true
@@ -503,10 +503,12 @@
       ]
     }
   ],
-  "spacing": 40,
+  "spacing": "var(--col-gap)",
   "resolve": {
     "scale": {
       "color": "shared"
     }
-  }
+  },
+  "padding": 0,
+  "bounds": "flush"
 }

@@ -48,6 +48,13 @@
   --world-europe: #7a4fa0;
   --world-se-asia: #d36f8f;
   --world-oceania: #5a78c0;
+
+  /* LAYOUT GRID: every two-column section splits at the page centre.
+     Charts read these too (js/theme.js), so the page and the charts line up. */
+  --col-width: 464px;            /* width of each half */
+  --col-gap: 32px;               /* gap between the halves */
+  --row-label-width: 110px;      /* heatmap state labels, inside the left half */
+  --heat-left-width: calc(var(--col-width) - var(--row-label-width));
 }
 
 body {
@@ -58,7 +65,7 @@ body {
   line-height: 1.55;
 }
 main {
-  max-width: 960px;          /* fits a small laptop: no horizontal scroll */
+  max-width: calc(2 * var(--col-width) + var(--col-gap));   /* 960px: fits a small laptop, no horizontal scroll */
   margin: 0 auto;
   padding: 2rem 1rem 4rem;
 }
@@ -98,9 +105,9 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--rul
 /* ---- end STAT BANDS ---- */
 
 /* Two-column layout: narrative beside a compact chart (e.g. the sunburst) */
-.two-col { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--col-gap); align-items: center; }
 .two-col .col-text p:first-child { margin-top: 0; }
-.col-chart { width: auto; }
+.col-chart { width: auto; justify-self: start; }
 @media (max-width: 820px) { .two-col { grid-template-columns: 1fr; } }
 
 /* Caption under each chart (fine print + source) sits close to the chart it describes */
@@ -109,3 +116,12 @@ footer { font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--rul
 /* Key numbers and places in the narrative text */
 main p strong { color: var(--rose-text); font-weight: 700; }
 .note strong { color: inherit; }
+
+/* Chart with its controls in a narrow column on the right (e.g. the bump chart's "Show" options) */
+.chart-with-controls { display: grid; grid-template-columns: minmax(0, 1fr) 170px; gap: var(--col-gap); align-items: start; }
+.chart-controls .vega-bind { margin: 0; }
+.chart-controls .vega-bind-name { display: block; margin-bottom: 0.4rem; }
+.chart-controls .vega-bind-radio { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.92rem; }
+.chart-controls .vega-bind-radio label { display: flex; align-items: center; gap: 0.45rem; cursor: pointer; }
+.chart-controls input[type="radio"] { margin: 0; accent-color: var(--rose); }
+@media (max-width: 820px) { .chart-with-controls { grid-template-columns: 1fr; } }

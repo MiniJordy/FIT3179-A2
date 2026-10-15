@@ -4,9 +4,20 @@
 //   "style": "bubble"          -> a named bundle of mark settings (STYLES below)
 //   "range": "wine"            -> a named list of colours for a scale (RANGES below)
 //   "var(--merlot)"            -> a single palette colour, swapped in by resolveVars() before drawing
+//   "var(--col-width)"         -> a layout size from the CSS grid, swapped in as a number (pixels)
 
 // Read a CSS variable, e.g. css('--merlot') -> '#5a1f36'
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+// Read a CSS size variable as a number of pixels, e.g. px('--col-width') -> 464 (works for calc() too)
+function px(name) {
+  const probe = document.createElement('div');
+  probe.style.cssText = `position:absolute; visibility:hidden; width:var(${name})`;
+  document.body.appendChild(probe);
+  const w = probe.getBoundingClientRect().width;
+  probe.remove();
+  return w;
+}
 
 const RANGES = {
   wine:  [css('--wine-red'), css('--wine-white'), css('--wine-rose'), css('--wine-other')],
@@ -45,11 +56,13 @@ const WINE_THEME = {
 };
 const EMBED_OPTS = {actions: false, config: WINE_THEME};
 
-// Replace every "var(--name)" string in a spec with that variable's colour.
+// Replace every "var(--name)" string in a spec with that variable's value.
 function resolveVars(node) {
   if (typeof node === 'string') {
     const m = node.match(/^var\((--[\w-]+)\)$/);
-    return m ? css(m[1]) : node;
+    if (!m) return node;
+    const value = css(m[1]);
+    return /px$|^calc/.test(value) ? px(m[1]) : value;   // sizes become numbers, colours stay strings
   }
   if (Array.isArray(node)) return node.map(resolveVars);
   if (node && typeof node === 'object') {

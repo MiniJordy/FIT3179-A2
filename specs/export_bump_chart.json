@@ -1,8 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Chart 9: rank of Australia's 11 main wine export markets by value (A$), 2014-2025. Markets shown are those in the overall top 10 in more than one year; they are ranked against each other.",
+  "description": "Chart 9: rank of Australia's 11 main wine export markets by value (A$), 2014-2025. Markets shown are those in the overall top 10 in more than one year; they are ranked against each other. By default only the top 3 markets of 2025 are coloured; the 'Show' radio buttons (drawn beside the chart, in #bump-controls) colour one world region or every market, and hovering a line highlights that market.",
   "width": "container",
   "height": 480,
+  "params": [
+    {
+      "name": "show",
+      "value": "Top 3 in 2025",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Top 3 in 2025",
+          "Northeast Asia",
+          "North America",
+          "Europe",
+          "Southeast Asia",
+          "Oceania",
+          "All markets"
+        ],
+        "name": "Show",
+        "element": "#bump-controls"
+      }
+    }
+  ],
   "data": {
     "url": "data/exports_by_market_2014_2025.csv",
     "format": {
@@ -68,6 +88,26 @@
       "groupby": [
         "year"
       ]
+    },
+    {
+      "calculate": "datum.year == 2025 && datum.rank <= 3 ? 1 : 0",
+      "as": "top3_2025"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "top3_2025",
+          "as": "is_top3"
+        }
+      ],
+      "groupby": [
+        "market"
+      ]
+    },
+    {
+      "calculate": "show == 'All markets' || (show == 'Top 3 in 2025' && datum.is_top3 == 1) || show == datum.world_region ? 1 : 0",
+      "as": "lit"
     }
   ],
   "encoding": {
@@ -127,6 +167,38 @@
     {
       "mark": {
         "type": "line",
+        "strokeWidth": 2,
+        "interpolate": "monotone",
+        "strokeCap": "round",
+        "color": "var(--border)"
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.35
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "or": [
+              {
+                "param": "hover",
+                "empty": false
+              },
+              "datum.lit == 1"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "line",
         "strokeWidth": 2.5,
         "interpolate": "monotone",
         "strokeCap": "round"
@@ -173,20 +245,31 @@
       },
       "encoding": {
         "color": {
-          "field": "world_region",
-          "type": "nominal",
-          "title": "Region of the world",
-          "scale": {
-            "domain": [
-              "Northeast Asia",
-              "North America",
-              "Europe",
-              "Southeast Asia",
-              "Oceania"
-            ],
-            "range": "world"
+          "condition": {
+            "test": {
+              "or": [
+                {
+                  "param": "hover",
+                  "empty": false
+                },
+                "datum.lit == 1"
+              ]
+            },
+            "field": "world_region",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Northeast Asia",
+                "North America",
+                "Europe",
+                "Southeast Asia",
+                "Oceania"
+              ],
+              "range": "world"
+            },
+            "legend": null
           },
-          "legend": null
+          "value": "var(--border)"
         },
         "opacity": {
           "condition": {
@@ -220,7 +303,6 @@
           }
         ]
       },
-      "transform": [],
       "params": [
         {
           "name": "hover",
@@ -259,6 +341,21 @@
             "value": 1
           },
           "value": 0.2
+        },
+        "color": {
+          "condition": {
+            "test": {
+              "or": [
+                {
+                  "param": "hover",
+                  "empty": false
+                },
+                "datum.lit == 1"
+              ]
+            },
+            "value": "var(--ink-2)"
+          },
+          "value": "var(--muted)"
         }
       }
     },
@@ -285,13 +382,28 @@
             "value": 1
           },
           "value": 0.2
+        },
+        "color": {
+          "condition": {
+            "test": {
+              "or": [
+                {
+                  "param": "hover",
+                  "empty": false
+                },
+                "datum.lit == 1"
+              ]
+            },
+            "value": "var(--ink-2)"
+          },
+          "value": "var(--muted)"
         }
       }
     }
   ],
   "padding": {
     "left": 5,
-    "right": 115,
+    "right": 22,
     "top": 5,
     "bottom": 5
   },

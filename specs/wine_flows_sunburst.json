@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Chart 8: sunburst of the 1,133 million litres of wine made in 2024-25. Inner ring: exported / sold in Australia / left over (production minus sales). Outer ring: wine style. Angles pre-computed in scripts/build_datasets.py.",
+  "padding": 0,
   "width": 440,
   "height": 440,
   "data": {
