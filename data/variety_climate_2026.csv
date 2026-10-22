@@ -1,0 +1,260 @@
+variety,colour,region,state,gst_c,tonnes,share_pct,variety_avg_gst
+Pinot Noir,Red,Riverland,SA,21.1,8734,22.1,19.04
+Pinot Noir,Red,Adelaide Hills,SA,17.9,5008,12.6,19.04
+Pinot Noir,Red,Tasmania,TAS,14.4,4749,12.0,19.04
+Pinot Noir,Red,Murray Darling–Swan Hill (NSW),NSW,21.4,4315,10.9,19.04
+Pinot Noir,Red,Murray Darling–Swan Hill (VIC),VIC,21.4,3159,8.0,19.04
+Pinot Noir,Red,Riverina,NSW,21.8,3013,7.6,19.04
+Pinot Noir,Red,Yarra Valley,VIC,16.3,2590,6.5,19.04
+Pinot Noir,Red,Langhorne Creek,SA,19.2,1193,3.0,19.04
+Pinot Noir,Red,King Valley,VIC,17.6,1161,2.9,19.04
+Pinot Noir,Red,Padthaway,SA,17.8,908,2.3,19.04
+Pinot Noir,Red,Mornington Peninsula,VIC,17.4,809,2.0,19.04
+Pinot Noir,Red,Alpine Valleys,VIC,16.9,741,1.9,19.04
+Pinot Noir,Red,Wrattonbully,SA,17.5,737,1.9,19.04
+Pinot Noir,Red,Robe,SA,17.0,368,0.9,19.04
+Pinot Noir,Red,Currency Creek,SA,18.5,365,0.9,19.04
+Pinot Noir,Red,Orange,NSW,18.1,343,0.9,19.04
+Pinot Noir,Red,Upper Goulburn,VIC,16.9,216,0.5,19.04
+Pinot Noir,Red,Great Southern,WA,18.0,174,0.4,19.04
+Pinot Noir,Red,Margaret River,WA,18.9,165,0.4,19.04
+Pinot Noir,Red,McLaren Vale,SA,18.6,163,0.4,19.04
+Pinot Noir,Red,Coonawarra,SA,17.3,154,0.4,19.04
+Pinot Noir,Red,Eden Valley,SA,18.4,129,0.3,19.04
+Pinot Noir,Red,Rutherglen,VIC,19.7,92,0.2,19.04
+Pinot Noir,Red,Hunter,NSW,20.2,69,0.2,19.04
+Pinot Noir,Red,Barossa Valley,SA,19.0,57,0.1,19.04
+Pinot Noir,Red,Adelaide Plains,SA,20.6,49,0.1,19.04
+Pinot Noir,Red,Heathcote,VIC,18.5,49,0.1,19.04
+Pinot Noir,Red,Grampians,VIC,17.1,25,0.1,19.04
+Pinot Noir,Red,Mount Benson,SA,17.1,23,0.1,19.04
+Pinot Noir,Red,Mount Gambier,SA,16.8,20,0.1,19.04
+Pinot Noir,Red,Mudgee,NSW,19.5,12,0.0,19.04
+Pinot Noir,Red,Goulburn Valley,VIC,19.6,2,0.0,19.04
+Pinot Noir,Red,Swan District,WA,21.8,1,0.0,19.04
+Cabernet Sauvignon,Red,Riverland,SA,21.1,40335,30.2,19.77
+Cabernet Sauvignon,Red,Coonawarra,SA,17.3,19282,14.4,19.77
+Cabernet Sauvignon,Red,Murray Darling–Swan Hill (VIC),VIC,21.4,12666,9.5,19.77
+Cabernet Sauvignon,Red,Riverina,NSW,21.8,9618,7.2,19.77
+Cabernet Sauvignon,Red,Barossa Valley,SA,19.0,7745,5.8,19.77
+Cabernet Sauvignon,Red,Murray Darling–Swan Hill (NSW),NSW,21.4,7414,5.5,19.77
+Cabernet Sauvignon,Red,Padthaway,SA,17.8,7112,5.3,19.77
+Cabernet Sauvignon,Red,Langhorne Creek,SA,19.2,6343,4.7,19.77
+Cabernet Sauvignon,Red,McLaren Vale,SA,18.6,6025,4.5,19.77
+Cabernet Sauvignon,Red,Wrattonbully,SA,17.5,5501,4.1,19.77
+Cabernet Sauvignon,Red,Margaret River,WA,18.9,2786,2.1,19.77
+Cabernet Sauvignon,Red,Clare Valley,SA,19.1,2199,1.6,19.77
+Cabernet Sauvignon,Red,Currency Creek,SA,18.5,1892,1.4,19.77
+Cabernet Sauvignon,Red,Great Southern,WA,18.0,1006,0.8,19.77
+Cabernet Sauvignon,Red,Eden Valley,SA,18.4,978,0.7,19.77
+Cabernet Sauvignon,Red,Robe,SA,17.0,728,0.5,19.77
+Cabernet Sauvignon,Red,Heathcote,VIC,18.5,453,0.3,19.77
+Cabernet Sauvignon,Red,Adelaide Hills,SA,17.9,433,0.3,19.77
+Cabernet Sauvignon,Red,Yarra Valley,VIC,16.3,284,0.2,19.77
+Cabernet Sauvignon,Red,Goulburn Valley,VIC,19.6,185,0.1,19.77
+Cabernet Sauvignon,Red,Mount Benson,SA,17.1,150,0.1,19.77
+Cabernet Sauvignon,Red,Grampians,VIC,17.1,134,0.1,19.77
+Cabernet Sauvignon,Red,Orange,NSW,18.1,111,0.1,19.77
+Cabernet Sauvignon,Red,Mudgee,NSW,19.5,78,0.1,19.77
+Cabernet Sauvignon,Red,Hunter,NSW,20.2,50,0.0,19.77
+Cabernet Sauvignon,Red,Tasmania,TAS,14.4,48,0.0,19.77
+Cabernet Sauvignon,Red,King Valley,VIC,17.6,44,0.0,19.77
+Cabernet Sauvignon,Red,Rutherglen,VIC,19.7,28,0.0,19.77
+Cabernet Sauvignon,Red,Swan District,WA,21.8,28,0.0,19.77
+Cabernet Sauvignon,Red,Mornington Peninsula,VIC,17.4,6,0.0,19.77
+Cabernet Sauvignon,Red,Alpine Valleys,VIC,16.9,1,0.0,19.77
+Shiraz,Red,Riverland,SA,21.1,57059,28.7,20.17
+Shiraz,Red,Riverina,NSW,21.8,30066,15.1,20.17
+Shiraz,Red,Barossa Valley,SA,19.0,25995,13.1,20.17
+Shiraz,Red,Murray Darling–Swan Hill (VIC),VIC,21.4,19744,9.9,20.17
+Shiraz,Red,McLaren Vale,SA,18.6,14725,7.4,20.17
+Shiraz,Red,Langhorne Creek,SA,19.2,8581,4.3,20.17
+Shiraz,Red,Murray Darling–Swan Hill (NSW),NSW,21.4,8088,4.1,20.17
+Shiraz,Red,Coonawarra,SA,17.3,6926,3.5,20.17
+Shiraz,Red,Padthaway,SA,17.8,6508,3.3,20.17
+Shiraz,Red,Clare Valley,SA,19.1,3927,2.0,20.17
+Shiraz,Red,Wrattonbully,SA,17.5,3343,1.7,20.17
+Shiraz,Red,Heathcote,VIC,18.5,2402,1.2,20.17
+Shiraz,Red,Margaret River,WA,18.9,1963,1.0,20.17
+Shiraz,Red,Eden Valley,SA,18.4,1599,0.8,20.17
+Shiraz,Red,Grampians,VIC,17.1,1172,0.6,20.17
+Shiraz,Red,Great Southern,WA,18.0,1118,0.6,20.17
+Shiraz,Red,Currency Creek,SA,18.5,1093,0.5,20.17
+Shiraz,Red,Adelaide Hills,SA,17.9,1047,0.5,20.17
+Shiraz,Red,Hunter,NSW,20.2,628,0.3,20.17
+Shiraz,Red,Adelaide Plains,SA,20.6,596,0.3,20.17
+Shiraz,Red,Yarra Valley,VIC,16.3,451,0.2,20.17
+Shiraz,Red,Robe,SA,17.0,414,0.2,20.17
+Shiraz,Red,Mudgee,NSW,19.5,278,0.1,20.17
+Shiraz,Red,Mount Benson,SA,17.1,230,0.1,20.17
+Shiraz,Red,Rutherglen,VIC,19.7,230,0.1,20.17
+Shiraz,Red,Orange,NSW,18.1,227,0.1,20.17
+Shiraz,Red,Goulburn Valley,VIC,19.6,158,0.1,20.17
+Shiraz,Red,Tasmania,TAS,14.4,141,0.1,20.17
+Shiraz,Red,Mornington Peninsula,VIC,17.4,128,0.1,20.17
+Shiraz,Red,King Valley,VIC,17.6,85,0.0,20.17
+Shiraz,Red,Swan District,WA,21.8,74,0.0,20.17
+Shiraz,Red,Alpine Valleys,VIC,16.9,21,0.0,20.17
+Shiraz,Red,Upper Goulburn,VIC,16.9,6,0.0,20.17
+Sauvignon Blanc,White,Riverland,SA,21.1,23830,25.8,20.65
+Sauvignon Blanc,White,Murray Darling–Swan Hill (NSW),NSW,21.4,19921,21.5,20.65
+Sauvignon Blanc,White,Riverina,NSW,21.8,18951,20.5,20.65
+Sauvignon Blanc,White,Murray Darling–Swan Hill (VIC),VIC,21.4,9368,10.1,20.65
+Sauvignon Blanc,White,Adelaide Hills,SA,17.9,5784,6.3,20.65
+Sauvignon Blanc,White,Margaret River,WA,18.9,3284,3.6,20.65
+Sauvignon Blanc,White,Padthaway,SA,17.8,2793,3.0,20.65
+Sauvignon Blanc,White,Currency Creek,SA,18.5,1434,1.6,20.65
+Sauvignon Blanc,White,Langhorne Creek,SA,19.2,1356,1.5,20.65
+Sauvignon Blanc,White,Coonawarra,SA,17.3,999,1.1,20.65
+Sauvignon Blanc,White,King Valley,VIC,17.6,765,0.8,20.65
+Sauvignon Blanc,White,Wrattonbully,SA,17.5,742,0.8,20.65
+Sauvignon Blanc,White,Tasmania,TAS,14.4,662,0.7,20.65
+Sauvignon Blanc,White,Mount Gambier,SA,16.8,530,0.6,20.65
+Sauvignon Blanc,White,Orange,NSW,18.1,429,0.5,20.65
+Sauvignon Blanc,White,Mount Benson,SA,17.1,398,0.4,20.65
+Sauvignon Blanc,White,Great Southern,WA,18.0,271,0.3,20.65
+Sauvignon Blanc,White,Barossa Valley,SA,19.0,201,0.2,20.65
+Sauvignon Blanc,White,Robe,SA,17.0,139,0.2,20.65
+Sauvignon Blanc,White,Adelaide Plains,SA,20.6,136,0.1,20.65
+Sauvignon Blanc,White,McLaren Vale,SA,18.6,120,0.1,20.65
+Sauvignon Blanc,White,Eden Valley,SA,18.4,116,0.1,20.65
+Sauvignon Blanc,White,Alpine Valleys,VIC,16.9,108,0.1,20.65
+Sauvignon Blanc,White,Goulburn Valley,VIC,19.6,78,0.1,20.65
+Sauvignon Blanc,White,Yarra Valley,VIC,16.3,51,0.1,20.65
+Sauvignon Blanc,White,Mornington Peninsula,VIC,17.4,18,0.0,20.65
+Sauvignon Blanc,White,Upper Goulburn,VIC,16.9,6,0.0,20.65
+Sauvignon Blanc,White,Hunter,NSW,20.2,5,0.0,20.65
+Sauvignon Blanc,White,Swan District,WA,21.8,3,0.0,20.65
+Sauvignon Blanc,White,Mudgee,NSW,19.5,1,0.0,20.65
+Merlot,Red,Riverland,SA,21.1,19917,41.8,20.76
+Merlot,Red,Riverina,NSW,21.8,11136,23.4,20.76
+Merlot,Red,Murray Darling–Swan Hill (VIC),VIC,21.4,4906,10.3,20.76
+Merlot,Red,Murray Darling–Swan Hill (NSW),NSW,21.4,3133,6.6,20.76
+Merlot,Red,Coonawarra,SA,17.3,2242,4.7,20.76
+Merlot,Red,Wrattonbully,SA,17.5,1166,2.4,20.76
+Merlot,Red,Barossa Valley,SA,19.0,758,1.6,20.76
+Merlot,Red,Langhorne Creek,SA,19.2,708,1.5,20.76
+Merlot,Red,Padthaway,SA,17.8,651,1.4,20.76
+Merlot,Red,Clare Valley,SA,19.1,446,0.9,20.76
+Merlot,Red,Margaret River,WA,18.9,440,0.9,20.76
+Merlot,Red,McLaren Vale,SA,18.6,422,0.9,20.76
+Merlot,Red,Currency Creek,SA,18.5,421,0.9,20.76
+Merlot,Red,King Valley,VIC,17.6,420,0.9,20.76
+Merlot,Red,Mount Benson,SA,17.1,212,0.4,20.76
+Merlot,Red,Mudgee,NSW,19.5,132,0.3,20.76
+Merlot,Red,Eden Valley,SA,18.4,127,0.3,20.76
+Merlot,Red,Yarra Valley,VIC,16.3,101,0.2,20.76
+Merlot,Red,Alpine Valleys,VIC,16.9,89,0.2,20.76
+Merlot,Red,Orange,NSW,18.1,48,0.1,20.76
+Merlot,Red,Adelaide Hills,SA,17.9,41,0.1,20.76
+Merlot,Red,Tasmania,TAS,14.4,33,0.1,20.76
+Merlot,Red,Hunter,NSW,20.2,29,0.1,20.76
+Merlot,Red,Adelaide Plains,SA,20.6,27,0.1,20.76
+Merlot,Red,Grampians,VIC,17.1,22,0.0,20.76
+Merlot,Red,Rutherglen,VIC,19.7,13,0.0,20.76
+Merlot,Red,Swan District,WA,21.8,8,0.0,20.76
+Merlot,Red,Goulburn Valley,VIC,19.6,6,0.0,20.76
+Merlot,Red,Robe,SA,17.0,5,0.0,20.76
+Merlot,Red,Great Southern,WA,18.0,5,0.0,20.76
+Merlot,Red,Heathcote,VIC,18.5,1,0.0,20.76
+Merlot,Red,Mornington Peninsula,VIC,17.4,1,0.0,20.76
+Pinot Gris/Grigio,White,Riverina,NSW,21.8,18279,27.7,20.78
+Pinot Gris/Grigio,White,Murray Darling–Swan Hill (NSW),NSW,21.4,17875,27.1,20.78
+Pinot Gris/Grigio,White,Murray Darling–Swan Hill (VIC),VIC,21.4,8662,13.1,20.78
+Pinot Gris/Grigio,White,Riverland,SA,21.1,8526,12.9,20.78
+Pinot Gris/Grigio,White,King Valley,VIC,17.6,2583,3.9,20.78
+Pinot Gris/Grigio,White,Adelaide Hills,SA,17.9,2414,3.7,20.78
+Pinot Gris/Grigio,White,Padthaway,SA,17.8,1416,2.1,20.78
+Pinot Gris/Grigio,White,Wrattonbully,SA,17.5,1273,1.9,20.78
+Pinot Gris/Grigio,White,Tasmania,TAS,14.4,858,1.3,20.78
+Pinot Gris/Grigio,White,Clare Valley,SA,19.1,477,0.7,20.78
+Pinot Gris/Grigio,White,Langhorne Creek,SA,19.2,424,0.6,20.78
+Pinot Gris/Grigio,White,Currency Creek,SA,18.5,325,0.5,20.78
+Pinot Gris/Grigio,White,Orange,NSW,18.1,305,0.5,20.78
+Pinot Gris/Grigio,White,Eden Valley,SA,18.4,290,0.4,20.78
+Pinot Gris/Grigio,White,Mudgee,NSW,19.5,256,0.4,20.78
+Pinot Gris/Grigio,White,Alpine Valleys,VIC,16.9,248,0.4,20.78
+Pinot Gris/Grigio,White,Margaret River,WA,18.9,232,0.4,20.78
+Pinot Gris/Grigio,White,Mornington Peninsula,VIC,17.4,231,0.4,20.78
+Pinot Gris/Grigio,White,Yarra Valley,VIC,16.3,220,0.3,20.78
+Pinot Gris/Grigio,White,Goulburn Valley,VIC,19.6,163,0.2,20.78
+Pinot Gris/Grigio,White,Swan District,WA,21.8,122,0.2,20.78
+Pinot Gris/Grigio,White,Adelaide Plains,SA,20.6,117,0.2,20.78
+Pinot Gris/Grigio,White,Barossa Valley,SA,19.0,112,0.2,20.78
+Pinot Gris/Grigio,White,Grampians,VIC,17.1,79,0.1,20.78
+Pinot Gris/Grigio,White,McLaren Vale,SA,18.6,68,0.1,20.78
+Pinot Gris/Grigio,White,Mount Benson,SA,17.1,54,0.1,20.78
+Pinot Gris/Grigio,White,Heathcote,VIC,18.5,51,0.1,20.78
+Pinot Gris/Grigio,White,Upper Goulburn,VIC,16.9,50,0.1,20.78
+Pinot Gris/Grigio,White,Hunter,NSW,20.2,49,0.1,20.78
+Pinot Gris/Grigio,White,Great Southern,WA,18.0,37,0.1,20.78
+Pinot Gris/Grigio,White,Robe,SA,17.0,25,0.0,20.78
+Pinot Gris/Grigio,White,Coonawarra,SA,17.3,18,0.0,20.78
+Pinot Gris/Grigio,White,Mount Gambier,SA,16.8,17,0.0,20.78
+Pinot Gris/Grigio,White,Rutherglen,VIC,19.7,15,0.0,20.78
+Chardonnay,White,Riverland,SA,21.1,100528,40.7,20.82
+Chardonnay,White,Riverina,NSW,21.8,43268,17.5,20.82
+Chardonnay,White,Murray Darling–Swan Hill (VIC),VIC,21.4,38222,15.5,20.82
+Chardonnay,White,Murray Darling–Swan Hill (NSW),NSW,21.4,27256,11.0,20.82
+Chardonnay,White,Adelaide Hills,SA,17.9,5679,2.3,20.82
+Chardonnay,White,Margaret River,WA,18.9,5073,2.1,20.82
+Chardonnay,White,Padthaway,SA,17.8,4776,1.9,20.82
+Chardonnay,White,Langhorne Creek,SA,19.2,3428,1.4,20.82
+Chardonnay,White,Tasmania,TAS,14.4,2618,1.1,20.82
+Chardonnay,White,Coonawarra,SA,17.3,1806,0.7,20.82
+Chardonnay,White,Yarra Valley,VIC,16.3,1788,0.7,20.82
+Chardonnay,White,Currency Creek,SA,18.5,1332,0.5,20.82
+Chardonnay,White,King Valley,VIC,17.6,1194,0.5,20.82
+Chardonnay,White,Wrattonbully,SA,17.5,1170,0.5,20.82
+Chardonnay,White,Hunter,NSW,20.2,1015,0.4,20.82
+Chardonnay,White,McLaren Vale,SA,18.6,962,0.4,20.82
+Chardonnay,White,Barossa Valley,SA,19.0,955,0.4,20.82
+Chardonnay,White,Heathcote,VIC,18.5,936,0.4,20.82
+Chardonnay,White,Robe,SA,17.0,773,0.3,20.82
+Chardonnay,White,Eden Valley,SA,18.4,771,0.3,20.82
+Chardonnay,White,Great Southern,WA,18.0,601,0.2,20.82
+Chardonnay,White,Mornington Peninsula,VIC,17.4,450,0.2,20.82
+Chardonnay,White,Orange,NSW,18.1,438,0.2,20.82
+Chardonnay,White,Mudgee,NSW,19.5,358,0.1,20.82
+Chardonnay,White,Alpine Valleys,VIC,16.9,338,0.1,20.82
+Chardonnay,White,Swan District,WA,21.8,309,0.1,20.82
+Chardonnay,White,Clare Valley,SA,19.1,308,0.1,20.82
+Chardonnay,White,Mount Benson,SA,17.1,205,0.1,20.82
+Chardonnay,White,Goulburn Valley,VIC,19.6,104,0.0,20.82
+Chardonnay,White,Mount Gambier,SA,16.8,88,0.0,20.82
+Chardonnay,White,Rutherglen,VIC,19.7,88,0.0,20.82
+Chardonnay,White,Upper Goulburn,VIC,16.9,71,0.0,20.82
+Chardonnay,White,Grampians,VIC,17.1,14,0.0,20.82
+Chardonnay,White,Adelaide Plains,SA,20.6,11,0.0,20.82
+Semillon,White,Riverina,NSW,21.8,12534,41.8,21.17
+Semillon,White,Riverland,SA,21.1,7192,24.0,21.17
+Semillon,White,Murray Darling–Swan Hill (VIC),VIC,21.4,4510,15.0,21.17
+Semillon,White,Margaret River,WA,18.9,1621,5.4,21.17
+Semillon,White,Murray Darling–Swan Hill (NSW),NSW,21.4,1545,5.2,21.17
+Semillon,White,Hunter,NSW,20.2,1074,3.6,21.17
+Semillon,White,Barossa Valley,SA,19.0,507,1.7,21.17
+Semillon,White,Great Southern,WA,18.0,314,1.0,21.17
+Semillon,White,Adelaide Hills,SA,17.9,151,0.5,21.17
+Semillon,White,Coonawarra,SA,17.3,118,0.4,21.17
+Semillon,White,Eden Valley,SA,18.4,99,0.3,21.17
+Semillon,White,Wrattonbully,SA,17.5,59,0.2,21.17
+Semillon,White,Goulburn Valley,VIC,19.6,57,0.2,21.17
+Semillon,White,Robe,SA,17.0,49,0.2,21.17
+Semillon,White,Currency Creek,SA,18.5,31,0.1,21.17
+Semillon,White,Clare Valley,SA,19.1,30,0.1,21.17
+Semillon,White,McLaren Vale,SA,18.6,25,0.1,21.17
+Semillon,White,Orange,NSW,18.1,20,0.1,21.17
+Semillon,White,Swan District,WA,21.8,16,0.1,21.17
+Semillon,White,Mudgee,NSW,19.5,15,0.1,21.17
+Semillon,White,Yarra Valley,VIC,16.3,6,0.0,21.17
+Semillon,White,Rutherglen,VIC,19.7,5,0.0,21.17
+Muscat Gordo Blanco,White,Riverland,SA,21.1,16124,47.5,21.3
+Muscat Gordo Blanco,White,Murray Darling–Swan Hill (VIC),VIC,21.4,8436,24.8,21.3
+Muscat Gordo Blanco,White,Murray Darling–Swan Hill (NSW),NSW,21.4,6168,18.2,21.3
+Muscat Gordo Blanco,White,Riverina,NSW,21.8,3246,9.6,21.3
+Muscat Gordo Blanco,White,Adelaide Plains,SA,20.6,4,0.0,21.3
+Muscat Gordo Blanco,White,Swan District,WA,21.8,3,0.0,21.3
+Colombard,White,Riverland,SA,21.1,14900,56.9,21.31
+Colombard,White,Riverina,NSW,21.8,5137,19.6,21.31
+Colombard,White,Murray Darling–Swan Hill (NSW),NSW,21.4,3819,14.6,21.31
+Colombard,White,Murray Darling–Swan Hill (VIC),VIC,21.4,2310,8.8,21.31

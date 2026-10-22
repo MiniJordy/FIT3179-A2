@@ -10,46 +10,68 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
-<main>
-  <header>
+<header class="page-header">
+  <div class="header-inner">
     <h1>Australian Wine: Climate, Regions and Trade</h1>
-    <p class="lede">This page follows Australian wine from the vineyard to the glass: where the grapes are grown, what is grown,
-      what the grapes are worth, and where the wine ends up. Each year Australia crushes <strong>more than a million tonnes</strong> of grapes
-      and makes <strong>over a billion litres</strong> of wine. <strong>More than half</strong> of it is sold overseas, to a list of customers that has changed
-      dramatically in the past decade, from China's rapid rise and sudden fall to the growing importance of Southeast Asia.</p>
-  </header>
+    <p class="header-sub">From the vineyard to the glass, and where it goes next.</p>
+    <div class="stat-band">
+      <div class="stat"><span class="stat-num">1.27 million</span><span class="stat-label">tonnes of grapes crushed in 2026</span></div>
+      <div class="stat"><span class="stat-num">1.13 billion</span><span class="stat-label">litres of wine made in 2024–25</span></div>
+      <div class="stat"><span class="stat-num">56%</span><span class="stat-label">of that wine sold overseas</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
 
   <section class="part" id="where">
     <header class="part-header">
       <h2>Where is wine grown?</h2>
       <p class="part-intro">Australia's wine regions and their climates.</p>
     </header>
-    <!-- STAT BAND (optional): delete this <div> to remove the big numbers for this part -->
-    <div class="stat-band">
-      <div class="stat"><span class="stat-num">1.27 million</span><span class="stat-label">tonnes of wine grapes crushed in 2026</span></div>
-      <div class="stat"><span class="stat-num">64</span><span class="stat-label">wine regions shown on the map</span></div>
-      <div class="stat"><span class="stat-num">140,800</span><span class="stat-label">hectares of vineyard inside those regions</span></div>
-    </div>
 
-    <section class="chart-section placeholder">
+    <section class="chart-section" id="climate">
       <h3>How warm is each wine region?</h3>
-      <p class="todo">Coming soon: map of every wine region coloured by growing season temperature (Map 1).</p>
+      <div class="text-cols">
+        <p>
+          Australian wine grapes grow across a wide range of climates. The warmest regions, <strong>South Burnett</strong> in
+          Queensland (22.4 °C) and the inland <strong>Murray Darling</strong> and <strong>Riverina</strong> (almost 22 °C), have
+          growing seasons around <strong>8 °C warmer</strong> than <strong>Tasmania</strong> (14.4 °C).
+        </p>
+        <p>
+          Growing season temperature is the average temperature from October to April, while the vines are growing. It shapes
+          which grapes suit a region: Pinot Noir does best at roughly 14–16 °C, Cabernet Sauvignon at 16.5–19.5 °C.
+          Darker regions are warmer; hover over a region to see its temperature.
+        </p>
+      </div>
+      <div id="gst-map" class="chart"></div>
+      <p class="note">Averages for the 1997–2017 growing seasons. Tasmania is one wine region, shown as the average of its
+        eight climate areas (12.7–16.2 °C).</p>
     </section>
 
     <section class="chart-section" id="regions">
       <h3>Where the grapes are grown</h3>
-      <p>
-        Most of Australia's grapes come from <strong>three hot inland regions</strong> along the Murray
+      <div class="text-cols">
+        <p>
+          Most of Australia's grapes come from <strong>three hot inland regions</strong> along the Murray
         River, while famous names like the Barossa and Margaret River are much smaller.
-        Each circle's size shows the tonnes of grapes crushed in that region in 2026.
-      </p>
+        </p>
+        <p>
+          Each circle's size shows the tonnes of grapes crushed in that region in 2026.
+        </p>
+      </div>
       <div id="crush-bubble-map" class="chart"></div>
-      <p>
-        Those three inland regions, Riverland, Riverina and Murray Darling–Swan Hill, crushed about <strong>72%</strong> of the grapes
+      <div class="text-cols">
+        <p>
+          Those three inland regions, Riverland, Riverina and Murray Darling–Swan Hill, crushed about <strong>72%</strong> of the grapes
         reported in 2026, but earned only about <strong>36%</strong> of their value. Their grapes sold for around <strong>$330 a tonne</strong> on average,
-        compared with about <strong>$1,480 a tonne</strong> everywhere else. They supply the volume for everyday, affordable wine, while
+        compared with about <strong>$1,480 a tonne</strong> everywhere else.
+        </p>
+        <p>
+          They supply the volume for everyday, affordable wine, while
         smaller regions like the <strong>Barossa Valley</strong> ($1,680 a tonne) and <strong>Tasmania</strong> ($3,720 a tonne) are paid far more for less fruit.
-      </p>
+        </p>
+      </div>
       <p class="note">Very small regions are drawn larger than their true size so they stay visible. Shaded regions without a circle (N/A in the tooltip) crush less than about 1,000 tonnes; Wine Australia doesn't publish figures for them.</p>
     </section>
   </section>
@@ -59,7 +81,7 @@
       <h2>What does each place grow?</h2>
       <p class="part-intro">The grape varieties and wine colours behind those regions.</p>
     </header>
-    <!-- STAT BAND (optional): delete this <div> to remove the big numbers for this part -->
+
     <div class="stat-band">
       <div class="stat"><span class="stat-num">53%</span><span class="stat-label">of the 2026 crush was white grapes</span></div>
       <div class="stat"><span class="stat-num">Chardonnay</span><span class="stat-label">the most-crushed grape in Australia</span></div>
@@ -68,32 +90,58 @@
 
     <section class="chart-section" id="varieties">
       <h3>Every state has its own signature</h3>
-      <p>
-        Each state has its own mix of grapes. <strong>South Australia</strong>, the biggest producer, leans on red: Shiraz (<strong>24%</strong>) and
+      <div class="text-cols">
+        <p>
+          Each state has its own mix of grapes. <strong>South Australia</strong>, the biggest producer, leans on red: Shiraz (<strong>24%</strong>) and
         Cabernet Sauvignon (<strong>18%</strong>) make up over two-fifths of its crush. <strong>Victoria</strong> and <strong>New South Wales</strong> lean the other way,
-        with Chardonnay their single biggest grape. <strong>Western Australia</strong> stands out for Cabernet Sauvignon and Sauvignon Blanc,
+        with Chardonnay their single biggest grape.
+        </p>
+        <p>
+          <strong>Western Australia</strong> stands out for Cabernet Sauvignon and Sauvignon Blanc,
         and <strong>Tasmania</strong>, the coolest state, is <strong>almost half Pinot Noir</strong>, a grape that struggles in hot weather.
         Each cell shows a grape variety's share of that state's 2026 crush.
-      </p>
+        </p>
+      </div>
       <div id="variety-heatmap" class="chart"></div>
       <p class="note">Shows the 10 most-crushed varieties nationally; the rest of each state's crush is other varieties. Queensland is based on only 541 tonnes.</p>
     </section>
 
     <section class="chart-section" id="colour">
       <h3>Grown white, shipped red</h3>
-      <p>
-        In 2026, white grapes made up <strong>53%</strong> of the crush, their <strong>highest share since 2012</strong>, because the
-        smaller 2026 crush hit red grapes much harder than white. But the wine Australia sends overseas tells the opposite story:
+      <div class="text-cols">
+        <p>
+          In 2026, white grapes made up <strong>53%</strong> of the crush, their <strong>highest share since 2012</strong>, because the
+        smaller 2026 crush hit red grapes much harder than white.
+        </p>
+        <p>
+          But the wine Australia sends overseas tells the opposite story:
         <strong>55%</strong> of export volume in 2025–26 was red, and only 41% white. Rosé, sparkling and fortified wines are only a
         small slice of either. Each square is 1%.
-      </p>
+        </p>
+      </div>
       <div id="colour-waffle" class="chart"></div>
       <p class="note">Sparkling, fortified and other wines are grouped because together they make up only 2% of exports.</p>
     </section>
 
-    <section class="chart-section placeholder">
+    <section class="chart-section" id="grape-climate">
       <h3>Every grape has a home climate</h3>
-      <p class="todo">Coming soon: the temperatures each grape variety is grown in (Chart 10).</p>
+      <div class="text-cols">
+        <p>
+          Most of Australia's grapes, whatever the variety, come from the hot inland regions, so most of the big circles sit on
+          the right. <strong>Pinot Noir</strong> stands out: it is the main grape of the two coolest regions, <strong>Tasmania</strong>
+          and the <strong>Yarra Valley</strong> (about 7,300 tonnes there, ahead of Chardonnay's 4,400), and has the coolest
+          average (19.0 °C).
+          Bulk grapes such as <strong>Colombard</strong> and <strong>Muscat Gordo Blanco</strong> are almost all inland (21.3 °C).
+        </p>
+        <p>
+          Each row is one grape. Every circle is a region that grew it in 2026, placed by the region's growing season
+          temperature and sized by the tonnes crushed. The black tick is the grape's average temperature, weighted by tonnes.
+          Hover over a circle to see that region light up in every row.
+        </p>
+      </div>
+      <div id="grape-climate-chart" class="chart"></div>
+      <p class="note">The same 10 varieties as the heatmap above. Queensland (541 tonnes) is left out because its two regions
+        are reported together.</p>
     </section>
   </section>
 
@@ -102,21 +150,50 @@
       <h2>What are the grapes worth?</h2>
       <p class="part-intro">Why a tonne of grapes can be worth $300 or $3,000.</p>
     </header>
-    <!-- STAT BAND (optional): delete this <div> to remove the big numbers for this part -->
+
     <div class="stat-band">
       <div class="stat"><span class="stat-num">$570</span><span class="stat-label">average price paid per tonne of grapes</span></div>
       <div class="stat"><span class="stat-num">$837 million</span><span class="stat-label">total value of the 2026 grape crush</span></div>
       <div class="stat"><span class="stat-num">13×</span><span class="stat-label">more per tonne in Tasmania than the Riverland</span></div>
     </div>
 
-    <section class="chart-section placeholder">
+    <section class="chart-section" id="prices">
       <h3>Who gets paid the most for their grapes?</h3>
-      <p class="todo">Coming soon: price per tonne for each region, grouped by state (Chart 6).</p>
+      <div class="text-cols">
+        <p>
+          A tonne of grapes from <strong>Tasmania</strong> was worth about <strong>$3,720</strong> in 2026, and from the
+          <strong>Mornington Peninsula</strong> almost <strong>$4,170</strong>. The same tonne from the <strong>Riverland</strong>
+          fetched about <strong>$290</strong>, roughly 13 times less. The cheapest grapes come from the regions that grow the most.
+        </p>
+        <p>
+          Each circle is one wine region, placed by the estimated value of a tonne of its grapes and sized by how many tonnes it
+          crushed. Rows are states, with the highest-priced state at the top. The dashed line is the national average price paid
+          for grapes. Hover over a circle for the region's figures.
+        </p>
+      </div>
+      <div id="price-chart" class="chart"></div>
+      <p class="note">Regions that crushed under 6,000 tonnes are drawn at the 6,000-tonne size so they stay visible.
+        Queensland's two regions are reported together.</p>
     </section>
 
-    <section class="chart-section placeholder">
+    <section class="chart-section" id="price-climate">
       <h3>Do cooler regions earn more?</h3>
-      <p class="todo">Coming soon: temperature vs price, linked to a map (Chart 7).</p>
+      <div class="text-cols">
+        <p>
+          Mostly, yes. Regions with cooler growing seasons tend to be paid more for their grapes: on the trend line, each
+          extra degree goes with a price about <strong>20% lower</strong>. But temperature is not the whole story. The
+          <strong>Hunter</strong> and <strong>Swan District</strong> are warm yet earn well above the hot inland regions, while
+          <strong>Coonawarra</strong> is cool but sells most of its large crush for under $1,000 a tonne.
+        </p>
+        <p>
+          Each circle is a wine region, placed by its growing season temperature and the value of a tonne of its grapes, and
+          sized by tonnes crushed. The price axis is a log scale, so each step up doubles the price. Hover over a circle to find
+          the region on the map, or over the map to find it on the chart.
+        </p>
+      </div>
+      <div id="price-climate-chart" class="chart"></div>
+      <p class="note">Grey regions on the map have no published crush figures. Queensland is left out because its two regions,
+        with very different temperatures, are reported together.</p>
     </section>
   </section>
 
@@ -125,7 +202,7 @@
       <h2>Where does the wine go?</h2>
       <p class="part-intro">How much of each year's wine is drunk at home, sent overseas or stored, and which countries buy it.</p>
     </header>
-    <!-- STAT BAND (optional): delete this <div> to remove the big numbers for this part -->
+
     <div class="stat-band">
       <div class="stat"><span class="stat-num">$2.3 billion</span><span class="stat-label">of wine exported in 2025–26</span></div>
       <div class="stat"><span class="stat-num">598 million</span><span class="stat-label">litres shipped overseas</span></div>
@@ -156,32 +233,46 @@
 
     <section class="chart-section" id="exports">
       <h3>Which countries buy it?</h3>
-      <p>
-        Around <strong>three in every five litres</strong> of Australian wine are sold overseas. <strong>China</strong> is the most
+      <div class="text-cols">
+        <p>
+          Around <strong>three in every five litres</strong> of Australian wine are sold overseas. <strong>China</strong> is the most
         valuable market again after its tariffs were lifted, while the <strong>UK</strong> buys the most by volume.
-        Each line's thickness shows the value of wine exported to that market, and the three biggest markets in each year are coloured. Notes in the corner explain the key events in the years they happened. Drag the slider to change the year,
+        Each line's thickness shows the value of wine exported to that market, and the three biggest markets in each year are coloured.
+        </p>
+        <p>
+          Notes in the corner explain the key events in the years they happened. Drag the slider to change the year,
         or use the menu to show the labels as dollars or as a share of all exports.
-      </p>
+        </p>
+      </div>
       <div id="export-flow-map" class="chart"></div>
-      <p>
-        Value and volume tell different stories. In 2025 the UK bought the most Australian wine by volume, about
+      <div class="text-cols">
+        <p>
+          Value and volume tell different stories. In 2025 the UK bought the most Australian wine by volume, about
         200 million litres, but paid <strong>under $2 a litre</strong>, because much of it is shipped in bulk and bottled in Britain.
-        China bought only about a third as much, around 68 million litres, yet paid over $700 million for it, <strong>more than
+        </p>
+        <p>
+          China bought only about a third as much, around 68 million litres, yet paid over $700 million for it, <strong>more than
         $10 a litre</strong>. <strong>Singapore</strong> and <strong>Thailand</strong> are smaller markets, but they pay premium prices and are among Australia's
         fastest-growing customers.
-      </p>
+        </p>
+      </div>
       <p class="note">Shows the 14 markets that were in Australia's top 10 at some point between 2014 and 2025.</p>
     </section>
 
     <section class="chart-section" id="markets">
       <h3>A changing list of customers</h3>
-      <p>
-        China rose to become Australia's most valuable wine market <strong>by 2016</strong>. When China put heavy duties
+      <div class="text-cols">
+        <p>
+          China rose to become Australia's most valuable wine market <strong>by 2016</strong>. When China put heavy duties
         on Australian wine <strong>in late 2020</strong> (up to 218% from March 2021), sales there <strong>almost stopped</strong>, and China fell out of the top 10 until the
-        tariffs were removed <strong>in 2024</strong>. Each line follows one of Australia's 11 main export markets and its rank by the
+        tariffs were removed <strong>in 2024</strong>.
+        </p>
+        <p>
+          Each line follows one of Australia's 11 main export markets and its rank by the
         value of wine it bought. The top three markets of 2025 are coloured; use the options beside the chart to colour a
         region or every market, or hover over a line to follow one market.
-      </p>
+        </p>
+      </div>
       <div class="chart-with-controls">
         <div id="export-bump-chart" class="chart"></div>
         <div id="bump-controls" class="chart-controls"></div>
@@ -222,11 +313,23 @@
             <a href="https://exportfinance.gov.au/resources/world-risk-developments/2024/april/australia-wine-exports-to-recover-slowly-after-china-lifts-tariffs/">exportfinance.gov.au</a></li>
           <li id="src-11">Austrade, <em>Australia–United Kingdom Free Trade Agreement</em> (in force 31 May 2023).
             <a href="https://www.austrade.gov.au/australian/export/free-trade-agreements/aukfta">austrade.gov.au</a></li>
+          <li id="src-12">Wine Australia, <em>Australia's Wine Future: A Climate Atlas</em>, National Summary (Remenyi et al., 2019), Figure 12: mean growing season temperature by region, 1997–2017.
+            <a href="https://www.wineaustralia.com/climate-atlas">wineaustralia.com</a></li>
+          <li id="src-13">Jones, G. V., <em>Climate change: implications for viticulture and wine production</em> (Pinot Noir and Cabernet Sauvignon temperature ranges).
+            <a href="https://www.infowine.com/wp-content/uploads/2024/04/libretto4594-01-1.pdf">infowine.com</a></li>
+          <li id="src-14">University of Adelaide Wine Economics Research Centre, working paper 2021-07, Table 4 (growing season temperatures 1997–2017, used as a check).
+            <a href="https://media.adelaide.edu.au/economics/papers/winedoc/winewp2021-07.pdf">adelaide.edu.au</a></li>
         </ol>
       </div>
       <div>
         <h3>Methodology</h3>
         <dl class="chart-notes">
+          <dt><a href="#climate">How warm is each wine region?</a></dt>
+          <dd>Growing season temperature is the mean temperature from October to April, averaged over the 1997–2017 seasons.
+            The atlas shows it as a bar chart without printed numbers, so each bar was measured from the image (accurate to about
+            0.05 °C; checked against 10 regions published as numbers). Bands are 2 °C wide. Sources <a href="#src-12">12</a>,
+            <a href="#src-13">13</a>, <a href="#src-14">14</a>.</dd>
+
           <dt><a href="#regions">Where the grapes are grown</a></dt>
           <dd>Tonnes crushed per region as reported in the regional appendix. Sources <a href="#src-1">1</a>, <a href="#src-2">2</a>.</dd>
 
@@ -236,6 +339,21 @@
           <dt><a href="#colour">Grown white, shipped red</a></dt>
           <dd>Grapes crushed are by reported tonnes (2026 vintage); exports are by volume (2025–26). Shares are rounded to
             whole squares so each grid adds up to 100. Sources <a href="#src-1">1</a>, <a href="#src-3">3</a>.</dd>
+
+          <dt><a href="#grape-climate">Every grape has a home climate</a></dt>
+          <dd>Each region's 2026 tonnes by variety joined to its growing season temperature (as in the map above). The Murray
+            Darling–Swan Hill figures (reported as one region in each state) use the average of the two regions' temperatures.
+            Sources <a href="#src-1">1</a>, <a href="#src-12">12</a>.</dd>
+
+          <dt><a href="#prices">Who gets paid the most for their grapes?</a></dt>
+          <dd>Value per tonne is each region's estimated value of its 2026 crush divided by the tonnes crushed. The national
+            average line ($570) is Wine Australia's weighted average for purchased grapes. Source <a href="#src-1">1</a>.</dd>
+
+          <dt><a href="#price-climate">Do cooler regions earn more?</a></dt>
+          <dd>Value per tonne as in the chart above, joined to each region's growing season temperature. The two state parts
+            of Murray Darling–Swan Hill are combined into one point. The trend line is an exponential fit (a straight line on
+            the log scale); the "20% per degree" figure comes from its slope. Sources <a href="#src-1">1</a>,
+            <a href="#src-12">12</a>.</dd>
 
           <dt><a href="#flows-sunburst">Where did the year's wine go?</a></dt>
           <dd>Production, sales and inventory figures for 2024–25. Source <a href="#src-4">4</a>.</dd>
@@ -258,9 +376,13 @@
 <script src="js/theme.js"></script>
 <script>
   // in page order
+  embedChart('#gst-map', 'specs/gst_choropleth_map.json');
   embedChart('#crush-bubble-map', 'specs/crush_bubble_map.json');
   embedChart('#variety-heatmap', 'specs/variety_heatmap.json');
+  embedChart('#grape-climate-chart', 'specs/variety_climate_strip.json');
   embedChart('#colour-waffle', 'specs/colour_waffle.json');
+  embedChart('#price-chart', 'specs/region_price_strip.json');
+  embedChart('#price-climate-chart', 'specs/price_climate_scatter.json');
   embedChart('#wine-flows-sunburst', 'specs/wine_flows_sunburst.json');
   embedChart('#export-flow-map', 'specs/export_flow_map.json');
   embedChart('#export-bump-chart', 'specs/export_bump_chart.json');

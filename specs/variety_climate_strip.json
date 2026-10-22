@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart 10: for the 10 most-crushed grape varieties (same as Chart 4), every region that grew them in 2026, placed by the region's growing season temperature (1997-2017) and sized by tonnes crushed (circle area proportional to tonnes; under 1,300 t drawn at the 1,300 t size so they stay visible). The tick is each variety's tonne-weighted average temperature. Rows sorted coolest to warmest average. Data built by scripts/build_variety_climate.py.",
+  "width": "container",
+  "height": {"step": 46},
+  "data": {
+    "url": "data/variety_climate_2026.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "gst_c": "number",
+        "tonnes": "number",
+        "share_pct": "number",
+        "variety_avg_gst": "number"
+      }
+    }
+  },
+  "encoding": {
+    "y": {
+      "field": "variety",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "variety_avg_gst", "op": "min", "order": "ascending"},
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12.5,
+        "labelColor": "var(--ink-2)",
+        "labelPadding": 10,
+        "grid": true,
+        "gridColor": "var(--grid)"
+      }
+    },
+    "x": {
+      "field": "gst_c",
+      "type": "quantitative",
+      "title": "Growing season temperature of the region (°C)",
+      "scale": {"domain": [14, 22.5], "nice": false},
+      "axis": {
+        "values": [14, 15, 16, 17, 18, 19, 20, 21, 22],
+        "labelExpr": "datum.value + '°'",
+        "grid": true,
+        "domain": false,
+        "ticks": false,
+        "titleFontWeight": 500,
+        "titlePadding": 10
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "circle", "stroke": "var(--paper)", "strokeWidth": 0.8},
+      "encoding": {
+        "size": {
+          "field": "size_t",
+          "type": "quantitative",
+          "title": "Tonnes crushed",
+          "scale": {"domain": [0, 100000], "range": [0, 1100]},
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "values": [10000, 50000, 100000],
+            "symbolFillColor": "var(--muted)",
+            "symbolStrokeWidth": 0,
+            "labelExpr": "format(datum.value, ',') + ' t'"
+          }
+        },
+        "color": {
+          "field": "colour",
+          "type": "nominal",
+          "title": "Grape colour",
+          "scale": {"domain": ["Red", "White"], "range": ["var(--wine-red)", "var(--wine-white)"]},
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "circle",
+            "titlePadding": 11.7
+          }
+        },
+        "opacity": {"condition": {"param": "hover", "empty": true, "value": 0.75}, "value": 0.12},
+        "tooltip": [
+          {"field": "variety", "title": "Grape"},
+          {"field": "region", "title": "Region"},
+          {"field": "state", "title": "State"},
+          {"field": "gst_c", "title": "Growing season temp. (°C)", "format": ".1f"},
+          {"field": "tonnes", "title": "Tonnes crushed (2026)", "format": ","},
+          {"field": "share_pct", "title": "% of this grape's crush", "format": ".1f"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["region"],
+            "on": "pointerover",
+            "clear": "pointerout",
+            "nearest": true
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [{"op": "min", "field": "variety_avg_gst", "as": "avg"}],
+          "groupby": ["variety"]
+        }
+      ],
+      "mark": {"type": "tick", "color": "var(--ink)", "thickness": 3, "size": 36},
+      "encoding": {
+        "x": {"field": "avg", "type": "quantitative"},
+        "tooltip": [
+          {"field": "variety", "title": "Grape"},
+          {"field": "avg", "title": "Average temp. of its tonnes (°C)", "format": ".1f"}
+        ]
+      }
+    }
+  ],
+  "transform": [{"calculate": "max(datum.tonnes, 1300)", "as": "size_t"}]
+}

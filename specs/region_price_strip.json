@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart 6: estimated value per tonne of grapes crushed in each wine region in 2026 (estimated value / tonnes, Vintage Report 2026 appendix), one row per state, circles sized by tonnes crushed (area proportional; regions under 6,000 t drawn at the 6,000 t size). Dashed line: Wine Australia's national weighted average for purchased grapes ($570).",
+  "width": "container",
+  "height": {"step": 70},
+  "data": {
+    "url": "data/regions_crush_2026.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "tonnes": "number",
+        "value_per_tonne": "number",
+        "est_value_aud": "number",
+        "lon": "number",
+        "lat": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.region === 'Murray Darling – Swan Hill (VIC)' || datum.region === 'Murray Darling – Swan Hill (NSW)' ? 'Murray Darling–Swan Hill' : datum.region",
+      "as": "short_name"
+    },
+    {"calculate": "max(datum.tonnes, 6000)", "as": "size_t"},
+    {"calculate": "35 - (sqrt(2500 * datum.size_t / 340000 / PI) + 4)", "as": "label_dy"}
+  ],
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "value_per_tonne", "op": "max", "order": "descending"},
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
+        "labelColor": "var(--ink-2)",
+        "labelPadding": 12,
+        "grid": true,
+        "gridColor": "var(--grid)"
+      }
+    },
+    "x": {
+      "field": "value_per_tonne",
+      "type": "quantitative",
+      "title": "Estimated value per tonne of grapes, 2026 (A$)",
+      "scale": {"domain": [0, 4400], "nice": false},
+      "axis": {
+        "format": "$,.0f",
+        "values": [0, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000],
+        "domain": false,
+        "ticks": false,
+        "titleFontWeight": 500,
+        "titlePadding": 10
+      }
+    }
+  },
+  "layer": [
+    {
+      "data": {"values": [{"v": 570}]},
+      "transform": [],
+      "mark": {"type": "rule", "strokeDash": [4, 3], "color": "var(--muted)", "strokeWidth": 1.2},
+      "encoding": {"x": {"field": "v", "type": "quantitative"}, "y": null}
+    },
+    {
+      "data": {"values": [{"v": 570}]},
+      "transform": [],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 5,
+        "y": {"expr": "height - 4"},
+        "fontSize": 11,
+        "color": "var(--ink-3)",
+        "text": "National average for purchased grapes: $570"
+      },
+      "encoding": {"x": {"field": "v", "type": "quantitative"}, "y": null}
+    },
+    {
+      "mark": {"type": "circle", "opacity": 0.8, "stroke": "var(--paper)", "strokeWidth": 1},
+      "encoding": {
+        "size": {
+          "field": "size_t",
+          "type": "quantitative",
+          "scale": {"domain": [0, 340000], "range": [0, 2500]},
+          "legend": null
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "scale": {"domain": ["SA", "VIC", "NSW", "WA", "QLD", "TAS"], "range": "state"},
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "region", "title": "Region"},
+          {"field": "state", "title": "State"},
+          {"field": "value_per_tonne", "title": "Value per tonne (A$)", "format": "$,.0f"},
+          {"field": "tonnes", "title": "Tonnes crushed", "format": ","},
+          {"field": "est_value_aud", "title": "Estimated value (A$)", "format": "$,.0f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "region",
+            "oneOf": [
+              "Tasmania",
+              "Mornington Peninsula",
+              "Yarra Valley",
+              "Great Southern",
+              "Margaret River",
+              "Adelaide Hills",
+              "Barossa Valley",
+              "Coonawarra",
+              "Riverland",
+              "Hunter",
+              "Riverina",
+              "Murray Darling – Swan Hill (VIC)"
+            ]
+          }
+        }
+      ],
+      "mark": {"type": "text", "baseline": "bottom", "style": "bubble-label"},
+      "encoding": {
+        "text": {"field": "short_name"},
+        "yOffset": {"field": "label_dy", "type": "quantitative", "scale": null}
+      }
+    }
+  ]
+}

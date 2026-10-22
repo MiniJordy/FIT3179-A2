@@ -20,6 +20,7 @@ A single-page data visualisation following Australian wine from the vineyard to 
 - Wine Australia, *Wine Geographical Indications Australia* (region boundaries) — https://wineaustralia-opendata-wineaustralia.hub.arcgis.com/datasets/2dd4c385f0ed4d109c2e18ae99e819e2
 - UN Comtrade, Australia's exports of HS 2204 (wine of fresh grapes) by partner, 2014–2025 — https://comtradeplus.un.org/
 - Reserve Bank of Australia, Statistical Table F11 Exchange Rates (AUD/USD) — https://www.rba.gov.au/statistics/historical-data.html
+- Wine Australia, *Australia's Wine Future: A Climate Atlas*, National Summary (Remenyi et al., 2019), Figure 12 — growing season temperature by region, 1997–2017 (values measured from the chart by `scripts/build_gst.py`) — https://www.wineaustralia.com/climate-atlas
 - World map: `world-110m.json` from [vega-datasets](https://github.com/vega/vega-datasets) (Natural Earth)
 
 The original downloaded reports are not included in this repository; they are available from the links above.

@@ -19,39 +19,17 @@
     }
   },
   "transform": [
-    {
-      "calculate": "datum.ring === 'inner' ? 64 : 151",
-      "as": "r1"
-    },
-    {
-      "calculate": "datum.ring === 'inner' ? 148 : 205",
-      "as": "r2"
-    }
+    {"calculate": "datum.ring === 'inner' ? 64 : 151", "as": "r1"},
+    {"calculate": "datum.ring === 'inner' ? 148 : 205", "as": "r2"}
   ],
   "layer": [
     {
-      "mark": {
-        "type": "arc",
-        "stroke": "var(--paper)",
-        "strokeWidth": 2
-      },
+      "mark": {"type": "arc", "stroke": "var(--paper)", "strokeWidth": 2},
       "encoding": {
-        "theta": {
-          "field": "t1",
-          "type": "quantitative",
-          "scale": null
-        },
-        "theta2": {
-          "field": "t2"
-        },
-        "radius": {
-          "field": "r1",
-          "type": "quantitative",
-          "scale": null
-        },
-        "radius2": {
-          "field": "r2"
-        },
+        "theta": {"field": "t1", "type": "quantitative", "scale": null},
+        "theta2": {"field": "t2"},
+        "radius": {"field": "r1", "type": "quantitative", "scale": null},
+        "radius2": {"field": "r2"},
         "color": {
           "field": "name",
           "type": "nominal",
@@ -71,47 +49,24 @@
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
-            "values": [
-              "Red & rosé",
-              "White",
-              "Sparkling & fortified"
-            ],
+            "values": ["Red & rosé", "White", "Sparkling & fortified"],
             "symbolType": "square",
-            "labelFontSize": 12
+            "labelFontSize": 12,
+            "offset": 4
           }
         },
         "tooltip": [
-          {
-            "field": "group",
-            "title": "Where it went"
-          },
-          {
-            "field": "name",
-            "title": "Wine"
-          },
-          {
-            "field": "ml",
-            "title": "Million litres",
-            "format": ",.0f"
-          },
-          {
-            "field": "pct_of_total",
-            "title": "Share of all wine made (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "pct_of_group",
-            "title": "Share of this group (%)",
-            "format": ".0f"
-          }
+          {"field": "group", "title": "Where it went"},
+          {"field": "name", "title": "Wine"},
+          {"field": "ml", "title": "Million litres", "format": ",.0f"},
+          {"field": "pct_of_total", "title": "Share of all wine made (%)", "format": ".1f"},
+          {"field": "pct_of_group", "title": "Share of this group (%)", "format": ".0f"}
         ]
       }
     },
     {
       "transform": [
-        {
-          "filter": "datum.ring === 'inner' && datum.group !== 'Left over'"
-        },
+        {"filter": "datum.ring === 'inner' && datum.group !== 'Left over'"},
         {
           "calculate": "replace(datum.name, 'Sold in ', 'Sold in|') + '|' + format(datum.ml, ',.0f') + ' ML'",
           "as": "lab"
@@ -126,17 +81,9 @@
         "baseline": "middle"
       },
       "encoding": {
-        "theta": {
-          "field": "mid",
-          "type": "quantitative",
-          "scale": null
-        },
-        "radius": {
-          "value": 106
-        },
-        "text": {
-          "field": "lab"
-        }
+        "theta": {"field": "mid", "type": "quantitative", "scale": null},
+        "radius": {"value": 106},
+        "text": {"field": "lab"}
       }
     },
     {
@@ -144,47 +91,23 @@
         {
           "filter": "datum.ring === 'outer' && datum.name !== 'Unsold' && (datum.t2 - datum.t1) > 0.3"
         },
-        {
-          "calculate": "format(datum.pct_of_group, '.0f') + '%'",
-          "as": "lab"
-        }
+        {"calculate": "format(datum.pct_of_group, '.0f') + '%'", "as": "lab"}
       ],
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fontWeight": 600,
-        "baseline": "middle"
-      },
+      "mark": {"type": "text", "fontSize": 12, "fontWeight": 600, "baseline": "middle"},
       "encoding": {
-        "theta": {
-          "field": "mid",
-          "type": "quantitative",
-          "scale": null
-        },
-        "radius": {
-          "value": 178
-        },
-        "text": {
-          "field": "lab"
-        },
+        "theta": {"field": "mid", "type": "quantitative", "scale": null},
+        "radius": {"value": 178},
+        "text": {"field": "lab"},
         "color": {
-          "condition": {
-            "test": "datum.name === 'White'",
-            "value": "var(--ink-2)"
-          },
+          "condition": {"test": "datum.name === 'White'", "value": "var(--ink-2)"},
           "value": "var(--paper)"
         }
       }
     },
     {
       "transform": [
-        {
-          "filter": "datum.ring === 'inner' && datum.group === 'Left over'"
-        },
-        {
-          "calculate": "'Left over|' + format(datum.ml, ',.0f') + ' ML'",
-          "as": "lab"
-        }
+        {"filter": "datum.ring === 'inner' && datum.group === 'Left over'"},
+        {"calculate": "'Left over|' + format(datum.ml, ',.0f') + ' ML'", "as": "lab"}
       ],
       "mark": {
         "type": "text",
@@ -196,27 +119,13 @@
         "baseline": "middle"
       },
       "encoding": {
-        "theta": {
-          "field": "mid",
-          "type": "quantitative",
-          "scale": null
-        },
-        "radius": {
-          "value": 222
-        },
-        "text": {
-          "field": "lab"
-        }
+        "theta": {"field": "mid", "type": "quantitative", "scale": null},
+        "radius": {"value": 222},
+        "text": {"field": "lab"}
       }
     },
     {
-      "data": {
-        "values": [
-          {
-            "t": "1,133"
-          }
-        ]
-      },
+      "data": {"values": [{"t": "1,133"}]},
       "mark": {
         "type": "text",
         "fontSize": 24,
@@ -224,47 +133,13 @@
         "color": "var(--ink-2)",
         "dy": -10
       },
-      "encoding": {
-        "theta": {
-          "value": 0
-        },
-        "radius": {
-          "value": 0
-        },
-        "text": {
-          "field": "t"
-        }
-      }
+      "encoding": {"theta": {"value": 0}, "radius": {"value": 0}, "text": {"field": "t"}}
     },
     {
-      "data": {
-        "values": [
-          {
-            "s": "million litres|made"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "fontSize": 11,
-        "color": "var(--ink-3)",
-        "dy": 14,
-        "lineBreak": "|"
-      },
-      "encoding": {
-        "theta": {
-          "value": 0
-        },
-        "radius": {
-          "value": 0
-        },
-        "text": {
-          "field": "s"
-        }
-      }
+      "data": {"values": [{"s": "million litres|made"}]},
+      "mark": {"type": "text", "fontSize": 11, "color": "var(--ink-3)", "dy": 14, "lineBreak": "|"},
+      "encoding": {"theta": {"value": 0}, "radius": {"value": 0}, "text": {"field": "s"}}
     }
   ],
-  "view": {
-    "stroke": null
-  }
+  "view": {"stroke": null}
 }

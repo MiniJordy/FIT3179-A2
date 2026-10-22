@@ -24,6 +24,8 @@ const RANGES = {
   flows: [css('--flow-exported'), css('--flow-domestic'), css('--flow-leftover'),
           css('--wine-red'), css('--wine-white'), css('--wine-other'), css('--flow-unsold')],
   heat:  [css('--heat-1'), css('--heat-2'), css('--heat-3'), css('--heat-4'), css('--merlot'), css('--merlot-deep')],
+  gst:   [css('--gst-1'), css('--gst-2'), css('--gst-3'), css('--gst-4'), css('--gst-5')],   // 5 temperature bands, cool to hot
+  state: [css('--state-sa'), css('--state-vic'), css('--state-nsw'), css('--state-wa'), css('--state-qld'), css('--state-tas')],
   world: [css('--world-ne-asia'), css('--world-n-america'), css('--world-europe'), css('--world-se-asia'), css('--world-oceania')]
 };
 
@@ -36,6 +38,7 @@ const STYLES = {
   'leader-line':  {color: css('--muted'), strokeWidth: 0.8},   // bubble -> its true location
   'callout-line': {color: css('--ink-3'), strokeWidth: 0.7},   // label -> bubble
   'bubble-label': {fontSize: 10.5, fontWeight: 600, color: css('--ink-2')},
+  'label-halo':   {stroke: css('--paper'), strokeWidth: 3, strokeJoin: 'round', strokeOpacity: 0.9},   // white outline drawn under a label
   // flow map
   'route-label':  {fontSize: 11, fontWeight: 600, color: css('--ink-2')},
   // bump chart

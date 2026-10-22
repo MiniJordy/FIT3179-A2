@@ -7,6 +7,7 @@
 //
 // Run from the DV2 folder:  NODE_PATH=<folder with d3-geo installed> node scripts/build_bubble_positions.mjs
 import fs from 'fs';
+import { execSync } from 'child_process';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const d3 = require('d3-geo');
@@ -23,7 +24,7 @@ const radius = t => Math.sqrt((SIZE_RANGE_MAX * Math.max(t, MIN_T) / SIZE_DOMAIN
 
 // ---- the two views ----
 const VIEWS = {
-  SE: { W: 580, H: 560, box: [[134.6, -26.2], [153.6, -43.8]], parallels: [-30, -40], rotate: [-144, 0] },
+  SE: { W: 580, H: 560, crop: 18, box: [[134.6, -26.2], [153.6, -43.8]], parallels: [-30, -40], rotate: [-144, 0] },
   WA: { W: 220, H: 260, box: [[114.9, -31.0], [118.4, -35.1]], parallels: [-30, -36], rotate: [-117, 0] },
 };
 for (const v of Object.values(VIEWS)) {
@@ -107,10 +108,12 @@ if (fs.existsSync(specPath)) {
   const panels = spec.hconcat.flatMap(p => p.vconcat || [p]).filter(p => VIEWS[p.name]);   // WA panel sits in a vconcat with the size legend
   for (const panel of panels) {
     const v = VIEWS[panel.name];
-    panel.width = v.W; panel.height = v.H;
+    const H = v.H - (v.crop || 0);                       // trim empty sea below Tasmania after fitting
+    panel.width = v.W; panel.height = H;
     panel.projection = { type: 'conicEqualArea', parallels: v.parallels, rotate: v.rotate,
-      scale: +v.proj.scale().toFixed(3), translate: v.proj.translate().map(t => +t.toFixed(3)), clipExtent: [[0, 0], [v.W, v.H]] };
+      scale: +v.proj.scale().toFixed(3), translate: v.proj.translate().map(t => +t.toFixed(3)), clipExtent: [[0, 0], [v.W, H]] };
   }
   fs.writeFileSync(specPath, JSON.stringify(spec, null, 2) + '\n');
+  execSync(`python3 scripts/format_specs.py ${specPath}`);   // keep the spec in the same compact layout as the others
   console.log('updated projections in', specPath);
 }

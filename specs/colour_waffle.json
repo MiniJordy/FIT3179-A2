@@ -3,10 +3,7 @@
   "description": "Chart 5: waffle charts (1 square = 1%) comparing the colour of grapes crushed in the 2026 vintage with the style of wine exported in 2025-26 (by volume). Squares pre-computed in scripts/build_datasets.py.",
   "hconcat": [
     {
-      "title": {
-        "text": "Grapes crushed",
-        "subtitle": "2026 vintage, by grape colour"
-      },
+      "title": {"text": "Grapes crushed", "subtitle": "2026 vintage, by grape colour"},
       "width": "var(--col-width)",
       "height": 210,
       "data": {
@@ -23,17 +20,9 @@
         }
       },
       "transform": [
-        {
-          "filter": "datum.chart === 'crush'"
-        },
-        {
-          "calculate": "datum.col + 1",
-          "as": "col2"
-        },
-        {
-          "calculate": "datum.row + 1",
-          "as": "row2"
-        }
+        {"filter": "datum.chart === 'crush'"},
+        {"calculate": "datum.col + 1", "as": "col2"},
+        {"calculate": "datum.row + 1", "as": "row2"}
       ],
       "layer": [
         {
@@ -47,62 +36,30 @@
             "x": {
               "field": "col",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  22.1
-                ],
-                "nice": false,
-                "zero": true
-              },
+              "scale": {"type": "linear", "domain": [0, 22.1], "nice": false, "zero": true},
               "axis": null
             },
-            "x2": {
-              "field": "col2"
-            },
+            "x2": {"field": "col2"},
             "y": {
               "field": "row",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  10
-                ],
-                "nice": false,
-                "zero": true
-              },
+              "scale": {"type": "linear", "domain": [0, 10], "nice": false, "zero": true},
               "axis": null
             },
-            "y2": {
-              "field": "row2"
-            },
+            "y2": {"field": "row2"},
             "color": {
               "field": "category",
               "type": "nominal",
               "title": null,
               "scale": {
-                "domain": [
-                  "Red",
-                  "White",
-                  "Rosé",
-                  "Sparkling, fortified & other"
-                ],
+                "domain": ["Red", "White", "Rosé", "Sparkling, fortified & other"],
                 "range": "wine"
               },
               "legend": null
             },
             "tooltip": [
-              {
-                "field": "category",
-                "title": "Category"
-              },
-              {
-                "field": "pct",
-                "title": "Share (%)",
-                "format": ".1f"
-              }
+              {"field": "category", "title": "Category"},
+              {"field": "pct", "title": "Share (%)", "format": ".1f"}
             ]
           }
         },
@@ -110,74 +67,32 @@
           "transform": [
             {
               "aggregate": [
-                {
-                  "op": "min",
-                  "field": "pct",
-                  "as": "pct"
-                },
-                {
-                  "op": "min",
-                  "field": "key_row",
-                  "as": "key_row"
-                }
+                {"op": "min", "field": "pct", "as": "pct"},
+                {"op": "min", "field": "key_row", "as": "key_row"}
               ],
-              "groupby": [
-                "category"
-              ]
+              "groupby": ["category"]
             },
-            {
-              "calculate": "9.4 - datum.key_row * 1.3",
-              "as": "ky"
-            },
-            {
-              "calculate": "format(datum.pct, '.0f') + '%  ' + datum.category",
-              "as": "lab"
-            }
+            {"calculate": "9.4 - datum.key_row * 1.3", "as": "ky"},
+            {"calculate": "format(datum.pct, '.0f') + '%  ' + datum.category", "as": "lab"}
           ],
-          "mark": {
-            "type": "square",
-            "size": 150,
-            "opacity": 1,
-            "cornerRadius": 2
-          },
+          "mark": {"type": "square", "size": 150, "opacity": 1, "cornerRadius": 2},
           "encoding": {
             "x": {
               "datum": 10.9,
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  22.1
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 22.1], "nice": false, "zero": true}
             },
             "y": {
               "field": "ky",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  10
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 10], "nice": false, "zero": true}
             },
             "color": {
               "field": "category",
               "type": "nominal",
               "title": null,
               "scale": {
-                "domain": [
-                  "Red",
-                  "White",
-                  "Rosé",
-                  "Sparkling, fortified & other"
-                ],
+                "domain": ["Red", "White", "Rosé", "Sparkling, fortified & other"],
                 "range": "wine"
               },
               "legend": null
@@ -188,75 +103,33 @@
           "transform": [
             {
               "aggregate": [
-                {
-                  "op": "min",
-                  "field": "pct",
-                  "as": "pct"
-                },
-                {
-                  "op": "min",
-                  "field": "key_row",
-                  "as": "key_row"
-                }
+                {"op": "min", "field": "pct", "as": "pct"},
+                {"op": "min", "field": "key_row", "as": "key_row"}
               ],
-              "groupby": [
-                "category"
-              ]
+              "groupby": ["category"]
             },
-            {
-              "calculate": "9.4 - datum.key_row * 1.3",
-              "as": "ky"
-            },
-            {
-              "calculate": "format(datum.pct, '.0f') + '%  ' + datum.category",
-              "as": "lab"
-            }
+            {"calculate": "9.4 - datum.key_row * 1.3", "as": "ky"},
+            {"calculate": "format(datum.pct, '.0f') + '%  ' + datum.category", "as": "lab"}
           ],
-          "mark": {
-            "type": "text",
-            "align": "left",
-            "baseline": "middle",
-            "style": "key-label"
-          },
+          "mark": {"type": "text", "align": "left", "baseline": "middle", "style": "key-label"},
           "encoding": {
             "x": {
               "datum": 11.5,
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  22.1
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 22.1], "nice": false, "zero": true}
             },
             "y": {
               "field": "ky",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  10
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 10], "nice": false, "zero": true}
             },
-            "text": {
-              "field": "lab"
-            }
+            "text": {"field": "lab"}
           }
         }
       ]
     },
     {
-      "title": {
-        "text": "Wine exported",
-        "subtitle": "2025–26, by volume"
-      },
+      "title": {"text": "Wine exported", "subtitle": "2025–26, by volume"},
       "width": "var(--col-width)",
       "height": 210,
       "data": {
@@ -273,17 +146,9 @@
         }
       },
       "transform": [
-        {
-          "filter": "datum.chart === 'exports'"
-        },
-        {
-          "calculate": "datum.col + 1",
-          "as": "col2"
-        },
-        {
-          "calculate": "datum.row + 1",
-          "as": "row2"
-        }
+        {"filter": "datum.chart === 'exports'"},
+        {"calculate": "datum.col + 1", "as": "col2"},
+        {"calculate": "datum.row + 1", "as": "row2"}
       ],
       "layer": [
         {
@@ -297,62 +162,30 @@
             "x": {
               "field": "col",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  22.1
-                ],
-                "nice": false,
-                "zero": true
-              },
+              "scale": {"type": "linear", "domain": [0, 22.1], "nice": false, "zero": true},
               "axis": null
             },
-            "x2": {
-              "field": "col2"
-            },
+            "x2": {"field": "col2"},
             "y": {
               "field": "row",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  10
-                ],
-                "nice": false,
-                "zero": true
-              },
+              "scale": {"type": "linear", "domain": [0, 10], "nice": false, "zero": true},
               "axis": null
             },
-            "y2": {
-              "field": "row2"
-            },
+            "y2": {"field": "row2"},
             "color": {
               "field": "category",
               "type": "nominal",
               "title": null,
               "scale": {
-                "domain": [
-                  "Red",
-                  "White",
-                  "Rosé",
-                  "Sparkling, fortified & other"
-                ],
+                "domain": ["Red", "White", "Rosé", "Sparkling, fortified & other"],
                 "range": "wine"
               },
               "legend": null
             },
             "tooltip": [
-              {
-                "field": "category",
-                "title": "Category"
-              },
-              {
-                "field": "pct",
-                "title": "Share (%)",
-                "format": ".1f"
-              }
+              {"field": "category", "title": "Category"},
+              {"field": "pct", "title": "Share (%)", "format": ".1f"}
             ]
           }
         },
@@ -360,74 +193,32 @@
           "transform": [
             {
               "aggregate": [
-                {
-                  "op": "min",
-                  "field": "pct",
-                  "as": "pct"
-                },
-                {
-                  "op": "min",
-                  "field": "key_row",
-                  "as": "key_row"
-                }
+                {"op": "min", "field": "pct", "as": "pct"},
+                {"op": "min", "field": "key_row", "as": "key_row"}
               ],
-              "groupby": [
-                "category"
-              ]
+              "groupby": ["category"]
             },
-            {
-              "calculate": "9.4 - datum.key_row * 1.3",
-              "as": "ky"
-            },
-            {
-              "calculate": "format(datum.pct, '.0f') + '%  ' + datum.category",
-              "as": "lab"
-            }
+            {"calculate": "9.4 - datum.key_row * 1.3", "as": "ky"},
+            {"calculate": "format(datum.pct, '.0f') + '%  ' + datum.category", "as": "lab"}
           ],
-          "mark": {
-            "type": "square",
-            "size": 150,
-            "opacity": 1,
-            "cornerRadius": 2
-          },
+          "mark": {"type": "square", "size": 150, "opacity": 1, "cornerRadius": 2},
           "encoding": {
             "x": {
               "datum": 10.9,
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  22.1
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 22.1], "nice": false, "zero": true}
             },
             "y": {
               "field": "ky",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  10
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 10], "nice": false, "zero": true}
             },
             "color": {
               "field": "category",
               "type": "nominal",
               "title": null,
               "scale": {
-                "domain": [
-                  "Red",
-                  "White",
-                  "Rosé",
-                  "Sparkling, fortified & other"
-                ],
+                "domain": ["Red", "White", "Rosé", "Sparkling, fortified & other"],
                 "range": "wine"
               },
               "legend": null
@@ -438,77 +229,34 @@
           "transform": [
             {
               "aggregate": [
-                {
-                  "op": "min",
-                  "field": "pct",
-                  "as": "pct"
-                },
-                {
-                  "op": "min",
-                  "field": "key_row",
-                  "as": "key_row"
-                }
+                {"op": "min", "field": "pct", "as": "pct"},
+                {"op": "min", "field": "key_row", "as": "key_row"}
               ],
-              "groupby": [
-                "category"
-              ]
+              "groupby": ["category"]
             },
-            {
-              "calculate": "9.4 - datum.key_row * 1.3",
-              "as": "ky"
-            },
-            {
-              "calculate": "format(datum.pct, '.0f') + '%  ' + datum.category",
-              "as": "lab"
-            }
+            {"calculate": "9.4 - datum.key_row * 1.3", "as": "ky"},
+            {"calculate": "format(datum.pct, '.0f') + '%  ' + datum.category", "as": "lab"}
           ],
-          "mark": {
-            "type": "text",
-            "align": "left",
-            "baseline": "middle",
-            "style": "key-label"
-          },
+          "mark": {"type": "text", "align": "left", "baseline": "middle", "style": "key-label"},
           "encoding": {
             "x": {
               "datum": 11.5,
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  22.1
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 22.1], "nice": false, "zero": true}
             },
             "y": {
               "field": "ky",
               "type": "quantitative",
-              "scale": {
-                "type": "linear",
-                "domain": [
-                  0,
-                  10
-                ],
-                "nice": false,
-                "zero": true
-              }
+              "scale": {"type": "linear", "domain": [0, 10], "nice": false, "zero": true}
             },
-            "text": {
-              "field": "lab"
-            }
+            "text": {"field": "lab"}
           }
         }
       ]
     }
   ],
   "spacing": "var(--col-gap)",
-  "resolve": {
-    "scale": {
-      "color": "shared"
-    }
-  },
+  "resolve": {"scale": {"color": "shared"}},
   "padding": 0,
   "bounds": "flush"
 }

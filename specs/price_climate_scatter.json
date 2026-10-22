@@ -1,0 +1,478 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart 7: growing season temperature (1997-2017) vs estimated value per tonne of grapes (2026) for 33 wine regions, with a linked map split into Western Australia and south-eastern Australia panels (Maps 1 and 2's projections scaled to fit beside the scatter). Hovering a point highlights the region on the map and vice versa. Circles sized by tonnes (area proportional, minimum 6,000 t size), coloured by state. Dashed line: exponential trend (straight on the log scale). Data: scripts/build_price_climate.py. A ring on the map marks the hovered region (small regions are hard to see otherwise).",
+  "padding": 0,
+  "bounds": "flush",
+  "spacing": "var(--col-gap)",
+  "hconcat": [
+    {
+      "width": "var(--col-plot-width)",
+      "height": 300,
+      "data": {
+        "url": "data/region_price_climate_2026.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "gst_c": "number",
+            "tonnes": "number",
+            "est_value_aud": "number",
+            "value_per_tonne": "number"
+          }
+        }
+      },
+      "transform": [
+        {"calculate": "datum.state === 'VIC/NSW' ? 'VIC' : datum.state", "as": "colour_state"},
+        {"calculate": "max(datum.tonnes, 6000)", "as": "size_t"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "gst_c",
+          "type": "quantitative",
+          "title": "Growing season temperature (°C)",
+          "scale": {"domain": [14, 22.5], "nice": false},
+          "axis": {
+            "values": [14, 16, 18, 20, 22],
+            "labelExpr": "datum.value + '°'",
+            "titleFontWeight": 500
+          }
+        },
+        "y": {
+          "field": "value_per_tonne",
+          "type": "quantitative",
+          "title": "Value per tonne (A$, log scale)",
+          "scale": {"type": "log", "domain": [250, 5000]},
+          "axis": {
+            "values": [250, 500, 1000, 2000, 4000],
+            "format": "$,.0f",
+            "titleFontWeight": 500,
+            "minExtent": "var(--axis-width)",
+            "maxExtent": "var(--axis-width)"
+          }
+        }
+      },
+      "layer": [
+        {
+          "transform": [
+            {"regression": "value_per_tonne", "on": "gst_c", "method": "exp", "extent": [14, 22.2]}
+          ],
+          "mark": {
+            "type": "line",
+            "strokeDash": [5, 4],
+            "color": "var(--muted)",
+            "strokeWidth": 1.5
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "pick",
+              "select": {
+                "type": "point",
+                "fields": ["region"],
+                "on": "pointerover",
+                "clear": "pointerout",
+                "nearest": true
+              }
+            }
+          ],
+          "mark": {"type": "circle", "stroke": "var(--paper)", "strokeWidth": 1},
+          "encoding": {
+            "size": {
+              "field": "size_t",
+              "type": "quantitative",
+              "scale": {"domain": [0, 340000], "range": [0, 2000]},
+              "legend": null
+            },
+            "color": {
+              "field": "colour_state",
+              "type": "nominal",
+              "title": "State",
+              "scale": {
+                "domain": ["SA", "VIC", "NSW", "WA", "TAS"],
+                "range": [
+                  "var(--state-sa)",
+                  "var(--state-vic)",
+                  "var(--state-nsw)",
+                  "var(--state-wa)",
+                  "var(--state-tas)"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "symbolType": "circle",
+                "title": null,
+                "offset": 6
+              }
+            },
+            "opacity": {
+              "condition": {
+                "test": {"and": [{"param": "pick"}, {"param": "mapPick"}, {"param": "mapPickSE"}]},
+                "value": 0.85
+              },
+              "value": 0.15
+            },
+            "tooltip": [
+              {"field": "region", "title": "Region"},
+              {"field": "state", "title": "State"},
+              {"field": "gst_c", "title": "Growing season temp. (°C)", "format": ".1f"},
+              {"field": "value_per_tonne", "title": "Value per tonne (A$)", "format": "$,.0f"},
+              {"field": "tonnes", "title": "Tonnes crushed", "format": ","}
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "field": "region",
+                "oneOf": [
+                  "Tasmania",
+                  "Mornington Peninsula",
+                  "Yarra Valley",
+                  "Hunter",
+                  "Barossa Valley",
+                  "Adelaide Hills"
+                ]
+              }
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 9,
+            "style": "bubble-label"
+          },
+          "encoding": {
+            "text": {"field": "region"},
+            "opacity": {
+              "condition": {
+                "test": {"and": [{"param": "pick"}, {"param": "mapPick"}, {"param": "mapPickSE"}]},
+                "value": 1
+              },
+              "value": 0.2
+            }
+          }
+        },
+        {
+          "transform": [
+            {"filter": {"field": "region", "oneOf": ["Coonawarra", "Swan District", "Riverland"]}}
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": -9,
+            "style": "bubble-label"
+          },
+          "encoding": {
+            "text": {"field": "region"},
+            "opacity": {
+              "condition": {
+                "test": {"and": [{"param": "pick"}, {"param": "mapPick"}, {"param": "mapPickSE"}]},
+                "value": 1
+              },
+              "value": 0.2
+            }
+          }
+        },
+        {
+          "transform": [{"filter": "datum.region === 'Riverina'"}],
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "middle",
+            "dx": 0,
+            "style": "bubble-label",
+            "dy": 28
+          },
+          "encoding": {
+            "text": {"field": "region"},
+            "opacity": {
+              "condition": {
+                "test": {"and": [{"param": "pick"}, {"param": "mapPick"}, {"param": "mapPickSE"}]},
+                "value": 1
+              },
+              "value": 0.2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "title": {
+            "text": "Western Australia",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "color": "var(--ink-3)"
+          },
+          "width": 124,
+          "height": 147,
+          "projection": {
+            "type": "conicEqualArea",
+            "parallels": [-30, -36],
+            "rotate": [-117, 0],
+            "scale": 1865.906,
+            "translate": [72.8, -1779.899],
+            "clipExtent": [[0, 0], [124, 147]]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/world-110m.json",
+                "format": {"type": "topojson", "feature": "countries"}
+              },
+              "transform": [{"filter": "datum.id == 36"}],
+              "mark": {"type": "geoshape", "style": "land"}
+            },
+            {
+              "data": {
+                "url": "data/gi_regions.topojson",
+                "format": {"type": "topojson", "feature": "wine_gi_regions"}
+              },
+              "transform": [
+                {
+                  "lookup": "properties.GI_NAME",
+                  "from": {
+                    "data": {
+                      "url": "data/gi_region_info.csv",
+                      "format": {"type": "csv", "parse": {"gst_c": "number"}}
+                    },
+                    "key": "gi_name",
+                    "fields": ["label", "gst_c", "region", "price_txt", "tonnes_txt", "price_state"]
+                  }
+                }
+              ],
+              "params": [
+                {
+                  "name": "mapPick",
+                  "select": {
+                    "type": "point",
+                    "fields": ["region"],
+                    "on": "pointerover",
+                    "clear": "pointerout"
+                  }
+                }
+              ],
+              "mark": {"type": "geoshape", "stroke": "var(--paper)", "strokeWidth": 0.5},
+              "encoding": {
+                "color": {
+                  "condition": {"test": "datum.price_state === 'none'", "value": "var(--border)"},
+                  "field": "price_state",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["SA", "VIC", "NSW", "WA", "TAS"],
+                    "range": [
+                      "var(--state-sa)",
+                      "var(--state-vic)",
+                      "var(--state-nsw)",
+                      "var(--state-wa)",
+                      "var(--state-tas)"
+                    ]
+                  },
+                  "legend": null
+                },
+                "opacity": {
+                  "condition": {
+                    "test": {
+                      "and": [{"param": "pick"}, {"param": "mapPick"}, {"param": "mapPickSE"}]
+                    },
+                    "value": 0.9
+                  },
+                  "value": 0.2
+                },
+                "tooltip": [
+                  {"field": "label", "title": "Region"},
+                  {"field": "properties.STATE", "title": "State"},
+                  {"field": "gst_c", "title": "Growing season temp. (°C)", "format": ".1f"},
+                  {"field": "price_txt", "title": "Value per tonne (A$)"},
+                  {"field": "tonnes_txt", "title": "Tonnes crushed"}
+                ]
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_crush_2026.csv",
+                "format": {
+                  "type": "csv",
+                  "parse": {
+                    "tonnes": "number",
+                    "value_per_tonne": "number",
+                    "est_value_aud": "number",
+                    "lon": "number",
+                    "lat": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "calculate": "indexof(datum.region, 'Murray Darling') === 0 ? 'Murray Darling–Swan Hill' : datum.region",
+                  "as": "region"
+                },
+                {
+                  "filter": {
+                    "or": [
+                      {"param": "pick", "empty": false},
+                      {"param": "mapPick", "empty": false},
+                      {"param": "mapPickSE", "empty": false}
+                    ]
+                  }
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "size": 260,
+                "filled": false,
+                "stroke": "var(--ink)",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "longitude": {"field": "lon", "type": "quantitative"},
+                "latitude": {"field": "lat", "type": "quantitative"}
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "text": "South-eastern Australia",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "color": "var(--ink-3)"
+          },
+          "width": 328,
+          "height": 316,
+          "projection": {
+            "type": "conicEqualArea",
+            "parallels": [-30, -40],
+            "rotate": [-144, 0],
+            "scale": 989.584,
+            "translate": [176.823, -856.077],
+            "clipExtent": [[0, 0], [328, 316]]
+          },
+          "layer": [
+            {
+              "data": {
+                "url": "data/world-110m.json",
+                "format": {"type": "topojson", "feature": "countries"}
+              },
+              "transform": [{"filter": "datum.id == 36"}],
+              "mark": {"type": "geoshape", "style": "land"}
+            },
+            {
+              "data": {
+                "url": "data/gi_regions.topojson",
+                "format": {"type": "topojson", "feature": "wine_gi_regions"}
+              },
+              "transform": [
+                {
+                  "lookup": "properties.GI_NAME",
+                  "from": {
+                    "data": {
+                      "url": "data/gi_region_info.csv",
+                      "format": {"type": "csv", "parse": {"gst_c": "number"}}
+                    },
+                    "key": "gi_name",
+                    "fields": ["label", "gst_c", "region", "price_txt", "tonnes_txt", "price_state"]
+                  }
+                }
+              ],
+              "params": [
+                {
+                  "name": "mapPickSE",
+                  "select": {
+                    "type": "point",
+                    "fields": ["region"],
+                    "on": "pointerover",
+                    "clear": "pointerout"
+                  }
+                }
+              ],
+              "mark": {"type": "geoshape", "stroke": "var(--paper)", "strokeWidth": 0.5},
+              "encoding": {
+                "color": {
+                  "condition": {"test": "datum.price_state === 'none'", "value": "var(--border)"},
+                  "field": "price_state",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["SA", "VIC", "NSW", "WA", "TAS"],
+                    "range": [
+                      "var(--state-sa)",
+                      "var(--state-vic)",
+                      "var(--state-nsw)",
+                      "var(--state-wa)",
+                      "var(--state-tas)"
+                    ]
+                  },
+                  "legend": null
+                },
+                "opacity": {
+                  "condition": {
+                    "test": {
+                      "and": [{"param": "pick"}, {"param": "mapPick"}, {"param": "mapPickSE"}]
+                    },
+                    "value": 0.9
+                  },
+                  "value": 0.2
+                },
+                "tooltip": [
+                  {"field": "label", "title": "Region"},
+                  {"field": "properties.STATE", "title": "State"},
+                  {"field": "gst_c", "title": "Growing season temp. (°C)", "format": ".1f"},
+                  {"field": "price_txt", "title": "Value per tonne (A$)"},
+                  {"field": "tonnes_txt", "title": "Tonnes crushed"}
+                ]
+              }
+            },
+            {
+              "data": {
+                "url": "data/regions_crush_2026.csv",
+                "format": {
+                  "type": "csv",
+                  "parse": {
+                    "tonnes": "number",
+                    "value_per_tonne": "number",
+                    "est_value_aud": "number",
+                    "lon": "number",
+                    "lat": "number"
+                  }
+                }
+              },
+              "transform": [
+                {
+                  "calculate": "indexof(datum.region, 'Murray Darling') === 0 ? 'Murray Darling–Swan Hill' : datum.region",
+                  "as": "region"
+                },
+                {
+                  "filter": {
+                    "or": [
+                      {"param": "pick", "empty": false},
+                      {"param": "mapPick", "empty": false},
+                      {"param": "mapPickSE", "empty": false}
+                    ]
+                  }
+                }
+              ],
+              "mark": {
+                "type": "circle",
+                "size": 260,
+                "filled": false,
+                "stroke": "var(--ink)",
+                "strokeWidth": 2
+              },
+              "encoding": {
+                "longitude": {"field": "lon", "type": "quantitative"},
+                "latitude": {"field": "lat", "type": "quantitative"}
+              }
+            }
+          ]
+        }
+      ],
+      "spacing": 12
+    }
+  ],
+  "resolve": {"scale": {"color": "shared"}}
+}

@@ -37,74 +37,23 @@
   },
   "transform": [
     {
-      "window": [
-        {
-          "op": "row_number",
-          "as": "true_rank"
-        }
-      ],
-      "sort": [
-        {
-          "field": "value_aud_m",
-          "order": "descending"
-        }
-      ],
-      "groupby": [
-        "year"
-      ]
+      "window": [{"op": "row_number", "as": "true_rank"}],
+      "sort": [{"field": "value_aud_m", "order": "descending"}],
+      "groupby": ["year"]
     },
+    {"calculate": "datum.true_rank <= 10 ? 1 : 0", "as": "in_top10"},
     {
-      "calculate": "datum.true_rank <= 10 ? 1 : 0",
-      "as": "in_top10"
+      "joinaggregate": [{"op": "sum", "field": "in_top10", "as": "years_in_top10"}],
+      "groupby": ["market"]
     },
+    {"filter": "datum.years_in_top10 >= 2"},
     {
-      "joinaggregate": [
-        {
-          "op": "sum",
-          "field": "in_top10",
-          "as": "years_in_top10"
-        }
-      ],
-      "groupby": [
-        "market"
-      ]
+      "window": [{"op": "row_number", "as": "rank"}],
+      "sort": [{"field": "value_aud_m", "order": "descending"}],
+      "groupby": ["year"]
     },
-    {
-      "filter": "datum.years_in_top10 >= 2"
-    },
-    {
-      "window": [
-        {
-          "op": "row_number",
-          "as": "rank"
-        }
-      ],
-      "sort": [
-        {
-          "field": "value_aud_m",
-          "order": "descending"
-        }
-      ],
-      "groupby": [
-        "year"
-      ]
-    },
-    {
-      "calculate": "datum.year == 2025 && datum.rank <= 3 ? 1 : 0",
-      "as": "top3_2025"
-    },
-    {
-      "joinaggregate": [
-        {
-          "op": "max",
-          "field": "top3_2025",
-          "as": "is_top3"
-        }
-      ],
-      "groupby": [
-        "market"
-      ]
-    },
+    {"calculate": "datum.year == 2025 && datum.rank <= 3 ? 1 : 0", "as": "top3_2025"},
+    {"joinaggregate": [{"op": "max", "field": "top3_2025", "as": "is_top3"}], "groupby": ["market"]},
     {
       "calculate": "show == 'All markets' || (show == 'Top 3 in 2025' && datum.is_top3 == 1) || show == datum.world_region ? 1 : 0",
       "as": "lit"
@@ -128,28 +77,9 @@
       "field": "rank",
       "type": "quantitative",
       "title": null,
-      "scale": {
-        "domain": [
-          1,
-          11
-        ],
-        "reverse": true,
-        "nice": false
-      },
+      "scale": {"domain": [1, 11], "reverse": true, "nice": false},
       "axis": {
-        "values": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11
-        ],
+        "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
         "labelExpr": "'#' + datum.value",
         "grid": false,
         "domain": false,
@@ -159,9 +89,7 @@
         "labelColor": "var(--ink-2)"
       }
     },
-    "detail": {
-      "field": "market"
-    }
+    "detail": {"field": "market"}
   },
   "layer": [
     {
@@ -173,49 +101,19 @@
         "color": "var(--border)"
       },
       "encoding": {
-        "opacity": {
-          "condition": {
-            "param": "hover",
-            "empty": true,
-            "value": 1
-          },
-          "value": 0.35
-        }
+        "opacity": {"condition": {"param": "hover", "empty": true, "value": 1}, "value": 0.35}
       }
     },
     {
-      "transform": [
-        {
-          "filter": {
-            "or": [
-              {
-                "param": "hover",
-                "empty": false
-              },
-              "datum.lit == 1"
-            ]
-          }
-        }
-      ],
-      "mark": {
-        "type": "line",
-        "strokeWidth": 2.5,
-        "interpolate": "monotone",
-        "strokeCap": "round"
-      },
+      "transform": [{"filter": {"or": [{"param": "hover", "empty": false}, "datum.lit == 1"]}}],
+      "mark": {"type": "line", "strokeWidth": 2.5, "interpolate": "monotone", "strokeCap": "round"},
       "encoding": {
         "color": {
           "field": "world_region",
           "type": "nominal",
           "title": "Region of the world",
           "scale": {
-            "domain": [
-              "Northeast Asia",
-              "North America",
-              "Europe",
-              "Southeast Asia",
-              "Oceania"
-            ],
+            "domain": ["Northeast Asia", "North America", "Europe", "Southeast Asia", "Oceania"],
             "range": "world"
           },
           "legend": {
@@ -226,81 +124,32 @@
             "titleOrient": "left"
           }
         },
-        "opacity": {
-          "condition": {
-            "param": "hover",
-            "empty": true,
-            "value": 0.95
-          },
-          "value": 0.12
-        }
+        "opacity": {"condition": {"param": "hover", "empty": true, "value": 0.95}, "value": 0.12}
       }
     },
     {
-      "mark": {
-        "type": "circle",
-        "size": 55,
-        "stroke": "var(--paper)",
-        "strokeWidth": 1
-      },
+      "mark": {"type": "circle", "size": 55, "stroke": "var(--paper)", "strokeWidth": 1},
       "encoding": {
         "color": {
           "condition": {
-            "test": {
-              "or": [
-                {
-                  "param": "hover",
-                  "empty": false
-                },
-                "datum.lit == 1"
-              ]
-            },
+            "test": {"or": [{"param": "hover", "empty": false}, "datum.lit == 1"]},
             "field": "world_region",
             "type": "nominal",
             "scale": {
-              "domain": [
-                "Northeast Asia",
-                "North America",
-                "Europe",
-                "Southeast Asia",
-                "Oceania"
-              ],
+              "domain": ["Northeast Asia", "North America", "Europe", "Southeast Asia", "Oceania"],
               "range": "world"
             },
             "legend": null
           },
           "value": "var(--border)"
         },
-        "opacity": {
-          "condition": {
-            "param": "hover",
-            "empty": true,
-            "value": 1
-          },
-          "value": 0.12
-        },
+        "opacity": {"condition": {"param": "hover", "empty": true, "value": 1}, "value": 0.12},
         "tooltip": [
-          {
-            "field": "market",
-            "title": "Market"
-          },
-          {
-            "field": "year",
-            "title": "Year"
-          },
-          {
-            "field": "rank",
-            "title": "Rank on this chart"
-          },
-          {
-            "field": "true_rank",
-            "title": "Rank among all markets"
-          },
-          {
-            "field": "value_aud_m",
-            "title": "Export value (A$m)",
-            "format": ",.0f"
-          }
+          {"field": "market", "title": "Market"},
+          {"field": "year", "title": "Year"},
+          {"field": "rank", "title": "Rank on this chart"},
+          {"field": "true_rank", "title": "Rank among all markets"},
+          {"field": "value_aud_m", "title": "Export value (A$m)", "format": ",.0f"}
         ]
       },
       "params": [
@@ -308,9 +157,7 @@
           "name": "hover",
           "select": {
             "type": "point",
-            "fields": [
-              "market"
-            ],
+            "fields": ["market"],
             "on": "pointerover",
             "clear": "pointerout",
             "nearest": true
@@ -319,40 +166,14 @@
       ]
     },
     {
-      "transform": [
-        {
-          "filter": "datum.year == 2025"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 12,
-        "style": "end-label"
-      },
+      "transform": [{"filter": "datum.year == 2025"}],
+      "mark": {"type": "text", "align": "left", "dx": 12, "style": "end-label"},
       "encoding": {
-        "text": {
-          "field": "market"
-        },
-        "opacity": {
-          "condition": {
-            "param": "hover",
-            "empty": true,
-            "value": 1
-          },
-          "value": 0.2
-        },
+        "text": {"field": "market"},
+        "opacity": {"condition": {"param": "hover", "empty": true, "value": 1}, "value": 0.2},
         "color": {
           "condition": {
-            "test": {
-              "or": [
-                {
-                  "param": "hover",
-                  "empty": false
-                },
-                "datum.lit == 1"
-              ]
-            },
+            "test": {"or": [{"param": "hover", "empty": false}, "datum.lit == 1"]},
             "value": "var(--ink-2)"
           },
           "value": "var(--muted)"
@@ -360,40 +181,14 @@
       }
     },
     {
-      "transform": [
-        {
-          "filter": "datum.year == 2014"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "dx": -12,
-        "style": "end-label"
-      },
+      "transform": [{"filter": "datum.year == 2014"}],
+      "mark": {"type": "text", "align": "right", "dx": -12, "style": "end-label"},
       "encoding": {
-        "text": {
-          "field": "market"
-        },
-        "opacity": {
-          "condition": {
-            "param": "hover",
-            "empty": true,
-            "value": 1
-          },
-          "value": 0.2
-        },
+        "text": {"field": "market"},
+        "opacity": {"condition": {"param": "hover", "empty": true, "value": 1}, "value": 0.2},
         "color": {
           "condition": {
-            "test": {
-              "or": [
-                {
-                  "param": "hover",
-                  "empty": false
-                },
-                "datum.lit == 1"
-              ]
-            },
+            "test": {"or": [{"param": "hover", "empty": false}, "datum.lit == 1"]},
             "value": "var(--ink-2)"
           },
           "value": "var(--muted)"
@@ -401,14 +196,6 @@
       }
     }
   ],
-  "padding": {
-    "left": 5,
-    "right": 22,
-    "top": 5,
-    "bottom": 5
-  },
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  }
+  "padding": {"left": 5, "right": 22, "top": 5, "bottom": 5},
+  "autosize": {"type": "fit", "contains": "padding"}
 }

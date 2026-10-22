@@ -1,54 +1,30 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Chart 4: share of each state's 2026 grape crush by variety (top 10 varieties nationally). Red and white panels each fill one half of the page grid (CSS --col-width), so the split lines up with the other two-column sections.",
-  "data": {
-    "url": "data/state_variety_2026.csv"
-  },
+  "data": {"url": "data/state_variety_2026.csv"},
   "transform": [
     {
       "calculate": "datum.state + '  ·  ' + format(datum.state_tonnes / 1000, ',.1f') + 'k t'",
       "as": "state_label"
     },
-    {
-      "calculate": "datum.colour === 'Red' ? 'Red grapes' : 'White grapes'",
-      "as": "grape_group"
-    },
-    {
-      "calculate": "indexof(['SA','NSW','VIC','WA','TAS','QLD'], datum.state)",
-      "as": "state_order"
-    }
+    {"calculate": "datum.colour === 'Red' ? 'Red grapes' : 'White grapes'", "as": "grape_group"},
+    {"calculate": "indexof(['SA','NSW','VIC','WA','TAS','QLD'], datum.state)", "as": "state_order"}
   ],
   "padding": 0,
   "bounds": "flush",
   "spacing": "var(--col-gap)",
   "hconcat": [
     {
-      "title": {
-        "text": "Red grapes",
-        "fontSize": 13,
-        "fontWeight": 600,
-        "color": "var(--ink-2)"
-      },
+      "title": {"text": "Red grapes", "fontSize": 13, "fontWeight": 600, "color": "var(--ink-2)"},
       "width": "var(--heat-left-width)",
-      "height": {
-        "step": 40
-      },
-      "transform": [
-        {
-          "filter": "datum.grape_group === 'Red grapes'"
-        }
-      ],
+      "height": {"step": 40},
+      "transform": [{"filter": "datum.grape_group === 'Red grapes'"}],
       "encoding": {
         "x": {
           "field": "variety",
           "type": "nominal",
           "title": null,
-          "sort": [
-            "Shiraz",
-            "Cabernet Sauvignon",
-            "Merlot",
-            "Pinot Noir"
-          ],
+          "sort": ["Shiraz", "Cabernet Sauvignon", "Merlot", "Pinot Noir"],
           "axis": {
             "orient": "top",
             "labelAngle": -35,
@@ -63,11 +39,7 @@
           "field": "state_label",
           "type": "nominal",
           "title": null,
-          "sort": {
-            "field": "state_order",
-            "op": "min",
-            "order": "ascending"
-          },
+          "sort": {"field": "state_order", "op": "min", "order": "ascending"},
           "axis": {
             "domain": false,
             "ticks": false,
@@ -80,25 +52,13 @@
       },
       "layer": [
         {
-          "mark": {
-            "type": "rect",
-            "cornerRadius": 3,
-            "stroke": "var(--paper)",
-            "strokeWidth": 2
-          },
+          "mark": {"type": "rect", "cornerRadius": 3, "stroke": "var(--paper)", "strokeWidth": 2},
           "encoding": {
             "color": {
               "field": "share_pct",
               "type": "quantitative",
               "title": "% of state's crush",
-              "scale": {
-                "domain": [
-                  0,
-                  50
-                ],
-                "range": "heat",
-                "clamp": true
-              },
+              "scale": {"domain": [0, 50], "range": "heat", "clamp": true},
               "legend": {
                 "orient": "bottom",
                 "direction": "horizontal",
@@ -108,47 +68,23 @@
               }
             },
             "tooltip": [
-              {
-                "field": "state",
-                "title": "State"
-              },
-              {
-                "field": "variety",
-                "title": "Variety"
-              },
-              {
-                "field": "tonnes",
-                "title": "Tonnes crushed",
-                "format": ","
-              },
-              {
-                "field": "share_pct",
-                "title": "% of state's crush",
-                "format": ".1f"
-              }
+              {"field": "state", "title": "State"},
+              {"field": "variety", "title": "Variety"},
+              {"field": "tonnes", "title": "Tonnes crushed", "format": ","},
+              {"field": "share_pct", "title": "% of state's crush", "format": ".1f"}
             ]
           }
         },
         {
-          "mark": {
-            "type": "text",
-            "fontSize": 11,
-            "fontWeight": 500
-          },
+          "mark": {"type": "text", "fontSize": 11, "fontWeight": 500},
           "encoding": {
             "text": {
-              "condition": {
-                "test": "datum.share_pct < 0.5",
-                "value": "–"
-              },
+              "condition": {"test": "datum.share_pct < 0.5", "value": "–"},
               "field": "share_pct",
               "format": ".0f"
             },
             "color": {
-              "condition": {
-                "test": "datum.share_pct >= 27",
-                "value": "var(--paper)"
-              },
+              "condition": {"test": "datum.share_pct >= 27", "value": "var(--paper)"},
               "value": "var(--ink-2)"
             }
           }
@@ -156,21 +92,10 @@
       ]
     },
     {
-      "title": {
-        "text": "White grapes",
-        "fontSize": 13,
-        "fontWeight": 600,
-        "color": "var(--ink-2)"
-      },
+      "title": {"text": "White grapes", "fontSize": 13, "fontWeight": 600, "color": "var(--ink-2)"},
       "width": "var(--col-width)",
-      "height": {
-        "step": 40
-      },
-      "transform": [
-        {
-          "filter": "datum.grape_group === 'White grapes'"
-        }
-      ],
+      "height": {"step": 40},
+      "transform": [{"filter": "datum.grape_group === 'White grapes'"}],
       "encoding": {
         "x": {
           "field": "variety",
@@ -198,35 +123,19 @@
           "field": "state_label",
           "type": "nominal",
           "title": null,
-          "sort": {
-            "field": "state_order",
-            "op": "min",
-            "order": "ascending"
-          },
+          "sort": {"field": "state_order", "op": "min", "order": "ascending"},
           "axis": null
         }
       },
       "layer": [
         {
-          "mark": {
-            "type": "rect",
-            "cornerRadius": 3,
-            "stroke": "var(--paper)",
-            "strokeWidth": 2
-          },
+          "mark": {"type": "rect", "cornerRadius": 3, "stroke": "var(--paper)", "strokeWidth": 2},
           "encoding": {
             "color": {
               "field": "share_pct",
               "type": "quantitative",
               "title": "% of state's crush",
-              "scale": {
-                "domain": [
-                  0,
-                  50
-                ],
-                "range": "heat",
-                "clamp": true
-              },
+              "scale": {"domain": [0, 50], "range": "heat", "clamp": true},
               "legend": {
                 "orient": "bottom",
                 "direction": "horizontal",
@@ -236,47 +145,23 @@
               }
             },
             "tooltip": [
-              {
-                "field": "state",
-                "title": "State"
-              },
-              {
-                "field": "variety",
-                "title": "Variety"
-              },
-              {
-                "field": "tonnes",
-                "title": "Tonnes crushed",
-                "format": ","
-              },
-              {
-                "field": "share_pct",
-                "title": "% of state's crush",
-                "format": ".1f"
-              }
+              {"field": "state", "title": "State"},
+              {"field": "variety", "title": "Variety"},
+              {"field": "tonnes", "title": "Tonnes crushed", "format": ","},
+              {"field": "share_pct", "title": "% of state's crush", "format": ".1f"}
             ]
           }
         },
         {
-          "mark": {
-            "type": "text",
-            "fontSize": 11,
-            "fontWeight": 500
-          },
+          "mark": {"type": "text", "fontSize": 11, "fontWeight": 500},
           "encoding": {
             "text": {
-              "condition": {
-                "test": "datum.share_pct < 0.5",
-                "value": "–"
-              },
+              "condition": {"test": "datum.share_pct < 0.5", "value": "–"},
               "field": "share_pct",
               "format": ".0f"
             },
             "color": {
-              "condition": {
-                "test": "datum.share_pct >= 27",
-                "value": "var(--paper)"
-              },
+              "condition": {"test": "datum.share_pct >= 27", "value": "var(--paper)"},
               "value": "var(--ink-2)"
             }
           }

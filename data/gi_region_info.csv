@@ -1,0 +1,65 @@
+gi_name,label,state,gst_c,gst_note,crush_text,region,price_txt,tonnes_txt,price_state
+Adelaide Hills,Adelaide Hills,SA,17.9,,"21,862 t",Adelaide Hills,"$2,081","21,862",SA
+Adelaide Plains,Adelaide Plains,SA,20.6,,"1,059 t",Adelaide Plains,$782,"1,059",SA
+Alpine Valleys,Alpine Valleys,VIC,16.9,,"2,624 t",Alpine Valleys,"$1,346","2,624",VIC
+Barossa Valley,Barossa Valley,SA,19.0,,"42,841 t",Barossa Valley,"$1,680","42,841",SA
+Beechworth,Beechworth,VIC,17.8,,N/A,Beechworth,Not published,Not published,none
+Bendigo,Bendigo,VIC,18.7,,N/A,Bendigo,Not published,Not published,none
+Blackwood Valley,Blackwood Valley,WA,18.6,,N/A,Blackwood Valley,Not published,Not published,none
+Canberra District,Canberra District,NSW,17.6,,N/A,Canberra District,Not published,Not published,none
+Clare Valley,Clare Valley,SA,19.1,,"13,228 t",Clare Valley,"$1,534","13,228",SA
+Coonawarra,Coonawarra,SA,17.3,,"32,303 t",Coonawarra,$942,"32,303",SA
+Cowra,Cowra,NSW,20.6,,N/A,Cowra,Not published,Not published,none
+Currency Creek,Currency Creek,SA,18.5,,"7,176 t",Currency Creek,$902,"7,176",SA
+Eden Valley,Eden Valley,SA,18.4,,"6,349 t",Eden Valley,"$2,027","6,349",SA
+Geelong,Geelong,VIC,17.2,,N/A,Geelong,Not published,Not published,none
+Geographe,Geographe,WA,19.4,,N/A,Geographe,Not published,Not published,none
+Glenrowan,Glenrowan,VIC,19.5,,N/A,Glenrowan,Not published,Not published,none
+Goulburn Valley,Goulburn Valley,VIC,19.6,,"1,263 t",Goulburn Valley,$763,"1,263",VIC
+Grampians,Grampians,VIC,17.1,,"1,646 t",Grampians,"$1,712","1,646",VIC
+Granite Belt,Granite Belt,QLD,18.7,,Counted in the Queensland total,Granite Belt,Not published,Not published,none
+Great Southern,Great Southern,WA,18.0,,"4,208 t",Great Southern,"$2,330","4,208",WA
+Gundagai,Gundagai,NSW,19.8,,N/A,Gundagai,Not published,Not published,none
+Hastings River,Hastings River,NSW,20.7,,N/A,Hastings River,Not published,Not published,none
+Heathcote,Heathcote,VIC,18.5,,"5,470 t",Heathcote,"$1,055","5,470",VIC
+Henty,Henty,VIC,16.6,,N/A,Henty,Not published,Not published,none
+Hilltops,Hilltops,NSW,19.5,,N/A,Hilltops,Not published,Not published,none
+Hunter,Hunter,NSW,20.2,,"3,605 t",Hunter,"$1,840","3,605",NSW
+Kangaroo Island,Kangaroo Island,SA,17.6,,N/A,Kangaroo Island,Not published,Not published,none
+King Valley,King Valley,VIC,17.6,,"16,783 t",King Valley,"$1,235","16,783",VIC
+Langhorne Creek,Langhorne Creek,SA,19.2,,"26,067 t",Langhorne Creek,$913,"26,067",SA
+Macedon Ranges,Macedon Ranges,VIC,16.2,,N/A,Macedon Ranges,Not published,Not published,none
+Manjimup,Manjimup,WA,18.1,,N/A,Manjimup,Not published,Not published,none
+Margaret River,Margaret River,WA,18.9,,"17,135 t",Margaret River,"$1,722","17,135",WA
+Mclaren Vale,McLaren Vale,SA,18.6,,"27,643 t",McLaren Vale,"$1,458","27,643",SA
+Mornington Peninsula,Mornington Peninsula,VIC,17.4,,"1,712 t",Mornington Peninsula,"$4,165","1,712",VIC
+Mount Benson,Mount Benson,SA,17.1,,"1,290 t",Mount Benson,"$1,045","1,290",SA
+Mount Gambier,Mount Gambier,SA,16.8,,655 t,Mount Gambier,"$1,426",655,SA
+Mudgee,Mudgee,NSW,19.5,,"1,315 t",Mudgee,"$1,261","1,315",NSW
+Murray Darling,Murray Darling,VIC,21.9,,Counted in Murray Darling–Swan Hill,Murray Darling–Swan Hill,$374,"237,311 (both regions together)",VIC
+New England Australia,New England,NSW,18.3,,N/A,New England,Not published,Not published,none
+Orange,Orange,NSW,18.1,,"2,371 t",Orange,"$1,657","2,371",NSW
+Padthaway,Padthaway,SA,17.8,,"26,392 t",Padthaway,$912,"26,392",SA
+Peel,Peel,WA,20.2,,N/A,Peel,Not published,Not published,none
+Pemberton,Pemberton,WA,18.2,,N/A,Pemberton,Not published,Not published,none
+Perricoota,Perricoota,NSW,19.9,,N/A,Perricoota,Not published,Not published,none
+Perth Hills,Perth Hills,WA,21.1,,N/A,Perth Hills,Not published,Not published,none
+Pyrenees,Pyrenees,VIC,18.0,,N/A,Pyrenees,Not published,Not published,none
+Riverina,Riverina,NSW,21.8,,"204,506 t",Riverina,$341,"204,506",NSW
+Riverland,Riverland,SA,21.1,,"339,197 t",Riverland,$286,"339,197",SA
+Robe,Robe,SA,17.0,,"2,505 t",Robe,"$1,182","2,505",SA
+Rutherglen,Rutherglen,VIC,19.7,,"1,176 t",Rutherglen,"$1,347","1,176",VIC
+Shoalhaven Coast,Shoalhaven Coast,NSW,19.4,,N/A,Shoalhaven Coast,Not published,Not published,none
+South Burnett,South Burnett,QLD,22.4,,Counted in the Queensland total,South Burnett,Not published,Not published,none
+Southern Fleurieu,Southern Fleurieu,SA,18.0,,N/A,Southern Fleurieu,Not published,Not published,none
+Southern Flinders Ranges,Southern Flinders Ranges,SA,20.5,,N/A,Southern Flinders Ranges,Not published,Not published,none
+Southern Highlands,Southern Highlands,NSW,18.0,,N/A,Southern Highlands,Not published,Not published,none
+Strathbogie Ranges,Strathbogie Ranges,VIC,17.6,,N/A,Strathbogie Ranges,Not published,Not published,none
+Sunbury,Sunbury,VIC,17.6,,N/A,Sunbury,Not published,Not published,none
+Swan District,Swan District,WA,21.8,,"2,366 t",Swan District,"$1,547","2,366",WA
+Swan Hill,Swan Hill,VIC,20.8,,Counted in Murray Darling–Swan Hill,Murray Darling–Swan Hill,$374,"237,311 (both regions together)",VIC
+Tasmania,Tasmania,TAS,14.4,Average of the atlas's 8 Tasmanian areas (12.7-16.2 C),"9,772 t",Tasmania,"$3,721","9,772",TAS
+Tumbarumba,Tumbarumba,NSW,17.5,,N/A,Tumbarumba,Not published,Not published,none
+Upper Goulburn,Upper Goulburn,VIC,16.9,,393 t,Upper Goulburn,"$1,626",393,VIC
+Wrattonbully,Wrattonbully,SA,17.5,,"14,213 t",Wrattonbully,"$1,110","14,213",SA
+Yarra Valley,Yarra Valley,VIC,16.3,,"5,891 t",Yarra Valley,"$2,492","5,891",VIC
