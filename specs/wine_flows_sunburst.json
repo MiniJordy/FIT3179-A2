@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Chart 8: sunburst of the 1,133 million litres of wine made in 2024-25. Inner ring: exported / sold in Australia / left over (production minus sales). Outer ring: wine style. Angles pre-computed in scripts/build_datasets.py.",
   "padding": 0,
-  "width": 440,
-  "height": 440,
+  "width": 360,
+  "height": 360,
   "data": {
     "url": "data/wine_flows_2024_25.csv",
     "format": {
@@ -19,8 +19,8 @@
     }
   },
   "transform": [
-    {"calculate": "datum.ring === 'inner' ? 64 : 151", "as": "r1"},
-    {"calculate": "datum.ring === 'inner' ? 148 : 205", "as": "r2"}
+    {"calculate": "datum.ring === 'inner' ? 52 : 124", "as": "r1"},
+    {"calculate": "datum.ring === 'inner' ? 121 : 168", "as": "r2"}
   ],
   "layer": [
     {
@@ -82,7 +82,7 @@
       },
       "encoding": {
         "theta": {"field": "mid", "type": "quantitative", "scale": null},
-        "radius": {"value": 106},
+        "radius": {"value": 87},
         "text": {"field": "lab"}
       }
     },
@@ -96,7 +96,7 @@
       "mark": {"type": "text", "fontSize": 12, "fontWeight": 600, "baseline": "middle"},
       "encoding": {
         "theta": {"field": "mid", "type": "quantitative", "scale": null},
-        "radius": {"value": 178},
+        "radius": {"value": 146},
         "text": {"field": "lab"},
         "color": {
           "condition": {"test": "datum.name === 'White'", "value": "var(--ink-2)"},
@@ -120,7 +120,7 @@
       },
       "encoding": {
         "theta": {"field": "mid", "type": "quantitative", "scale": null},
-        "radius": {"value": 222},
+        "radius": {"value": 182},
         "text": {"field": "lab"}
       }
     },

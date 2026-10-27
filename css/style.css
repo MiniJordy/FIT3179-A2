@@ -121,7 +121,7 @@ section { margin: 3rem 0; }
 .vega-bind select { font: inherit; font-size: 0.9rem; padding: 0.15rem 0.4rem; border: 1px solid var(--axis); border-radius: 6px; background: var(--paper); color: var(--ink); }
 
 /* Story structure: five parts, each holding one or more chart sections */
-.part { margin: 4.5rem 0 3rem; }
+.part { margin: 2.5rem 0 3rem; }
 .part:first-child { margin-top: 3rem; }   /* first part sits closer to the page header */
 /* Coloured part header: a burgundy band that opens each part like a chapter */
 .part-header { background: var(--merlot); color: var(--paper); border-radius: 12px; padding: 1.6rem 1.8rem 1.4rem; }
@@ -144,7 +144,7 @@ section { margin: 3rem 0; }
 @media (max-width: 640px) { .stat-band { grid-template-columns: 1fr; } }
 
 /* Two-column layout: narrative beside a compact chart (e.g. the sunburst) */
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--col-gap); align-items: start; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--col-gap); align-items: center; }
 .two-col .col-text p:first-child { margin-top: 0; }
 .col-chart { width: auto; justify-self: start; }
 @media (max-width: 820px) { .two-col { grid-template-columns: 1fr; } }

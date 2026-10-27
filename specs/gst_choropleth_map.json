@@ -60,7 +60,7 @@
                   "legend": {
                     "orient": "none",
                     "legendX": 0,
-                    "legendY": 300,
+                    "legendY": 404,
                     "type": "symbol",
                     "symbolType": "square",
                     "symbolSize": 180,
@@ -253,7 +253,7 @@
               "legend": {
                 "orient": "none",
                 "legendX": 0,
-                "legendY": 300,
+                "legendY": 404,
                 "type": "symbol",
                 "symbolType": "square",
                 "symbolSize": 180,
