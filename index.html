@@ -151,17 +151,17 @@
       <div class="text-cols">
         <p>
           A tonne of grapes from <strong>Tasmania</strong> was worth about <strong>$3,720</strong> in 2026, and from the
-          <strong>Mornington Peninsula</strong> almost <strong>$4,170</strong>. The cheapest grapes come from the regions that grow the most.
+          <strong>Mornington Peninsula</strong> almost <strong>$4,170</strong>. The cheapest grapes come from the regions that grow the most, so the biggest regions earn far less than their size suggests.
         </p>
         <p>
-          Each circle is one wine region, placed by the estimated value of a tonne of its grapes and sized by how many tonnes it
-          crushed. Rows are states, ordered by their most expensive region. The dashed line is the national average price paid
-          for grapes. Hover over a circle for the region's figures.
+          Each bar is one wine region. Its height is the value of a tonne of its grapes and its width is how many tonnes it
+          crushed, so the size of each block is the total value of its grapes. The dashed line is the national average price paid
+          for grapes. Hover over a bar for the region's figures.
         </p>
       </div>
       <div id="price-chart" class="chart"></div>
-      <p class="note">Regions that crushed under 6,000 tonnes are drawn at the 6,000-tonne size so they stay visible.
-        Queensland's two regions are reported together.</p>
+      <p class="note">Widths are each region's share of all reported tonnes, so the smallest regions are only slivers. Regions crushing
+        less than about 1,000 tonnes aren't published. Queensland's two regions are reported together.</p>
     </section>
 
     <section class="chart-section" id="price-climate">
@@ -323,8 +323,10 @@
             Sources <a href="#src-1">1</a>, <a href="#src-12">12</a>.</dd>
 
           <dt><a href="#prices">Who gets paid the most for their grapes?</a></dt>
-          <dd>Value per tonne is each region's estimated value of its 2026 crush divided by the tonnes crushed. The national
-            average line ($570) is Wine Australia's weighted average for purchased grapes. Source <a href="#src-1">1</a>.</dd>
+          <dd>Value per tonne is each region's estimated value of its 2026 crush divided by the tonnes crushed. Bar widths are
+            each region's share of the tonnes crushed by all published regions, so each bar's area is its share of their total
+            estimated value (the 72% and 36% in the annotation come from these figures). The national average line ($570) is
+            Wine Australia's weighted average for purchased grapes. Source <a href="#src-1">1</a>.</dd>
 
           <dt><a href="#price-climate">Do cooler regions earn more?</a></dt>
           <dd>Value per tonne as in the chart above, joined to each region's growing season temperature. The two state parts
@@ -358,7 +360,7 @@
   embedChart('#variety-heatmap', 'specs/variety_heatmap.json');
   embedChart('#grape-climate-chart', 'specs/variety_climate_strip.json');
   embedChart('#colour-waffle', 'specs/colour_waffle.json');
-  embedChart('#price-chart', 'specs/region_price_strip.json');
+  embedChart('#price-chart', 'specs/region_price_mekko.json');
   embedChart('#price-climate-chart', 'specs/price_climate_scatter.json');
   embedChart('#wine-flows-sunburst', 'specs/wine_flows_sunburst.json');
   embedChart('#export-flow-map', 'specs/export_flow_map.json');

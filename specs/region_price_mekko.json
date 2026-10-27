@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Chart 6 (variable-width bar chart): one bar per wine region, sorted from highest to lowest estimated value per tonne in 2026. Bar height = value per tonne, bar width = share of all reported tonnes crushed, so each bar's area is the region's share of the total value. Colour = state. Dashed line: Wine Australia's national weighted average for purchased grapes ($570).",
+  "width": "container",
+  "height": 380,
+  "data": {
+    "url": "data/regions_crush_2026.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"tonnes": "number", "value_per_tonne": "number", "est_value_aud": "number"}
+    }
+  },
+  "transform": [
+    {
+      "calculate": "indexof(datum.region, 'Murray Darling') === 0 ? 'Murray Darling–|Swan Hill' : datum.region",
+      "as": "short_name"
+    },
+    {
+      "joinaggregate": [
+        {"op": "sum", "field": "tonnes", "as": "total_t"},
+        {"op": "sum", "field": "est_value_aud", "as": "total_v"}
+      ]
+    },
+    {
+      "window": [{"op": "sum", "field": "tonnes", "as": "cum_t"}],
+      "sort": [{"field": "value_per_tonne", "order": "descending"}],
+      "frame": [null, 0]
+    },
+    {"calculate": "datum.cum_t / datum.total_t", "as": "x1"},
+    {"calculate": "(datum.cum_t - datum.tonnes) / datum.total_t", "as": "x0"},
+    {"calculate": "datum.tonnes / datum.total_t", "as": "share_t"},
+    {"calculate": "datum.est_value_aud / datum.total_v", "as": "share_v"}
+  ],
+  "encoding": {
+    "y": {
+      "field": "value_per_tonne",
+      "type": "quantitative",
+      "title": "Value per tonne of grapes (A$)",
+      "scale": {"domain": [0, 4400], "nice": false},
+      "axis": {
+        "format": "$,.0f",
+        "values": [0, 1000, 2000, 3000, 4000],
+        "domain": false,
+        "ticks": false,
+        "titlePadding": 10
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "var(--paper)", "strokeWidth": 0.5},
+      "encoding": {
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "title": "Share of all grapes crushed in 2026 (bar width = tonnes)",
+          "scale": {"domain": [0, 1], "nice": false},
+          "axis": {
+            "format": ".0%",
+            "values": [0, 0.25, 0.5, 0.75, 1],
+            "grid": false,
+            "titlePadding": 10
+          }
+        },
+        "x2": {"field": "x1"},
+        "y2": {"datum": 0},
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "scale": {"domain": ["SA", "VIC", "NSW", "WA", "QLD", "TAS"], "range": "state"},
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "title": null,
+            "symbolType": "square",
+            "labelFontSize": 12
+          }
+        },
+        "tooltip": [
+          {"field": "region", "title": "Region"},
+          {"field": "state", "title": "State"},
+          {"field": "value_per_tonne", "title": "Value per tonne (A$)", "format": "$,.0f"},
+          {"field": "tonnes", "title": "Tonnes crushed", "format": ","},
+          {"field": "share_t", "title": "Share of all grapes", "format": ".1%"},
+          {"field": "est_value_aud", "title": "Estimated value (A$)", "format": "$,.0f"},
+          {"field": "share_v", "title": "Share of total value", "format": ".1%"}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"v": 570}]},
+      "transform": [],
+      "mark": {"type": "rule", "strokeDash": [4, 3], "color": "var(--ink-3)", "strokeWidth": 1.2},
+      "encoding": {"y": {"field": "v", "type": "quantitative"}}
+    },
+    {
+      "data": {"values": [{"v": 570}]},
+      "transform": [],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dy": -3,
+        "x": {"expr": "width"},
+        "fontSize": 11,
+        "color": "var(--ink-3)",
+        "text": "National average for purchased grapes: $570"
+      },
+      "encoding": {"y": {"field": "v", "type": "quantitative"}}
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "field": "region",
+            "oneOf": [
+              "Mornington Peninsula",
+              "Tasmania",
+              "Yarra Valley",
+              "Adelaide Hills",
+              "Barossa Valley"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 4,
+        "style": "bubble-label"
+      },
+      "encoding": {"x": {"field": "x1", "type": "quantitative"}, "text": {"field": "short_name"}}
+    },
+    {
+      "transform": [
+        {"filter": "test(/^(Riverland|Riverina|Murray Darling)/, datum.region)"},
+        {
+          "joinaggregate": [
+            {"op": "min", "field": "x0", "as": "gx0"},
+            {"op": "max", "field": "x1", "as": "gx1"},
+            {"op": "max", "field": "value_per_tonne", "as": "gy"}
+          ],
+          "groupby": ["short_name"]
+        },
+        {"filter": "datum.region !== 'Murray Darling – Swan Hill (NSW)'"},
+        {"calculate": "(datum.gx0 + datum.gx1) / 2", "as": "mid"},
+        {"calculate": "replace(datum.short_name, '|', '')", "as": "one_line"},
+        {"calculate": "datum.gy / 2", "as": "ymid"}
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "var(--paper)"
+      },
+      "encoding": {
+        "x": {"field": "mid", "type": "quantitative"},
+        "y": {"field": "ymid", "type": "quantitative"},
+        "text": {"field": "one_line"}
+      }
+    },
+    {
+      "data": {"values": [{"x": 0.6, "y": 2300}]},
+      "transform": [],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "lineBreak": "|",
+        "fontSize": 12.5,
+        "lineHeight": 18,
+        "color": "var(--ink-2)",
+        "text": "Riverland, Riverina and Murray Darling–Swan Hill|crushed 72% of the grapes, but their bars hold|only 36% of the total area: the value of the crush."
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      }
+    }
+  ],
+  "view": {"stroke": null}
+}
